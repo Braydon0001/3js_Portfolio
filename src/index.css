@@ -218,3 +218,31 @@
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(9px);
 }
+
+.listItems {
+  -webkit-text-stroke: 1px white;
+}
+
+.listItems::after {
+  content: attr(data-content) !important;
+  position: absolute;
+  left: 0;
+  color: rgb(145 94 255);
+  width: 0%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* .listItems:hover {
+  -webkit-text-stroke: 0px white;
+} */
+
+.listItems:hover::after {
+  animation: moveText 0.5s linear both;
+}
+
+@keyframes moveText {
+  to {
+    width: 100%;
+  }
+}

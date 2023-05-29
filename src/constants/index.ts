@@ -51,19 +51,19 @@ export const navLinks: NavLinkType[] = [
 
 const services: ServicesIconType[] = [
   {
-    title: "Web Developer",
-    icon: web,
-  },
-  {
-    title: "React Native Developer",
+    title: "Frontend Dev",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Backend Dev",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "UI/UX Design",
+    icon: web,
+  },
+  {
+    title: "Web Design",
     icon: creator,
   },
 ];

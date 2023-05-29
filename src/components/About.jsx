@@ -6,10 +6,6 @@ import { styles } from "../style";
 import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ServiceCard = ({ index, title, icon }) => {
-  return <p>{title}</p>;
-};
-
 const About = () => {
   return (
     <div id="about" className="w-fit mx-6 xs:mx-auto my-[80px]">
@@ -31,9 +27,21 @@ const About = () => {
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10 w-fit">
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
-        ))}
+        <div className="w-[1400px] flex justify-between ">
+          <div className="flex-[1]">
+            <ul className="list-none flex flex-col gap-1">
+              {services.map((service, index) => (
+                <li
+                  data-content={service.title}
+                  className="lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] font-bold cursor-pointer text-transparent stroke-white stroke-1 listItems relative "
+                >
+                  {service.title}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="flex-[1]"></div>
+        </div>
       </div>
     </div>
   );
