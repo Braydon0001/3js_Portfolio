@@ -5,8 +5,11 @@ import { motion } from "framer-motion";
 import { styles } from "../style";
 import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+import FrontEndDevModel from "./canvas/FrontEndDevModel";
 
 const About = () => {
+  const ReactModel = services[0].model;
+
   return (
     <div id="about" className="w-fit mx-6 xs:mx-auto my-[80px]">
       <motion.div variants={textVariant()}>
@@ -40,7 +43,9 @@ const About = () => {
               ))}
             </ul>
           </div>
-          <div className="flex-[1]"></div>
+          <div className="flex-[1]">
+            <ReactModel />
+          </div>
         </div>
       </div>
     </div>

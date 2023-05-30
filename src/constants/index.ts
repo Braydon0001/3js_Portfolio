@@ -34,6 +34,8 @@ import {
   TestimonialType,
 } from "../common/constantTypes";
 
+import FrontEndDevModel from "../components/canvas/FrontEndDevModel";
+
 export const navLinks: NavLinkType[] = [
   {
     id: "about",
@@ -52,19 +54,19 @@ export const navLinks: NavLinkType[] = [
 const services: ServicesIconType[] = [
   {
     title: "Frontend Dev",
-    icon: mobile,
+    model: FrontEndDevModel,
   },
   {
     title: "Backend Dev",
-    icon: backend,
+    model: FrontEndDevModel,
   },
   {
     title: "UI/UX Design",
-    icon: web,
+    model: FrontEndDevModel,
   },
   {
     title: "Web Design",
-    icon: creator,
+    model: FrontEndDevModel,
   },
 ];
 
