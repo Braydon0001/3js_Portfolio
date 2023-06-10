@@ -33,8 +33,11 @@ import {
   TechnologiesIconType,
   TestimonialType,
 } from "../common/constantTypes";
+import CSharpCanvas from "../components/canvas/CSharp";
 
 import FrontEndDevModel from "../components/canvas/FrontEndDevModel";
+import WebDevCanvas from "../components/canvas/WebDev";
+import FigmaCanvas from "../components/canvas/figma";
 
 export const navLinks: NavLinkType[] = [
   {
@@ -58,15 +61,15 @@ const services: ServicesIconType[] = [
   },
   {
     title: "Backend Dev",
-    model: FrontEndDevModel,
+    model: CSharpCanvas,
   },
   {
     title: "UI/UX Design",
-    model: FrontEndDevModel,
+    model: FigmaCanvas,
   },
   {
     title: "Web Design",
-    model: FrontEndDevModel,
+    model: WebDevCanvas,
   },
 ];
 

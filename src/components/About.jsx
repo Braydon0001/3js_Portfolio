@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 
@@ -8,7 +8,8 @@ import { fadeIn, textVariant } from "../utils/motion";
 import FrontEndDevModel from "./canvas/FrontEndDevModel";
 
 const About = () => {
-  const ReactModel = services[0].model;
+  const [skill, setSkill] = useState(0);
+  const ReactModel = services[skill].model;
 
   return (
     <div id="about" className="w-fit mx-6 xs:mx-auto my-[80px]">
@@ -16,7 +17,9 @@ const About = () => {
         <p className={`${styles.sectionSubText} text-slate-100 w-fit`}>
           Introduction
         </p>
-        <h2 className={`${styles.sectionHeadText} w-fit`}>Overview</h2>
+        <h2 className={`${styles.sectionHeadText} w-fit text-accent`}>
+          Overview
+        </h2>
       </motion.div>
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
@@ -35,8 +38,11 @@ const About = () => {
             <ul className="list-none flex flex-col gap-1">
               {services.map((service, index) => (
                 <li
+                  onClick={() => setSkill(index)}
                   data-content={service.title}
-                  className="lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] font-bold cursor-pointer text-transparent stroke-white stroke-1 listItems relative "
+                  className={`lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] font-bold cursor-pointer text-transparent stroke-white stroke-1 listItems relative ${
+                    skill == index && "active"
+                  }`}
                 >
                   {service.title}
                 </li>

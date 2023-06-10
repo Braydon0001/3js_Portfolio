@@ -241,6 +241,10 @@
   animation: moveText 0.5s linear both;
 }
 
+.listItems.active::after {
+  animation: moveText 0.5s linear both;
+}
+
 @keyframes moveText {
   to {
     width: 100%;
