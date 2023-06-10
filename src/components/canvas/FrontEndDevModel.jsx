@@ -43,7 +43,7 @@ const FrontEndDevModel = () => {
         {/* <Stage environment="city" intensity={0.6}> */}
         <Atom />
         <EffectComposer>
-          <Bloom mipmapBlur luminanceThreshold={1} radius={0.5} />
+          <Bloom mipmapBlur luminanceThreshold={0.7} radius={0.5} />
         </EffectComposer>
         {/* </Stage> */}
         <OrbitControls enableZoom={false} autoRotate />

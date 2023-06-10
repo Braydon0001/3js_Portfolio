@@ -6,6 +6,7 @@ export type NavLinkType = {
 export type ServicesIconType = {
   title: string;
   model: () => JSX.Element;
+  skillGroups: string[];
 };
 
 export type TechnologiesIconType = {

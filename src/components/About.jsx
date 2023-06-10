@@ -33,8 +33,8 @@ const About = () => {
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10 w-fit">
-        <div className="w-[1400px] flex justify-between ">
-          <div className="flex-[1]">
+        <div className="w-[1600px] flex justify-between relative">
+          <div>
             <ul className="list-none flex flex-col gap-1">
               {services.map((service, index) => (
                 <li
@@ -49,6 +49,23 @@ const About = () => {
               ))}
             </ul>
           </div>
+
+          <div className="glass w-[350px] rounded-lg absolute right-[70px]  p-5 top-[100px]">
+            <p className="text-[21px]">{services[skill].skillGroups[2]}</p>
+          </div>
+
+          <div className="glass w-[350px] rounded-lg absolute  right-[90px]  z-10  p-5 top-[350px]">
+            <p className="text-[21px]">{services[skill].skillGroups[3]}</p>
+          </div>
+
+          <div className="glass w-[350px] rounded-lg absolute  z-10 p-5 top-[50px] right-[670px]">
+            <p className="text-[21px]">{services[skill].skillGroups[0]}</p>
+          </div>
+
+          <div className="glass w-[350px] rounded-lg absolute  p-5 top-[300px] right-[690px]">
+            <p className="text-[21px]">{services[skill].skillGroups[1]}</p>
+          </div>
+
           <div className="flex-[1]">
             <ReactModel />
           </div>

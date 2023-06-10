@@ -1,8 +1,4 @@
 import {
-  mobile,
-  backend,
-  creator,
-  web,
   javascript,
   typescript,
   html,
@@ -34,10 +30,10 @@ import {
   TestimonialType,
 } from "../common/constantTypes";
 import CSharpCanvas from "../components/canvas/CSharp";
+import FigmaCanvas from "../components/canvas/Figma";
 
 import FrontEndDevModel from "../components/canvas/FrontEndDevModel";
 import WebDevCanvas from "../components/canvas/WebDev";
-import FigmaCanvas from "../components/canvas/figma";
 
 export const navLinks: NavLinkType[] = [
   {
@@ -58,18 +54,42 @@ const services: ServicesIconType[] = [
   {
     title: "Frontend Dev",
     model: FrontEndDevModel,
+    skillGroups: [
+      "React, Typescript, Next.js",
+      "3JS, React Three Fiber, GIT",
+      "Html, CSS, Javascript, Tailwind",
+      "JQuery, MVC, Razor, Umbraco",
+    ],
   },
   {
     title: "Backend Dev",
     model: CSharpCanvas,
+    skillGroups: [
+      "SQL Server, MySQL, Azure, AWS",
+      "ASP .Net Web API, C#, GIT",
+      "Entity Framework, Dapper",
+      "Clean Architecture, LINQ",
+    ],
   },
   {
     title: "UI/UX Design",
     model: FigmaCanvas,
+    skillGroups: [
+      "Figma, Adobe XD",
+      "Adobe Photoshop / Illustrator",
+      "LoFi / HiFi Prototyping",
+      "Wireframing, Interaction design",
+    ],
   },
   {
     title: "Web Design",
     model: WebDevCanvas,
+    skillGroups: [
+      "Wordpress, Elementor",
+      "Woocommerce, PHP",
+      "Adobe Creative Cloud",
+      "Sanity Studio",
+    ],
   },
 ];
 
