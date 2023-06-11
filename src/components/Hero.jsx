@@ -41,6 +41,11 @@ const Hero = () => {
           </div>
         </a>
       </div>
+
+      <img
+        className="w-[700px] mr-0 ml-auto absolute right-0 bottom-[-450px] opacity-[20%]"
+        src="img/computer-desk-light-4.png"
+      />
     </section>
   );
 };

@@ -12,7 +12,7 @@ const About = () => {
   const ReactModel = services[skill].model;
 
   return (
-    <div id="about" className="w-fit mx-6 xs:mx-auto my-[80px]">
+    <div id="about" className="w-fit mx-6 xs:mx-auto my-[80px] relative">
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} text-slate-100 w-fit`}>
           Introduction
@@ -32,7 +32,7 @@ const About = () => {
         interests include playing musical instruments, gaming, gyming and art.
       </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-10 w-fit">
+      <div className="mt-20 flex flex-wrap gap-10 w-fit mr-5">
         <div className="w-[1600px] flex justify-between relative">
           <div>
             <ul className="list-none flex flex-col gap-1">
@@ -40,7 +40,7 @@ const About = () => {
                 <li
                   onClick={() => setSkill(index)}
                   data-content={service.title}
-                  className={`lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] font-bold cursor-pointer text-transparent stroke-white stroke-1 listItems relative ${
+                  className={`lg:text-[74px] sm:text-[60px] xs:text-[50px] text-[40px] font-bold cursor-pointer text-transparent stroke-white stroke-1 listItems relative ${
                     skill == index && "active"
                   }`}
                 >
@@ -50,25 +50,27 @@ const About = () => {
             </ul>
           </div>
 
-          <div className="glass w-[350px] rounded-lg absolute right-[70px]  p-5 top-[100px]">
-            <p className="text-[21px]">{services[skill].skillGroups[2]}</p>
-          </div>
+          <>
+            <div className="glass w-[350px] rounded-lg absolute right-[60px]  p-5 top-[90px]">
+              <p className="text-[21px]">{services[skill].skillGroups[2]}</p>
+            </div>
 
-          <div className="glass w-[350px] rounded-lg absolute  right-[90px]  z-10  p-5 top-[350px]">
-            <p className="text-[21px]">{services[skill].skillGroups[3]}</p>
-          </div>
+            <div className="glass w-[350px] rounded-lg absolute  right-[80px]  z-10  p-5 top-[330px]">
+              <p className="text-[21px]">{services[skill].skillGroups[3]}</p>
+            </div>
 
-          <div className="glass w-[350px] rounded-lg absolute  z-10 p-5 top-[50px] right-[670px]">
-            <p className="text-[21px]">{services[skill].skillGroups[0]}</p>
-          </div>
+            <div className="glass w-[350px] rounded-lg absolute  z-10 p-5 top-[40px] right-[610px]">
+              <p className="text-[21px]">{services[skill].skillGroups[0]}</p>
+            </div>
 
-          <div className="glass w-[350px] rounded-lg absolute  p-5 top-[300px] right-[690px]">
-            <p className="text-[21px]">{services[skill].skillGroups[1]}</p>
-          </div>
+            <div className="glass w-[350px] rounded-lg absolute  p-5 top-[290px] right-[630px]">
+              <p className="text-[21px]">{services[skill].skillGroups[1]}</p>
+            </div>
 
-          <div className="flex-[1]">
-            <ReactModel />
-          </div>
+            <div className="w-2/3">
+              <ReactModel />
+            </div>
+          </>
         </div>
       </div>
     </div>

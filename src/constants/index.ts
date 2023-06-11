@@ -88,7 +88,7 @@ const services: ServicesIconType[] = [
       "Wordpress, Elementor",
       "Woocommerce, PHP",
       "Adobe Creative Cloud",
-      "Sanity Studio",
+      "Sanity Studio, Responsive",
     ],
   },
 ];

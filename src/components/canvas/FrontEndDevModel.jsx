@@ -8,7 +8,7 @@ const Atom = () => {
   const points = useMemo(
     () =>
       new THREE.EllipseCurve(0, 0, 3, 1.15, 0, 2 * Math.PI, false, 0).getPoints(
-        100
+        80
       ),
     []
   );
@@ -38,12 +38,12 @@ const Atom = () => {
 
 const FrontEndDevModel = () => {
   return (
-    <Canvas resize={{ scroll: false }} camera={{ position: [0, 0, 5] }}>
+    <Canvas resize={{ scroll: false }} camera={{ position: [0, 0, 5.2] }}>
       <Suspense fallback={null}>
         {/* <Stage environment="city" intensity={0.6}> */}
         <Atom />
         <EffectComposer>
-          <Bloom mipmapBlur luminanceThreshold={0.7} radius={0.5} />
+          <Bloom mipmapBlur luminanceThreshold={0.8} radius={0.5} />
         </EffectComposer>
         {/* </Stage> */}
         <OrbitControls enableZoom={false} autoRotate />
