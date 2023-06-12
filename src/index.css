@@ -241,6 +241,10 @@
   animation: moveText 0.5s linear both;
 }
 
+.listItems.active {
+  -webkit-text-stroke: 0px;
+}
+
 .listItems.active::after {
   animation: moveText 0.5s linear both;
 }
