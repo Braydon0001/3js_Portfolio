@@ -12,7 +12,7 @@ const About = () => {
   const ReactModel = services[skill].model;
 
   return (
-    <div id="about" className="w-fit mx-6 xs:mx-auto my-[80px] relative">
+    <div id="about" className="w-fit max-w-[1600px] mx-6 xs:mx-auto my-[80px] relative">
       <motion.div variants={textVariant()} className="xl:mx-0 xs:mx-[60px]">
         <p className={`${styles.sectionSubText} text-slate-100 w-fit`}>
           Introduction
