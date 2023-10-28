@@ -182,7 +182,7 @@ const experiences: ExperienceType[] = [
     date: 'Mar 2020 - Jun 2022',
     points: [
       'Did all the Design , Development and maintenance of their web apps.',
-      'Managed all I.T service providers and ensured I.T / Software operations ran smoothly',
+      'Managed all I.T service providers and ensured I.T / Software operations were running smoothly',
       'Troubleshooted and fixed any software errors and network or hardware / equipment related technical issues',
     ],
   },
@@ -197,7 +197,7 @@ const experiences: ExperienceType[] = [
       'Ensure our client and server requests are protected via JWT Authentication and Authorization, SSL encryption, Password hashing & salting, etc',
       'UI UX High fidelity prototyping via Figma and built out dynamic and user friendly interfaces in accordance',
       'Maintained and built features and modules using other technologies like MVC, Umbraco, Flutter, Azure Web Services',
-      'Fleshed out ER diagrams of systems then built out the REST API and Database via Entity Framework core and SQL Server or MySQL',
+      'Fleshed out ER diagrams of system domains then built out the RESTful API and Database via Entity Framework core and SQL Server or MySQL',
       'Participating in code reviews and providing constructive feedback to ensure highly robust and clean development as a standard',
     ],
   },

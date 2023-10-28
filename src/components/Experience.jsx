@@ -58,10 +58,14 @@ const Experience = () => {
   return (
     <div className="max-w-[1600px] xs:mx-auto xs:my-[80px]">
       <motion.div variants={textVariant()} className="xl:mx-0 xs:mx-[60px]">
-        <p className={`${styles.sectionSubText} text-slate-100 w-fit`}>
-          Where i have worked so far
+        <p
+          className={`${styles.sectionSubText} text-slate-100 w-fit text-center w-full`}
+        >
+          My career
         </p>
-        <h2 className={`${styles.sectionHeadText} w-fit text-accent`}>
+        <h2
+          className={`${styles.sectionHeadText} w-fit text-accent text-center w-full`}
+        >
           Work Experience
         </h2>
       </motion.div>
