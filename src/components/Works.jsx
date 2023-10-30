@@ -3,11 +3,12 @@ import { projects } from '../constants'
 import { fadeIn, textVariant } from '../utils/motion'
 import { styles } from '../style'
 import Tilt from 'react-tilt'
+import { github } from '../assets'
 
 const ProjectCard = ({
   index,
   name,
-  edscription,
+  description,
   tags,
   image,
   source_code_link,
@@ -19,7 +20,7 @@ const ProjectCard = ({
     >
       <Tilt
         options={{ max: 45, scale: 1, speed: 450 }}
-        className="bg-secondary p-5 rounded-2xl"
+        className=" glass p-5 rounded-2xl"
       >
         <div className="relative w-full h-[230px] xl:h-[330px]">
           <img
@@ -27,6 +28,30 @@ const ProjectCard = ({
             alt={name}
             className="w-full h-full object-cover rounded-2xl"
           />
+        </div>
+
+        <div className="absolute inset-0 flex justify-end m-8 card-img_hover Z-30">
+          <Tilt
+            onClick={() => window.open(source_code_link, '_blank')}
+            className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer "
+          >
+            <img src={github} alt={'github'} className="w-1/2 h-1/2" />
+          </Tilt>
+        </div>
+
+        <div className="mt-5">
+          <h3 className="text-white font-bold text-[24px]">{name}</h3>
+          <p className="text-[rgba(255,255,255,0.7)] mt-2 text-[14px]">
+            {description}
+          </p>
+        </div>
+
+        <div className="mt-4 flex flex-wrap gap-2">
+          {tags?.map((tag, index) => (
+            <p key={tag?.name} className={`text-[14px] ${tag?.color}`}>
+              #{tag?.name}
+            </p>
+          ))}
         </div>
       </Tilt>
     </motion.div>
