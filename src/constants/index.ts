@@ -232,62 +232,145 @@ const testimonials: TestimonialType[] = [
 
 const projects: ProjectType[] = [
   {
-    name: 'Car Rent',
+    name: 'Surgical Society',
     description:
       'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
     tags: [
       {
-        name: 'react',
+        name: 'React',
         color: 'blue-text-gradient',
       },
       {
-        name: 'mongodb',
+        name: 'ASP.Net REST API',
         color: 'green-text-gradient',
       },
       {
-        name: 'tailwind',
+        name: 'SQL Server (JSON Columns)',
         color: 'pink-text-gradient',
+      },
+      {
+        name: 'MS Identity Core',
+        color: 'orange-text-gradient',
       },
     ],
     image: carrent,
     source_code_link: 'https://github.com/',
   },
   {
-    name: 'Job IT',
+    name: 'Engage Employee Portal',
     description:
       'Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.',
     tags: [
       {
-        name: 'react',
+        name: 'Next.js',
         color: 'blue-text-gradient',
       },
       {
-        name: 'restapi',
+        name: 'ASP.Net REST API',
         color: 'green-text-gradient',
       },
       {
-        name: 'scss',
+        name: 'MySQL',
         color: 'pink-text-gradient',
+      },
+      {
+        name: 'Tailwind CSS',
+        color: 'orange-text-gradient',
+      },
+      {
+        name: 'Sanity Headless CMS',
+        color: 'violet-text-gradient',
+      },
+      {
+        name: 'Figma',
+        color: 'cyan-text-gradient',
       },
     ],
     image: jobit,
     source_code_link: 'https://github.com/',
   },
   {
-    name: 'Trip Guide',
+    name: 'Expense Claims',
     description:
       'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
     tags: [
       {
-        name: 'nextjs',
+        name: 'React',
         color: 'blue-text-gradient',
       },
       {
-        name: 'supabase',
+        name: 'ASP.Net REST API',
         color: 'green-text-gradient',
       },
       {
-        name: 'css',
+        name: 'SQL Server',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: tripguide,
+    source_code_link: 'https://github.com/',
+  },
+  {
+    name: 'Illovo CPA',
+    description:
+      'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
+    tags: [
+      {
+        name: 'React',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'ASP.Net REST API',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'SQL Server',
+        color: 'pink-text-gradient',
+      },
+      {
+        name: 'Figma',
+        color: 'orange-text-gradient',
+      },
+    ],
+    image: tripguide,
+    source_code_link: 'https://github.com/',
+  },
+  {
+    name: 'RCL Foods Activity Tracker',
+    description:
+      'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
+    tags: [
+      {
+        name: 'React',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'CSS',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'Figma',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: tripguide,
+    source_code_link: 'https://github.com/',
+  },
+  {
+    name: 'Works Group',
+    description:
+      'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
+    tags: [
+      {
+        name: 'MVC',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'Windows Service',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'Razor',
         color: 'pink-text-gradient',
       },
     ],
