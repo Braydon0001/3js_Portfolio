@@ -1,19 +1,23 @@
-import { Suspense, useEffect, useRef, useState } from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import { Suspense, useEffect, useRef, useState } from 'react'
+import { Canvas } from '@react-three/fiber'
+import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
 
-import CanvasLoader from "../Loader";
+import CanvasLoader from '../Loader'
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./gaming_desktop_pc/scene.gltf");
+  const computer = useGLTF('./gaming_desktop_pc/scene.gltf')
 
   return (
+    // @ts-ignore
     <mesh is="x3d">
+      {/* @ts-ignore */}
       <hemisphereLight is="x3d" intenstity={0.15} groundColor="#aaa" />
+      {/* @ts-ignore */}
       <pointLight is="x3d" intenstity={1} />
       <spotLight
         position={[-20, -50, -50]}
         angle={0.12}
+        // @ts-ignore
         penubra={1}
         intenstity={1}
         castShadow
@@ -27,28 +31,28 @@ const Computers = ({ isMobile }) => {
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
-  );
-};
+  )
+}
 
 const ComputerCanvas = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(false)
 
   //changing the isMobile state
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 500px)");
+    const mediaQuery = window.matchMedia('(max-width: 500px)')
 
-    setIsMobile(mediaQuery.matches);
+    setIsMobile(mediaQuery.matches)
 
     const handleMediaQueryChange = (event) => {
-      setIsMobile(event.matches);
-    };
+      setIsMobile(event.matches)
+    }
 
-    mediaQuery.addEventListener("change", handleMediaQueryChange);
+    mediaQuery.addEventListener('change', handleMediaQueryChange)
 
     return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange);
-    };
-  }, []);
+      mediaQuery.removeEventListener('change', handleMediaQueryChange)
+    }
+  }, [])
 
   return (
     <Canvas
@@ -72,7 +76,7 @@ const ComputerCanvas = () => {
 
       <Preload all />
     </Canvas>
-  );
-};
+  )
+}
 
-export default ComputerCanvas;
+export default ComputerCanvas

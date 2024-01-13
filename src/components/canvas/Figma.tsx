@@ -1,19 +1,23 @@
-import { Suspense, useEffect, useRef, useState } from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import { Suspense, useEffect, useRef, useState } from 'react'
+import { Canvas } from '@react-three/fiber'
+import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
 
-import CanvasLoader from "../Loader";
+import CanvasLoader from '../Loader'
 
-const CSharp = ({ isMobile }) => {
-  const CSharpModel = useGLTF("./csharp/scene.gltf");
+const Figma = ({ isMobile }) => {
+  const FigmaModel = useGLTF('./figma/scene.gltf')
 
   return (
+    // @ts-ignore
     <mesh is="x3d">
+      {/* @ts-ignore */}
       <hemisphereLight is="x3d" intenstity={0.15} groundColor="#aaa" />
+      {/* @ts-ignore */}
       <pointLight is="x3d" intenstity={1} />
       <spotLight
         position={[-20, -50, -50]}
         angle={0.12}
+        // @ts-ignore
         penubra={1}
         intenstity={1}
         castShadow
@@ -21,33 +25,33 @@ const CSharp = ({ isMobile }) => {
       />
       <primitive
         is="x3d"
-        object={CSharpModel.scene}
-        scale={isMobile ? 0.1 : 0.11}
+        object={FigmaModel.scene}
+        scale={isMobile ? 2 : 4}
         position={isMobile ? [0, -1.25, -0.5] : [0, 0, 0]}
       />
     </mesh>
-  );
-};
+  )
+}
 
-const CSharpCanvas = () => {
-  const [isMobile, setIsMobile] = useState(false);
+const FigmaCanvas = () => {
+  const [isMobile, setIsMobile] = useState(false)
 
   //changing the isMobile state
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 500px)");
+    const mediaQuery = window.matchMedia('(max-width: 500px)')
 
-    setIsMobile(mediaQuery.matches);
+    setIsMobile(mediaQuery.matches)
 
     const handleMediaQueryChange = (event) => {
-      setIsMobile(event.matches);
-    };
+      setIsMobile(event.matches)
+    }
 
-    mediaQuery.addEventListener("change", handleMediaQueryChange);
+    mediaQuery.addEventListener('change', handleMediaQueryChange)
 
     return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange);
-    };
-  }, []);
+      mediaQuery.removeEventListener('change', handleMediaQueryChange)
+    }
+  }, [])
 
   return (
     <Canvas
@@ -66,12 +70,12 @@ const CSharpCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <CSharp isMobile={isMobile} />
+        <Figma isMobile={isMobile} />
       </Suspense>
 
       <Preload all />
     </Canvas>
-  );
-};
+  )
+}
 
-export default CSharpCanvas;
+export default FigmaCanvas
