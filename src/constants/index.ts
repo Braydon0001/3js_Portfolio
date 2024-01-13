@@ -187,7 +187,7 @@ const experiences: ExperienceType[] = [
     ],
   },
   {
-    title: 'Full stack Developer & UI UX Designer',
+    title: 'Full Stack Developer & UI UX Designer',
     company_name: 'KodeLab / Insight Consulting',
     icon: '/img/experience-images/code-solid.svg',
     iconBg: '#E6DEDD',
@@ -234,7 +234,7 @@ const projects: ProjectType[] = [
   {
     name: 'Surgical Society',
     description:
-      'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
+      'Web based advanced back office forms system that leverages React Survey.js to generate form schemas and return the Answers in JSON format. I then persisted the schema and answers in "JSON columns" in the db. To view and edit the forms and answers, i pass the form schema to the Survey component which generates the forms and also pass the answers to populate the form fields. I only had a month deadline so I had to get creative to manage the complexity of the form logic required, create extremely long forms (one of the schemas came to 9000 lines) and perform crud operations in adition to some of the niche requirements.',
     tags: [
       {
         name: 'React',
@@ -259,7 +259,7 @@ const projects: ProjectType[] = [
   {
     name: 'Engage Employee Portal',
     description:
-      'Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.',
+      'A Next.js project that consisted of multiple components such as a public site, employee portal accessible via login and a headless Content Management System. This was my first enterprise project at Kodelab. I started by Creating LoFi and HiFi figma prototypes. Once approved i moved on to building the front-end of the system using Tailwind CSS (big fan) and building mostly custom components while leveraging UI libraries where it made sense. I then moved on to the headless content management system i.e. Sanity.io and build out the CMS backend and integrated the data via its GROQ API',
     tags: [
       {
         name: 'Next.js',
