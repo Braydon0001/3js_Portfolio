@@ -12,7 +12,10 @@ const About = () => {
   const ReactModel = services[skill].model;
 
   return (
-    <div id="about" className="w-fit max-w-[1600px] mx-6 xs:mx-auto my-[80px] relative">
+    <div
+      id="about"
+      className="w-fit max-w-[1600px] mx-6 xs:mx-auto my-[80px] relative"
+    >
       <motion.div variants={textVariant()} className="xl:mx-0 xs:mx-[60px]">
         <p className={`${styles.sectionSubText} text-slate-100 w-fit`}>
           Introduction
@@ -52,19 +55,27 @@ const About = () => {
 
           <div className="w-full xl:w-[800px] flex justify-between relative ">
             <div className="glass w-[350px] rounded-lg absolute right-[140px] xl:right-[60px]  p-5 top-[40px] xl:top-[90px]">
-              <p className="text-[21px]">{services[skill].skillGroups[2]}</p>
+              <p className="text-[21px] text-white">
+                {services[skill].skillGroups[2]}
+              </p>
             </div>
 
             <div className="glass w-[350px] rounded-lg absolute right-[160px] xl:right-[80px]  z-10  p-5 top-[150px] xl:top-[330px]">
-              <p className="text-[21px]">{services[skill].skillGroups[3]}</p>
+              <p className="text-[21px] text-white">
+                {services[skill].skillGroups[3]}
+              </p>
             </div>
 
             <div className="glass w-[350px] rounded-lg absolute  z-10 p-5 top-[40px] left-[160px] xl:left-auto  xl:right-[610px]">
-              <p className="text-[21px]">{services[skill].skillGroups[0]}</p>
+              <p className="text-[21px] text-white">
+                {services[skill].skillGroups[0]}
+              </p>
             </div>
 
             <div className="glass w-[350px] rounded-lg absolute  p-5 top-[150px] xl:top-[290px] xl:left-auto left-[140px]  xl:right-[630px]">
-              <p className="text-[21px]">{services[skill].skillGroups[1]}</p>
+              <p className="text-[21px] text-white">
+                {services[skill].skillGroups[1]}
+              </p>
             </div>
 
             <div className="w-full mt-10 xl:mt-0 xl:w-2/3">

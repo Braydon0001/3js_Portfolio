@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
 
-import { styles } from '../style'
-import { ComputersCanvas } from './canvas'
+import { styles } from "../style";
+import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
   return (
@@ -34,7 +34,7 @@ const Hero = () => {
               transition={{
                 duration: 1.5,
                 repeat: Infinity,
-                repeatType: 'loop',
+                repeatType: "loop",
               }}
               className="w-3 h-3 rounded-full bg-secondary mb-1"
             />
@@ -47,7 +47,7 @@ const Hero = () => {
         src="img/computer-desk-light-4.png"
       />
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
