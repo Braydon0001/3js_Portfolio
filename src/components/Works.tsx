@@ -1,10 +1,10 @@
-import { motion } from 'framer-motion'
-import { projects } from '../constants'
-import { fadeIn, textVariant } from '../utils/motion'
-import { styles } from '../style'
-import Tilt from 'react-tilt'
-import { github } from '../assets'
-import { MdArrowRightAlt } from 'react-icons/md'
+import { motion } from "framer-motion";
+import { projects } from "../constants";
+import { fadeIn, textVariant } from "../utils/motion";
+import { styles } from "../style";
+import Tilt from "react-tilt";
+import { github } from "../assets";
+import { MdArrowRightAlt } from "react-icons/md";
 
 const ProjectCard = ({
   index,
@@ -17,10 +17,10 @@ const ProjectCard = ({
   return (
     <motion.div
       className="sm:w-[calc(33.33%-19px)] cursor-pointer w-full h-full min-h-[486px] xl:min-h-[601px]"
-      variants={fadeIn('up', 'spring', index * 0.5, 0.75)}
+      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
     >
-      <Tilt
-        options={{ max: 45, scale: 1, speed: 450 }}
+      <div
+        // options={{ max: 45, scale: 1, speed: 450 }}
         className="flex flex-col justify-between glass p-5 rounded-2xl h-full min-h-[486px] xl:min-h-[601px]"
       >
         <div>
@@ -34,10 +34,10 @@ const ProjectCard = ({
 
           <div className="absolute inset-0 flex justify-end m-8 card-img_hover Z-30">
             <Tilt
-              onClick={() => window.open(source_code_link, '_blank')}
+              onClick={() => window.open(source_code_link, "_blank")}
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer "
             >
-              <img src={github} alt={'github'} className="w-1/2 h-1/2" />
+              <img src={github} alt={"github"} className="w-1/2 h-1/2" />
             </Tilt>
           </div>
 
@@ -61,15 +61,15 @@ const ProjectCard = ({
           <p className=" bg-none text-[rgba(255,255,255,0.7)] border-0 text-[14px] flex gap-2 items-center">
             Click card to read more
             <MdArrowRightAlt
-              style={{ width: '20px', height: '20px' }}
+              style={{ width: "20px", height: "20px" }}
               color="rgba(255,255,255,0.7)"
             />
           </p>
         </div>
-      </Tilt>
+      </div>
     </motion.div>
-  )
-}
+  );
+};
 
 const Works = () => {
   return (
@@ -92,7 +92,7 @@ const Works = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Works
+export default Works;
