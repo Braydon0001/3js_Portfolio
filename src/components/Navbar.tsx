@@ -3,15 +3,33 @@ import { Link } from "react-router-dom";
 import { styles } from "../style";
 import { logo, menu, close } from "../assets";
 import { navLinks } from "../constants";
+import { cn } from "@/lib/utils";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggleBurger, setToggleBurger] = useState(false);
+  const [isNavSticky, setIsNavSticky] = useState(false);
+
+  useEffect(() => {
+    const changeNav = () => {
+      if (window.scrollY > 0) {
+        setIsNavSticky(true);
+      } else {
+        setIsNavSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", changeNav, { passive: true });
+    return () => window.removeEventListener("scroll", changeNav);
+  }, [isNavSticky]);
 
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary glass
-  `}
+      className={cn(
+        `${styles.paddingX} transition-all duration-[0.5s] ease w-full flex items-center py-5 fixed top-0 z-20 bg-primary glass
+  `,
+        isNavSticky && "py-2"
+      )}
     >
       <div className="w-full flex justify-between max-w-[1600px] mx-auto items-center">
         <Link
@@ -22,7 +40,14 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="Logo" className="h-[50px]" />
+          <img
+            src={logo}
+            alt="Logo"
+            className={cn(
+              " transition-all duration-[0.5s] ease h-[50px]",
+              isNavSticky && "h-[40px]"
+            )}
+          />
           <p className="text-white text-[21px] font-bold cursor-pointer flex">
             Braydon &nbsp;{" "}
             <span className="sm:block hidden">| &nbsp;Portfolio</span>
