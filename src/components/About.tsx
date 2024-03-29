@@ -1,14 +1,14 @@
 import { useState } from "react";
-import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../style";
 import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
-import FrontEndDevModel from "./canvas/FrontEndDevModel";
+import { cn } from "@/lib/utils";
 
 const About = () => {
   const [skill, setSkill] = useState(0);
+  const [isGrabbing, setIsGrabbing] = useState(false);
   const ReactModel = services[skill].model;
 
   return (
@@ -78,7 +78,14 @@ const About = () => {
               </p>
             </div>
 
-            <div className="w-full mt-10 xl:mt-0 xl:w-2/3">
+            <div
+              onMouseDown={() => setIsGrabbing(true)}
+              onMouseUp={() => setIsGrabbing(false)}
+              className={cn(
+                "w-full mt-10 xl:mt-0 xl:w-2/3 cursor-grab",
+                isGrabbing && "cursor-grabbing"
+              )}
+            >
               <ReactModel />
             </div>
           </div>

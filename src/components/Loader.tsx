@@ -8,10 +8,10 @@ const Loader = () => {
       <p
         style={{
           fontSize: 21,
-          color: "f1f1f1",
+          color: "#f1f1f1",
           fontWeight: 800,
           marginTop: 40,
-          whiteSpace: "no-wrap",
+          whiteSpace: "nowrap",
           textAlign: "center",
           width: "180px",
         }}

@@ -2,10 +2,20 @@ import { motion } from "framer-motion";
 
 import { styles } from "../style";
 import { ComputersCanvas } from "./canvas";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
 
 const Hero = () => {
+  const [isGrabbing, setIsGrabbing] = useState(false);
   return (
-    <section className={`relative w-full h-[90vh] xs:h-screen mx-auto`}>
+    <section
+      onMouseDown={() => setIsGrabbing(true)}
+      onMouseUp={() => setIsGrabbing(false)}
+      className={cn(
+        `relative w-full h-[90vh] xs:h-screen mx-auto cursor-grab`,
+        isGrabbing && "cursor-grabbing"
+      )}
+    >
       <div
         className={` absolute inset-0 top-[160px] mx-14 max-w-[1600px] xl:mx-auto flex flex-row items-start gap-5`}
       >
