@@ -1,0 +1,104 @@
+/*  light gallery css */
+.lg-container .lg-backdrop.in,
+.lg-container .lg-outer,
+.lg-thumb-outer {
+  /* glass effect on modal */
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  ) !important;
+  mix-blend-mode: normal !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05) !important;
+  backdrop-filter: blur(9px) !important;
+  -webkit-backdrop-filter: blur(9px) !important;
+}
+
+.lg-next,
+.lg-prev {
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  ) !important;
+  mix-blend-mode: normal !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05) !important;
+  backdrop-filter: blur(9px) !important;
+  -webkit-backdrop-filter: blur(9px) !important;
+
+  background-color: rgba(0, 0, 0, 0.05) !important;
+  border-radius: 25px !important;
+  color: #333 !important;
+  box-shadow: none;
+}
+
+.lg-toolbar {
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  ) !important;
+  mix-blend-mode: normal !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05) !important;
+  backdrop-filter: blur(9px) !important;
+  -webkit-backdrop-filter: blur(9px) !important;
+}
+
+.lg-sub-html,
+.lg-counter span,
+.lg-counter {
+  color: #333 !important;
+  font-size: 21px !important;
+  padding: 7px 40px !important;
+  text-align: center !important;
+}
+
+.lg-sub-html {
+  color: #000 !important;
+}
+
+.lg-sub-html {
+  padding-top: 0px !important;
+  padding-bottom: 15px !important;
+
+  font-size: 26px !important;
+  text-transform: uppercase;
+}
+
+.lg-counter {
+  color: #de4444 !important;
+}
+
+.lg-counter span {
+  padding: 0 !important;
+}
+
+.lg-outer .lg-thumb-item.active,
+.lg-outer .lg-thumb-item:hover {
+  border-color: #de4444 !important;
+}
+
+.lg-toolbar .lg-icon {
+  color: #333 !important;
+  font-size: 26px !important;
+}
+
+.lg-icon:hover {
+  color: #de4444 !important;
+}
+
+.lg-outer .lg-object {
+  max-height: 95% !important;
+}
+
+.lg-has-iframe {
+  display: inline !important;
+}
+
+.lg-has-iframe iframe {
+  width: 100% !important;
+  height: 100% !important;
+}
