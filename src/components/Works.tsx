@@ -16,12 +16,12 @@ const ProjectCard = ({
 }) => {
   return (
     <motion.div
-      className="sm:w-[calc(33.33%-19px)] cursor-pointer w-full h-full min-h-[486px] xl:min-h-[601px]"
+      className="sm:w-[calc(33.33%-19px)] cursor-pointer w-full h-full min-h-[486px] xl:min-h-[601px] hover:scale-[1.02] transition-transform duration-300 ease-in-out rounded-2xl "
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
     >
       <div
         // options={{ max: 45, scale: 1, speed: 450 }}
-        className="flex flex-col justify-between glass p-5 rounded-2xl h-full min-h-[486px] xl:min-h-[601px]"
+        className="flex flex-col justify-between glass p-5 rounded-2xl h-full min-h-[486px] xl:min-h-[601px] "
       >
         <div>
           <div className="relative w-full h-[230px] xl:h-[330px]">
@@ -76,7 +76,7 @@ const Works = () => {
     <div className="max-w-[1600px] xs:mx-auto xs:my-[80px]">
       <motion.div variants={textVariant()} className="xl:mx-0 xs:mx-[60px]">
         <p className={`${styles.sectionSubText} text-slate-100 w-fit`}>
-          More On Request
+          But Not Limited To
         </p>
         <h2 className={`${styles.sectionHeadText} w-fit text-accent`}>
           My Projects
