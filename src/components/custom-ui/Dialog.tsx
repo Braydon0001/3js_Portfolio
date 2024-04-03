@@ -48,7 +48,7 @@ const DialogContent = React.forwardRef<
       <DialogPrimitive.Close
         className={`${
           hideCloseBtn && "hidden"
-        } hover:rotate-90 transition-all ease duration-300 absolute right-[13px] top-[13px] rounded-sm opacity-70 ring-offset-background  hover:opacity-100  disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground`}
+        } hover:rotate-90 transition-all ease duration-300 absolute right-[13px] top-[13px] rounded-sm opacity-70  hover:opacity-100  disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground`}
       >
         <Cross2Icon className="h-6 w-6 text-red-700 " />
         <span className="sr-only">Close</span>

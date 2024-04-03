@@ -28,11 +28,12 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="xl:mx-0 xs:mx-[60px] mt-4 text-slate-100 text-[18px] max-w-3xl leading-[30px]"
       >
-        I'm a Senior UI/UX designer and Intermediate full stack developer from
+        I am an Intermediate full stack developer and Senior UI/UX designer from
         South Africa. With a Higher Certificate in Information Systems &
-        Software Development and a Bachelor of Science Degree in I.T, I'm
+        Software Development and a Bachelor of Science Degree in IT, I am
         constantly innovating and pushing the boundaries beyond expectations. My
-        interests include playing musical instruments, gaming, gyming and art.
+        interests include playing musical instruments, going to the gym, gaming,
+        and art.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10 w-fit mr-5">
@@ -68,7 +69,7 @@ const About = () => {
                       times: [0, 0.2, 0.4, 0.6, 0.8, 1],
                       duration: 5,
                     }}
-                    className="absolute w-[180px] h-[180px] xl:left-[8%] left-[35%] translate-x-[-35%] xl:translate-x-0 bottom-32 xl:bottom-24 opacity-20"
+                    className="absolute w-[180px] h-[180px] xl:left-[8%] left-[35%] translate-x-[-35%] xl:translate-x-0 bottom-32 xl:bottom-20 opacity-20"
                   >
                     <img
                       src={"img/icons/click-white.png"}

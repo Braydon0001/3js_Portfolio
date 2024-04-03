@@ -4,6 +4,7 @@ import { styles } from "../style";
 import { ComputersCanvas } from "./canvas";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import { InView } from "react-intersection-observer";
 
 const Hero = () => {
   const [isGrabbing, setIsGrabbing] = useState(false);
@@ -42,26 +43,7 @@ const Hero = () => {
           </p>
         </div>
       </div>
-
-      {!isLoading && (
-        <motion.div
-          initial={{ opacity: 1, scale: 1 }}
-          animate={{
-            opacity: [0.2, 0, 0.2, 0, 0.2, 0],
-            scale: [1, 1.2, 1, 1.1, 1],
-          }}
-          transition={{ times: [0, 0.2, 0.4, 0.6, 0.8, 1], duration: 5 }}
-          className="absolute w-[180px] h-[180px] left-[8%] bottom-0 opacity-20"
-        >
-          <img
-            src={"img/icons/move-white.png"}
-            alt={"move icon"}
-            className="w-full h-full object-contain rounded-2xl"
-          />
-        </motion.div>
-      )}
       <ComputersCanvas />
-
       <div className="absolute xs:bottom-6 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
@@ -76,8 +58,35 @@ const Hero = () => {
             />
           </div>
         </a>
+        {!isLoading && (
+          <InView>
+            {({ inView, ref }) => (
+              <div ref={ref}>
+                {inView && (
+                  <motion.div
+                    initial={{ opacity: 1, scale: 1 }}
+                    animate={{
+                      opacity: [0.2, 0, 0.2, 0, 0.2, 0],
+                      scale: [1, 1.2, 1, 1.1, 1],
+                    }}
+                    transition={{
+                      times: [0, 0.2, 0.4, 0.6, 0.8, 1],
+                      duration: 5,
+                    }}
+                    className="absolute w-[180px] h-[180px] left-40 bottom-0 opacity-20"
+                  >
+                    <img
+                      src={"img/icons/move-white.png"}
+                      alt={"move icon"}
+                      className="w-full h-full object-contain rounded-2xl"
+                    />
+                  </motion.div>
+                )}
+              </div>
+            )}
+          </InView>
+        )}
       </div>
-
       <img
         className="w-[700px] mr-0 ml-auto absolute right-0 bottom-[-450px] opacity-[20%]"
         src="img/computer-desk-light-4.png"
