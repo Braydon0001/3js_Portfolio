@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-
+import { InView } from "react-intersection-observer";
 import { styles } from "../style";
 import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -37,10 +37,11 @@ const About = () => {
 
       <div className="mt-20 flex flex-wrap gap-10 w-fit mr-5">
         <div className="xl:w-[1600px] flex flex-wrap justify-between relative">
-          <div className="w-full xl:w-[800px] flex justify-between relative ">
+          <div className="w-full xl:w-[800px] flex justify-between relative z-10">
             <ul className="list-none flex flex-wrap flex-row xl:flex-col  justify-center gap-x-10 xl:px-0 px-5 xl:gap-1">
               {services.map((service, index) => (
                 <li
+                  key={service.title + index}
                   onClick={() => setSkill(index)}
                   data-content={service.title}
                   className={`lg:text-[74px] text-center xl:text-left w-[45%] xl:w-full sm:text-[60px] xs:text-[50px] text-[40px] font-bold cursor-pointer text-transparent stroke-white stroke-1 listItems relative ${
@@ -52,6 +53,33 @@ const About = () => {
               ))}
             </ul>
           </div>
+
+          <InView>
+            {({ inView, ref }) => (
+              <div ref={ref}>
+                {inView && (
+                  <motion.div
+                    initial={{ opacity: 1, scale: 1 }}
+                    animate={{
+                      opacity: [0.2, 0, 0.2, 0, 0.2, 0],
+                      scale: [1, 1.2, 1, 1.1, 1],
+                    }}
+                    transition={{
+                      times: [0, 0.2, 0.4, 0.6, 0.8, 1],
+                      duration: 5,
+                    }}
+                    className="absolute w-[180px] h-[180px] xl:left-[8%] left-[35%] translate-x-[-35%] xl:translate-x-0 bottom-32 xl:bottom-24 opacity-20"
+                  >
+                    <img
+                      src={"img/icons/click-white.png"}
+                      alt={"move icon"}
+                      className="w-full h-full object-contain rounded-2xl"
+                    />
+                  </motion.div>
+                )}
+              </div>
+            )}
+          </InView>
 
           <div className="w-full xl:w-[800px] flex justify-between relative ">
             <div className="glass w-[350px] rounded-lg absolute right-[140px] xl:right-[60px]  p-5 top-[40px] xl:top-[90px]">

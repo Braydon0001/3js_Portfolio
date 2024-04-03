@@ -20,7 +20,7 @@ const Demos = () => {
       </motion.div>
 
       {/* work cards */}
-      <div className="mx-[60px] xl:mx-0 mt-14 flex flex-wrap gap-7 w-full relative">
+      <div className="mx-[60px] xl:mx-0 mt-14 flex flex-wrap gap-7  relative">
         <VideoDemo
           index={0}
           title={"Illovo Fiscal Calendar"}
