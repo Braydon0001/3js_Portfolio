@@ -18,16 +18,9 @@ const Hero = () => {
   }, []);
 
   return (
-    <section
-      onMouseDown={() => setIsGrabbing(true)}
-      onMouseUp={() => setIsGrabbing(false)}
-      className={cn(
-        `relative w-full h-[90vh] xs:h-screen mx-auto cursor-grab`,
-        isGrabbing && "cursor-grabbing"
-      )}
-    >
+    <section className={"relative w-full h-[90vh] xs:h-screen mx-auto"}>
       <div
-        className={` absolute inset-0 top-[160px] mx-14 max-w-[1600px] xl:mx-auto flex flex-row items-start gap-5`}
+        className={`absolute inset-0 top-[160px] mx-14 max-w-[1600px] xl:mx-auto flex flex-row items-start gap-5`}
       >
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915eff]" />
@@ -42,8 +35,45 @@ const Hero = () => {
             Fullstack Software Developer <br /> UI/UX Designer
           </p>
         </div>
+        {!isLoading && (
+          <InView>
+            {({ inView, ref }) => (
+              <div ref={ref}>
+                {inView && (
+                  <motion.div
+                    initial={{ opacity: 1, scale: 1 }}
+                    animate={{
+                      opacity: [0, 0.7, 0, 0.6, 0, 0],
+                      scale: [1, 1.1, 1, 1.1, 1, 1, 0],
+                    }}
+                    transition={{
+                      times: [0, 0.2, 0.4, 0.6],
+                      duration: 4,
+                    }}
+                    className="absolute w-[145px] h-[145px] left-[46.5%] translate-x-[-46.5%] bottom-[31%] translate-y-[-31%] opacity-20 z-20"
+                  >
+                    <img
+                      src={"img/icons/move-white.png"}
+                      alt={"move icon"}
+                      className="w-full h-full object-contain rounded-2xl"
+                    />
+                  </motion.div>
+                )}
+              </div>
+            )}
+          </InView>
+        )}
       </div>
-      <ComputersCanvas />
+      <div
+        onMouseDown={() => setIsGrabbing(true)}
+        onMouseUp={() => setIsGrabbing(false)}
+        className={cn(
+          `m-auto pr-4 w-3/4 h-full cursor-grab`,
+          isGrabbing && "cursor-grabbing"
+        )}
+      >
+        <ComputersCanvas />
+      </div>
       <div className="absolute xs:bottom-6 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
@@ -58,34 +88,6 @@ const Hero = () => {
             />
           </div>
         </a>
-        {!isLoading && (
-          <InView>
-            {({ inView, ref }) => (
-              <div ref={ref}>
-                {inView && (
-                  <motion.div
-                    initial={{ opacity: 1, scale: 1 }}
-                    animate={{
-                      opacity: [0.2, 0, 0.2, 0, 0.2, 0],
-                      scale: [1, 1.2, 1, 1.1, 1],
-                    }}
-                    transition={{
-                      times: [0, 0.2, 0.4, 0.6, 0.8, 1],
-                      duration: 5,
-                    }}
-                    className="absolute w-[180px] h-[180px] left-40 bottom-0 opacity-20"
-                  >
-                    <img
-                      src={"img/icons/move-white.png"}
-                      alt={"move icon"}
-                      className="w-full h-full object-contain rounded-2xl"
-                    />
-                  </motion.div>
-                )}
-              </div>
-            )}
-          </InView>
-        )}
       </div>
       <img
         className="w-[700px] mr-0 ml-auto absolute right-0 bottom-[-450px] opacity-[20%]"
