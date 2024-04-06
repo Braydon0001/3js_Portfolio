@@ -9,6 +9,12 @@ import { styles } from "../style";
 import { fadeIn, textVariant } from "../utils/motion";
 import LightGalleryWrapper from "./LightGalleryWrapper";
 import GlassPopup from "./custom-ui/GlassPopup";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "./ui/tooltip";
 
 const ProjectCard = ({
   index,
@@ -49,7 +55,16 @@ const ProjectCard = ({
                       data-src={video_link}
                     >
                       <div className="bg-gray-800  w-10 h-10 rounded-full flex justify-center items-center cursor-pointer hover:bg-[#de4444]">
-                        <Play color="white" width={27} height={27} />
+                        <TooltipProvider delayDuration={0}>
+                          <Tooltip>
+                            <TooltipTrigger>
+                              <Play color="white" width={27} height={27} />
+                            </TooltipTrigger>
+                            <TooltipContent side="bottom" sideOffset={15}>
+                              Demo Video
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
                       </div>
                     </a>
                   </LightGalleryWrapper>
@@ -65,7 +80,20 @@ const ProjectCard = ({
                         data-src={figma_link}
                       >
                         <div className="bg-gray-800 hover:bg-[#de4444] w-10 h-10 rounded-full flex justify-center items-center cursor-pointer ">
-                          <FigmaLogoIcon color="white" width={27} height={27} />
+                          <TooltipProvider delayDuration={0}>
+                            <Tooltip>
+                              <TooltipTrigger>
+                                <FigmaLogoIcon
+                                  color="white"
+                                  width={27}
+                                  height={27}
+                                />
+                              </TooltipTrigger>
+                              <TooltipContent side="bottom" sideOffset={15}>
+                                Figma Prototype
+                              </TooltipContent>
+                            </Tooltip>
+                          </TooltipProvider>
                         </div>
                       </a>
                     </LightGalleryWrapper>
@@ -119,7 +147,16 @@ const ProjectCard = ({
                       data-src={video_link}
                     >
                       <div className="bg-gray-800 hover:bg-[#de4444] w-10 h-10 rounded-full flex justify-center items-center cursor-pointer ">
-                        <Play color="white" width={27} height={27} />
+                        <TooltipProvider delayDuration={0}>
+                          <Tooltip>
+                            <TooltipTrigger>
+                              <Play color="white" width={27} height={27} />
+                            </TooltipTrigger>
+                            <TooltipContent side="bottom" sideOffset={15}>
+                              Demo Video
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
                       </div>
                     </a>
                   </LightGalleryWrapper>
@@ -138,7 +175,20 @@ const ProjectCard = ({
                         data-src={figma_link}
                       >
                         <div className="bg-gray-800 hover:bg-[#de4444] w-10 h-10 rounded-full flex justify-center items-center cursor-pointer ">
-                          <FigmaLogoIcon color="white" width={27} height={27} />
+                          <TooltipProvider delayDuration={0}>
+                            <Tooltip>
+                              <TooltipTrigger>
+                                <FigmaLogoIcon
+                                  color="white"
+                                  width={27}
+                                  height={27}
+                                />
+                              </TooltipTrigger>
+                              <TooltipContent side="bottom" sideOffset={15}>
+                                Figma Prototype
+                              </TooltipContent>
+                            </Tooltip>
+                          </TooltipProvider>
                         </div>
                       </a>
                     </LightGalleryWrapper>
