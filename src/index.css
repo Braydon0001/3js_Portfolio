@@ -415,3 +415,173 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* custom styles */
+.glassWhiter,
+.glassWhiter:hover {
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.6) 0%,
+    rgba(255, 255, 255, 0.2) 100%
+  ) !important;
+}
+
+.glassWhiter2,
+.glassWhiter2:hover {
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0.2) 100%
+  ) !important;
+}
+
+.glassWhiter3,
+.glassWhiter3:hover {
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0.45) 100%
+  ) !important;
+}
+
+.glassWhiter4,
+.glassWhiter4:hover {
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.6) 100%
+  ) !important;
+}
+
+.glassWhiter5,
+.glassWhiter5:hover {
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  ) !important;
+}
+
+/* blur notification drawer bg*/
+.transparent-blur-bg {
+  mix-blend-mode: normal;
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+}
+
+/* scrollbar styling */
+
+.scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 10px;
+}
+
+.scrollbarWidth2::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbarWidth3::-webkit-scrollbar {
+  width: 12px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  border-radius: 100vh;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  mix-blend-mode: normal;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: #e2e8f0;
+  border-radius: 100vh;
+  border: 0px solid #e2e8f0;
+}
+
+.scrollbar-glass.scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 100vh;
+  border: 0px solid #fff;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+
+/* ---------------------------------------------------------- */
+/* ----------------new scroll bar with arrows ----------------*/
+/* ---------------------------------------------------------- */
+
+.scrollbar2::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.scrollbar2::-webkit-scrollbar-track {
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  mix-blend-mode: normal;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+}
+
+.scrollbar2::-webkit-scrollbar-thumb {
+  background: #e2e8f0;
+  border: 0px solid #e2e8f0;
+}
+
+.scrollbar-glass.scrollbar2::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 100vh;
+  border: 0px solid #fff;
+}
+
+.scrollbar2::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+/* Buttons */
+.scrollbar2::-webkit-scrollbar-button:single-button {
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  mix-blend-mode: normal;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  display: block;
+  border-style: solid;
+  height: 13px;
+  width: 16px;
+}
+/* Up */
+.scrollbar2::-webkit-scrollbar-button:single-button:vertical:decrement {
+  border-width: 0 5px 5px 5px;
+  border-color: #e2e8f0 #e2e8f0 rgba(255, 255, 255, 0.9) #e2e8f0;
+  border-radius: 50px 50px 0 0;
+}
+.scrollbar2::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+  border-color: #e2e8fad0 #e2e8fad0 #000 #e2e8fad0;
+}
+/* Down */
+.scrollbar2::-webkit-scrollbar-button:single-button:vertical:increment {
+  border-width: 5px 5px 0 5px;
+  border-color: rgba(255, 255, 255, 0.9) #e2e8f0 #e2e8f0 #e2e8f0;
+  border-radius: 0 0 50px 50px;
+}
+.scrollbar2::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+  border-color: #000 #e2e8fad0 #e2e8fad0 #e2e8fad0;
+}

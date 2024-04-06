@@ -255,12 +255,17 @@ const projects: ProjectType[] = [
       },
     ],
     image: carrent,
-    source_code_link: "https://github.com/",
+    video_iframe_links: [
+      "https://www.youtube.com/embed/dQw4w9WgXcQ?si=w71qYNEZ3-dO8mbH",
+    ],
+    figma_links: [
+      "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fdsop7M44BoWU60uSWSzYhW%2FSurgical-Society%3Fnode-id%3D1-12%26starting-point-node-id%3D1%253A12%26mode%3Ddesign%26t%3D5dNG1ZQlP9PTioS5-1",
+    ],
   },
   {
     name: "Engage Employee Portal",
     description:
-      "A Next.js project that consisted of multiple components such as a public site, employee portal accessible via login and a headless Content Management System. This was my first enterprise project at Kodelab. I started by Creating LoFi and HiFi figma prototypes. Once approved i moved on to building the front-end of the system using Tailwind CSS (big fan) and building mostly custom components while leveraging UI libraries where it made sense. I then moved on to the headless content management system i.e. Sanity.io and build out the CMS backend and integrated the data via its GROQ API",
+      "A Next.js project that consisted of multiple components such as a public site, employee portal accessible via login and a headless Content Management System for the client. This was my first enterprise project at Kodelab. I started by Creating LoFi and HiFi figma prototypes. Once approved i moved on to building the front-end of the system using Tailwind CSS and built out mostly custom components while leveraging UI libraries where it made sense. I then moved on to the headless content management system i.e. Sanity.io and build out the CMS backend and integrated the data via its GROQ API",
     tags: [
       {
         name: "Next.js",
@@ -288,7 +293,10 @@ const projects: ProjectType[] = [
       },
     ],
     image: jobit,
-    source_code_link: "https://github.com/",
+    // video_iframe_links: [""],
+    figma_links: [
+      "https://www.figma.com/proto/dBwfWvP5wqCoPmOFHVQ38q/Engage-Website-Design?node-id=1108-5&starting-point-node-id=1108%3A5&mode=design&t=myrpyQbUxOCEZWzm-1",
+    ],
   },
   {
     name: "Expense Claims",
@@ -309,7 +317,6 @@ const projects: ProjectType[] = [
       },
     ],
     image: tripguide,
-    source_code_link: "https://github.com/",
   },
   {
     name: "Illovo CPA",
@@ -334,7 +341,6 @@ const projects: ProjectType[] = [
       },
     ],
     image: tripguide,
-    source_code_link: "https://github.com/",
   },
   {
     name: "RCL Foods Activity Tracker",
@@ -355,7 +361,6 @@ const projects: ProjectType[] = [
       },
     ],
     image: tripguide,
-    source_code_link: "https://github.com/",
   },
   {
     name: "Works Group",
@@ -376,7 +381,6 @@ const projects: ProjectType[] = [
       },
     ],
     image: tripguide,
-    source_code_link: "https://github.com/",
   },
 ];
 

@@ -14,7 +14,7 @@ const Hero = () => {
     // Simulate a delay for loading the data
     setTimeout(() => {
       setIsLoading(false);
-    }, 1500); // 2 seconds delay
+    }, 2000); // 2 seconds delay
   }, []);
 
   return (

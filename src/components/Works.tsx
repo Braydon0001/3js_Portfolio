@@ -1,12 +1,14 @@
+import { ProjectType } from "@/common/constantTypes";
+import { FigmaLogoIcon } from "@radix-ui/react-icons";
 import { motion } from "framer-motion";
-import { projects } from "../constants";
-import { fadeIn, textVariant } from "../utils/motion";
-import { styles } from "../style";
-import Tilt from "react-tilt";
-import { github } from "../assets";
-import { MdArrowRightAlt } from "react-icons/md";
-import CustomModal from "./custom-ui/CustomModal";
+import { Play } from "lucide-react";
 import { useState } from "react";
+import { MdArrowRightAlt } from "react-icons/md";
+import { projects } from "../constants";
+import { styles } from "../style";
+import { fadeIn, textVariant } from "../utils/motion";
+import LightGalleryWrapper from "./LightGalleryWrapper";
+import GlassPopup from "./custom-ui/GlassPopup";
 
 const ProjectCard = ({
   index,
@@ -14,40 +16,66 @@ const ProjectCard = ({
   description,
   tags,
   image,
-  source_code_link,
-}) => {
+  video_iframe_links,
+  figma_links,
+}: ProjectType & { index: number }) => {
   const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
+  const hasFigmaLinks = figma_links && figma_links?.length > 0;
+  const hasVideoLinks = video_iframe_links && video_iframe_links?.length > 0;
   return (
     <>
-      <CustomModal
+      <GlassPopup
         isOpen={isProfileModalOpen}
         setIsOpen={setIsProfileModalOpen}
+        lightBg
       >
-        <div
-          // options={{ max: 45, scale: 1, speed: 450 }}
-          className="flex flex-col justify-between relative p-5 rounded-2xl h-full min-h-[486px] xl:min-h-[601px] "
-        >
+        <div className="flex flex-col justify-between relative p-5 rounded-2xl h-full min-h-[486px] xl:min-h-[601px] ">
           <div>
-            <div className="relative w-full h-[230px] xl:h-[330px]">
+            <div className="relative w-full h-[230px] xl:h-[510px]">
               <img
                 src={image}
                 alt={name}
                 className="w-full h-full object-cover rounded-2xl"
               />
             </div>
-
-            <div className="absolute inset-0 flex justify-end m-8 card-img_hover Z-30">
-              <Tilt
-                onClick={() => window.open(source_code_link, "_blank")}
-                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer "
-              >
-                <img src={github} alt={"github"} className="w-1/2 h-1/2" />
-              </Tilt>
+            <div className="w-full flex gap-2 absolute top-0 right-0">
+              {hasVideoLinks &&
+                video_iframe_links?.map((video_link, index) => (
+                  <LightGalleryWrapper key={index}>
+                    <a
+                      className="text-[18px] text-white"
+                      id={video_link}
+                      data-iframe="true"
+                      data-src={video_link}
+                    >
+                      <div className="bg-gray-800  w-10 h-10 rounded-full flex justify-center items-center cursor-pointer hover:bg-[#de4444]">
+                        <Play color="white" width={27} height={27} />
+                      </div>
+                    </a>
+                  </LightGalleryWrapper>
+                ))}
+              {hasFigmaLinks &&
+                figma_links?.map((figma_link, index) => (
+                  <div key={index}>
+                    <LightGalleryWrapper key={index}>
+                      <a
+                        className="text-[18px] text-white"
+                        id={figma_link}
+                        data-iframe="true"
+                        data-src={figma_link}
+                      >
+                        <div className="bg-gray-800 hover:bg-[#de4444] w-10 h-10 rounded-full flex justify-center items-center cursor-pointer ">
+                          <FigmaLogoIcon color="white" width={27} height={27} />
+                        </div>
+                      </a>
+                    </LightGalleryWrapper>
+                  </div>
+                ))}
             </div>
 
             <div className="mt-5">
               <h3 className=" font-bold text-[24px]">{name}</h3>
-              <p className=" text-[rgba(0,0,0,0.7)] mt-2 text-[16px]">
+              <p className=" text-[rgba(0,0,0,0.9)] mt-2 text-[16px]">
                 {description}
               </p>
             </div>
@@ -55,22 +83,22 @@ const ProjectCard = ({
 
           <div className="mt-4 flex flex-wrap gap-2">
             {tags?.map((tag, index) => (
-              <p key={tag?.name} className={`text-[14px] ${tag?.color}`}>
+              <p
+                key={tag?.name}
+                className={`text-[15px] ${tag?.color} font-medium`}
+              >
                 {tag?.name}
               </p>
             ))}
           </div>
         </div>
-      </CustomModal>
+      </GlassPopup>
       <motion.div
         onClick={() => setIsProfileModalOpen(true)}
         className="sm:w-[calc(33.33%-19px)] cursor-pointer w-full h-full min-h-[486px] xl:min-h-[601px] hover:scale-[1.02] transition-transform duration-300 ease-in-out rounded-2xl "
         variants={fadeIn("up", "spring", index * 0.5, 0.75)}
       >
-        <div
-          // options={{ max: 45, scale: 1, speed: 450 }}
-          className="flex flex-col justify-between glass p-5 rounded-2xl h-full min-h-[486px] xl:min-h-[601px] "
-        >
+        <div className="flex flex-col justify-between glass p-5 rounded-2xl h-full min-h-[486px] xl:min-h-[601px] ">
           <div>
             <div className="relative w-full h-[230px] xl:h-[330px]">
               <img
@@ -80,13 +108,42 @@ const ProjectCard = ({
               />
             </div>
 
-            <div className="absolute inset-0 flex justify-end m-8 card-img_hover Z-30">
-              <Tilt
-                onClick={() => window.open(source_code_link, "_blank")}
-                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer "
-              >
-                <img src={github} alt={"github"} className="w-1/2 h-1/2" />
-              </Tilt>
+            <div className="w-full flex gap-2 absolute top-0 right-0  p-8">
+              {hasVideoLinks &&
+                video_iframe_links?.map((video_link, index) => (
+                  <LightGalleryWrapper key={index}>
+                    <a
+                      className="text-[18px] text-white"
+                      id={video_link}
+                      data-iframe="true"
+                      data-src={video_link}
+                    >
+                      <div className="bg-gray-800 hover:bg-[#de4444] w-10 h-10 rounded-full flex justify-center items-center cursor-pointer ">
+                        <Play color="white" width={27} height={27} />
+                      </div>
+                    </a>
+                  </LightGalleryWrapper>
+                ))}
+              {hasFigmaLinks &&
+                figma_links?.map((figma_link, index) => (
+                  <div
+                    key={index}
+                    // className="absolute inset-0 flex justify-end m-8 card-img_hover Z-30"
+                  >
+                    <LightGalleryWrapper key={index}>
+                      <a
+                        className="text-[18px] text-white"
+                        id={figma_link}
+                        data-iframe="true"
+                        data-src={figma_link}
+                      >
+                        <div className="bg-gray-800 hover:bg-[#de4444] w-10 h-10 rounded-full flex justify-center items-center cursor-pointer ">
+                          <FigmaLogoIcon color="white" width={27} height={27} />
+                        </div>
+                      </a>
+                    </LightGalleryWrapper>
+                  </div>
+                ))}
             </div>
 
             <div className="mt-5">
