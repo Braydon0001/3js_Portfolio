@@ -1,25 +1,64 @@
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { ReactNode, useRef } from "react";
 
-const ParrallaxBg = () => {
+const ParrallaxBg = ({ children }: { children: ReactNode }) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+  const backgroundY1 = useTransform(scrollYProgress, [0, 1], ["0%", "65%"]);
+  const backgroundY2 = useTransform(scrollYProgress, [0, 1], ["0%", "48%"]);
+  const backgroundY3 = useTransform(scrollYProgress, [0, 1], ["0%", "42%"]);
+  const backgroundY4 = useTransform(scrollYProgress, [0, 1], ["0%", "36%"]);
+
   return (
-    <Parallax
-      pages={1}
-      className="relative block z-20"
-      style={{ overflow: "hidden" }}
+    <div
+      ref={ref}
+      className="w-full h-full overflow-hidden relative grid place-items-center"
     >
-      <ParallaxLayer offset={0} speed={0.25}>
-        <div className="bg-parallax-layer-1  w-full h-full z-[5] bg-cover bg-no-repeat bg-bottom " />
-      </ParallaxLayer>
-      <ParallaxLayer offset={0} speed={-0.3}>
-        <div className="bg-parallax-layer-2  w-full h-full z-[10] bg-contain bg-no-repeat bg-bottom " />
-      </ParallaxLayer>
-      <ParallaxLayer offset={0} speed={0.5}>
-        <div className="bg-parallax-layer-3  w-full h-full z-[15] bg-contain bg-no-repeat bg-bottom " />
-      </ParallaxLayer>
-      <ParallaxLayer offset={0} speed={0.8}>
-        <div className="bg-parallax-layer-4  w-full h-full z-[20] bg-contain bg-no-repeat bg-bottom " />
-      </ParallaxLayer>
-    </Parallax>
+      <motion.div
+        className="absolute inset-0 z-[5]"
+        style={{
+          backgroundImage: "url(/img/bg/parallax-bg/Layer-1.jpg)",
+          backgroundPosition: "top",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          y: backgroundY1,
+        }}
+      />
+      <motion.div
+        className="absolute inset-0 z-[10]"
+        style={{
+          backgroundImage: "url(/img/bg/parallax-bg/Layer-2.png)",
+          backgroundPosition: "bottom",
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+          y: backgroundY2,
+        }}
+      />
+      <motion.div
+        className="absolute inset-0 z-[15]"
+        style={{
+          backgroundImage: "url(/img/bg/parallax-bg/Layer-3.png)",
+          backgroundPosition: "bottom",
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+          y: backgroundY3,
+        }}
+      />
+      <motion.div
+        className="absolute inset-0 z-[20]"
+        style={{
+          backgroundImage: "url(/img/bg/parallax-bg/Layer-4.png)",
+          backgroundPosition: "bottom",
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+          y: backgroundY4,
+        }}
+      />
+      {children}
+    </div>
   );
 };
 

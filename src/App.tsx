@@ -26,8 +26,9 @@ const App = () => {
         </div>
         <div className="relative">
           <div className="absolute w-full bg-gradient-to-b from-[#11235f] to-transparent top-0 h-[300px] z-30" />
-          <ParrallaxBg />
-          <Experience />
+          <ParrallaxBg>
+            <Experience />
+          </ParrallaxBg>
           <div className="absolute w-full bg-gradient-to-t from-[#11235f] to-transparent bottom-0 h-[300px] z-30" />
         </div>
         {/* <Tech /> */}
