@@ -7,10 +7,10 @@ const ParrallaxBg = ({ children }: { children: ReactNode }) => {
     target: ref,
     offset: ["start start", "end start"],
   });
-  const backgroundY1 = useTransform(scrollYProgress, [0, 1], ["0%", "65%"]);
-  const backgroundY2 = useTransform(scrollYProgress, [0, 1], ["0%", "48%"]);
-  const backgroundY3 = useTransform(scrollYProgress, [0, 1], ["0%", "42%"]);
-  const backgroundY4 = useTransform(scrollYProgress, [0, 1], ["0%", "36%"]);
+  const backgroundY1 = useTransform(scrollYProgress, [0, 1], ["0%", "60%"]);
+  const backgroundY2 = useTransform(scrollYProgress, [0, 1], ["0%", "45%"]);
+  const backgroundY3 = useTransform(scrollYProgress, [0, 1], ["0%", "35%"]);
+  const backgroundY4 = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
 
   return (
     <div
