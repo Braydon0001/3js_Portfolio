@@ -5,7 +5,7 @@ import { styles } from "../style";
 import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { cn } from "@/lib/utils";
-import { ChevronLeft, ChevronsLeft } from "lucide-react";
+import { ChevronLeft, ChevronsLeft, MoveLeft } from "lucide-react";
 
 const About = () => {
   const [skill, setSkill] = useState(0);
@@ -15,7 +15,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="w-fit max-w-[1600px] mx-6 xs:mx-auto my-[80px] relative"
+      className="w-fit max-w-[1600px] mx-6 xs:mx-auto py-[80px] relative"
     >
       <motion.div variants={textVariant()} className="xl:mx-0 xs:mx-[60px]">
         <p className={`${styles.sectionSubText} text-slate-100 w-fit`}>
@@ -52,8 +52,8 @@ const About = () => {
                 >
                   {service.title}
                   {skill == index && (
-                    <ChevronLeft
-                      style={{ width: "50px", height: "50px", marginTop: 5 }}
+                    <MoveLeft
+                      style={{ width: "40px", height: "40px", marginTop: 5 }}
                       color="rgba(255,255,255,0.7)"
                       // color="#de4444"
                     />
@@ -100,7 +100,7 @@ const About = () => {
             </div>
           </div>
 
-          <InView>
+          {/* <InView>
             {({ inView, ref }) => (
               <div ref={ref}>
                 {inView && (
@@ -125,7 +125,7 @@ const About = () => {
                 )}
               </div>
             )}
-          </InView>
+          </InView> */}
         </div>
       </div>
     </div>

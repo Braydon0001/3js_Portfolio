@@ -1,13 +1,13 @@
-import { motion } from 'framer-motion'
-import { fadeIn, textVariant } from '../utils/motion'
-import { styles } from '../style'
+import { motion } from "framer-motion";
+import { fadeIn, textVariant } from "../utils/motion";
+import { styles } from "../style";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
-} from 'react-vertical-timeline-component'
+} from "react-vertical-timeline-component";
 
-import 'react-vertical-timeline-component/style.min.css'
-import { experiences } from '../constants'
+import "react-vertical-timeline-component/style.min.css";
+import { experiences } from "../constants";
 // import { SectionWrapper } from '../utils/motion'
 
 const ExperienceCard = ({ experience }) => {
@@ -15,14 +15,14 @@ const ExperienceCard = ({ experience }) => {
     <VerticalTimelineElement
       contentStyle={{
         background:
-          'linear-gradient(to bottom right,rgba(255, 255, 255, 0.3) 0%,rgba(255, 255, 255, 0.1) 100%)',
-        border: '1px solid rgba(255, 255, 255, 0.3)',
-        boxShadow: '0px 20px 40px rgba(0, 0, 0, 0.05)',
-        backdropFilter: 'blur(9px)',
-        color: '#fff',
+          "linear-gradient(to bottom right,rgba(255, 255, 255, 0.3) 0%,rgba(255, 255, 255, 0.1) 100%)",
+        border: "1px solid rgba(255, 255, 255, 0.3)",
+        boxShadow: "0px 20px 40px rgba(0, 0, 0, 0.05)",
+        backdropFilter: "blur(9px)",
+        color: "#fff",
       }}
       contentArrowStyle={{
-        borderRight: '7px solid rgba(255,255,255,0.7)',
+        borderRight: "7px solid rgba(255,255,255,0.7)",
       }}
       date={experience.date}
       iconStyle={{ background: experience.iconBg }}
@@ -57,20 +57,20 @@ const ExperienceCard = ({ experience }) => {
         ))}
       </ul>
     </VerticalTimelineElement>
-  )
-}
+  );
+};
 
 const Experience = () => {
   return (
-    <div className="max-w-[1600px] xs:mx-auto xs:my-[80px]">
+    <div className="max-w-[1600px] xs:mx-auto xs:py-[80px] z-40 relative">
       <motion.div variants={textVariant()} className="xl:mx-0 xs:mx-[60px]">
         <p
-          className={`${styles.sectionSubText} text-slate-100 w-fit text-center w-full`}
+          className={`${styles.sectionSubText} text-slate-100 text-center w-full`}
         >
           My career
         </p>
         <h2
-          className={`${styles.sectionHeadText} w-fit text-accent text-center w-full`}
+          className={`${styles.sectionHeadText} text-accent text-center w-full`}
         >
           Work Experience
         </h2>
@@ -85,7 +85,7 @@ const Experience = () => {
         </VerticalTimeline>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Experience
+export default Experience;

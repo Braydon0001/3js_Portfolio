@@ -11,6 +11,7 @@ import {
   StarsCanvas,
 } from "./components";
 import Demos from "./components/Demos";
+import ParrallaxBg from "./components/ParrallaxBg";
 
 const App = () => {
   return (
@@ -20,11 +21,23 @@ const App = () => {
           <Navbar />
           <Hero />
         </div>
-        <About />
-        <Experience />
+        <div className="bg-gradient-to-t from-[#11235f] to-primary bg-contain bg-no-repeat bg-top">
+          <About />
+        </div>
+        <div className="relative">
+          <div className="absolute w-full bg-gradient-to-b from-[#11235f] to-transparent top-0 h-[300px] z-30" />
+          <ParrallaxBg />
+          <Experience />
+          <div className="absolute w-full bg-gradient-to-t from-[#11235f] to-transparent bottom-0 h-[300px] z-30" />
+        </div>
         {/* <Tech /> */}
-        <Demos />
-        <Works />
+        <div className="bg-gradient-to-b from-[#11235f] to-transparent bg-cover bg-no-repeat bg-bottom relative">
+          <Demos />
+          <div className="absolute w-full bg-gradient-to-t from-[#11235f] to-transparent bottom-0 h-[300px] z-30" />
+        </div>
+        <div className="bg-gradient-to-b from-[#11235f] to-primary bg-cover bg-no-repeat bg-top">
+          <Works />
+        </div>
         <Feedbacks />
         <div className="relative z-0">
           <Contact />

@@ -84,6 +84,18 @@ module.exports = {
       },
       backgroundImage: {
         "hero-pattern": "url('/src/assets/bg4.svg')",
+        "hero-bg-1": "url('/img/bg/bg-option-1.jpg')",
+        "hero-bg-1-1": "url('/img/bg/bg-option-1-1.jpg')",
+        "hero-bg-2": "url('/img/bg/bg-option-2.jpg')",
+        "hero-bg-3": "url('/img/bg/bg-option-3.jpg')",
+        "hero-bg-4": "url('/img/bg/bg-option-4.jpg')",
+        "hero-bg-5": "url('/img/bg/bg-option-5.jpg')",
+        "hero-bg-5-1": "url('/img/bg/bg-option-5-1.jpg')",
+
+        "parallax-layer-1": "url('/img/bg/parallax-bg/Layer-1.jpg')",
+        "parallax-layer-2": "url('/img/bg/parallax-bg/Layer-2.png')",
+        "parallax-layer-3": "url('/img/bg/parallax-bg/Layer-3.png')",
+        "parallax-layer-4": "url('/img/bg/parallax-bg/Layer-4.png')",
       },
     },
   },
