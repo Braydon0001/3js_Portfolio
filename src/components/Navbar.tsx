@@ -26,8 +26,7 @@ const Navbar = () => {
   return (
     <nav
       className={cn(
-        `${styles.paddingX} transition-all duration-[0.5s] ease w-full flex items-center py-5 fixed top-0 z-20 bg-primary glass
-  `,
+        `${styles.paddingX} transition-all duration-[0.5s] ease w-full flex items-center py-5 fixed top-0 z-50 bg-primary glass`,
         isNavSticky && "py-2"
       )}
     >
