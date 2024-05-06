@@ -34,7 +34,7 @@ const Demos = () => {
           title={"Clerk Auth Solution"}
           image={"/img/thumbnails/clerk-thumb.jpg"}
           videoUrl={
-            "https://www.youtube.com/embed/HgmA5pqZEuI?si=E7ZdcUxYfGFPxrcd"
+            "https://www.youtube.com/embed/gj5ehZWogQM?si=oJcj9FOAGwxzylFt"
           }
         />
         <VideoDemo
