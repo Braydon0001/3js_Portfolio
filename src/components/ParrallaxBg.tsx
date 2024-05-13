@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ReactNode, useRef } from "react";
+import ParticleBackground from "./ParticleBackground";
 
 const ParrallaxBg = ({ children }: { children: ReactNode }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -31,6 +32,7 @@ const ParrallaxBg = ({ children }: { children: ReactNode }) => {
           y: backgroundY1,
         }}
       />
+      <ParticleBackground />
       <motion.div
         className="absolute inset-0 z-[10]"
         style={{

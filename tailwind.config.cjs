@@ -96,6 +96,9 @@ module.exports = {
         "parallax-layer-2": "url('/img/bg/parallax-bg/Layer-2.png')",
         "parallax-layer-3": "url('/img/bg/parallax-bg/Layer-3.png')",
         "parallax-layer-4": "url('/img/bg/parallax-bg/Layer-4.png')",
+
+        "paricle-radial":
+          "radial-gradient(50% 50% at 50% 50%, rgba(245, 222, 250,0.5) 0%, rgba(145,94,255,0) 100%)",
       },
     },
   },
