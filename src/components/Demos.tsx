@@ -22,11 +22,19 @@ const Demos = () => {
       {/* work cards */}
       <div className="mx-[60px] xl:mx-0 mt-14 flex flex-wrap gap-7  relative">
         <VideoDemo
-          index={0}
-          title={"Illovo Fiscal Calendar"}
-          image={"/img/thumbnails/illovo-thumb.jpg"}
+          index={1}
+          title={"Data Hierarchy Tree Renderer"}
+          image={"/img/thumbnails/organogram-demo-thumb.png"}
           videoUrl={
-            "https://www.youtube.com/embed/fgGxjS85b6U?si=9OClaGYIU5-5lftB"
+            "https://www.youtube.com/embed/ATioOmdy0QU?si=awcIojnD_Fvzw_wo"
+          }
+        />
+        <VideoDemo
+          index={2}
+          title={"Expense Claims Admin Backend"}
+          image={"/img/thumbnails/expense-claims-admin-thumb.png"}
+          videoUrl={
+            "https://www.youtube.com/embed/D8GQOih-mR0?si=RbHtz8-o_1nLAJAZ"
           }
         />
         <VideoDemo
@@ -34,7 +42,7 @@ const Demos = () => {
           title={"Clerk Auth Solution"}
           image={"/img/thumbnails/clerk-thumb.jpg"}
           videoUrl={
-            "https://www.youtube.com/embed/gj5ehZWogQM?si=oJcj9FOAGwxzylFt"
+            "https://www.youtube.com/embed/XOaxkhZBzFg?si=JS4Bb7zpLLgqP0Pe"
           }
         />
         <VideoDemo
@@ -42,7 +50,23 @@ const Demos = () => {
           title={"Dynamic Theming Solution"}
           image={"/img/thumbnails/theming-thumb.jpg"}
           videoUrl={
-            "https://www.youtube.com/embed/u5nE3pJudxs?si=8kccrqERhmc4usgb"
+            "https://www.youtube.com/embed/OB_N6iv07Wg?si=LburBzs9h1S1FFsI"
+          }
+        />
+        <VideoDemo
+          index={0}
+          title={"Illovo Fiscal Calendar"}
+          image={"/img/thumbnails/illovo-thumb.jpg"}
+          videoUrl={
+            "https://www.youtube.com/embed/V6ZwApN66dU?si=wkQEOe7tSQkq0L5v"
+          }
+        />
+        <VideoDemo
+          index={2}
+          title={"Products Module"}
+          image={"/img/thumbnails/product-module-thumb.png"}
+          videoUrl={
+            "https://www.youtube.com/embed/OOeQQqqmUJA?si=i9sj_AZcQfqIBAqW"
           }
         />
         <div className="mr-[-3px] flex w-full justify-end mt-6">
