@@ -6,9 +6,9 @@ import { Icon } from "./Icon";
 import LightGalleryWrapper from "./LightGalleryWrapper";
 import { useState } from "react";
 import GlassPopup from "./custom-ui/GlassPopup";
-import { Button } from "./ui/button";
 import { MdArrowRightAlt } from "react-icons/md";
 import { cn } from "@/lib/utils";
+import { Button } from "./aceternity-ui/moving-border";
 
 const Demos = () => {
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
@@ -155,8 +155,9 @@ const Demos = () => {
           />
           <div className="mr-[-3px] flex w-full justify-end mt-6">
             <Button
-              className="py-3 text-lg text-primary-foreground flex items-center hover:bg-opacity-90"
-              variant="ghost"
+              borderRadius="1rem"
+              borderClassName="bg-[radial-gradient(var(--purple-500)_40%,transparent_60%)]"
+              className="text-white px-2 pt-[2px] bg-primary hover:bg-[#031249]"
               onClick={() => setIsDemoModalOpen(true)}
             >
               View All Demos{" "}
