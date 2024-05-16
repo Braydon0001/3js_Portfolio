@@ -1,91 +1,184 @@
 import { styles } from "@/style";
 import { fadeIn, textVariant } from "@/utils/motion";
 import { motion } from "framer-motion";
-import { MdArrowRightAlt } from "react-icons/md";
-import LinkButton from "./LinkButton";
 import Tilt from "react-tilt";
 import { Icon } from "./Icon";
 import LightGalleryWrapper from "./LightGalleryWrapper";
+import { useState } from "react";
+import GlassPopup from "./custom-ui/GlassPopup";
+import { Button } from "./ui/button";
+import { MdArrowRightAlt } from "react-icons/md";
+import { cn } from "@/lib/utils";
 
 const Demos = () => {
+  const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
   return (
-    <div className="max-w-[1600px] xs:mx-auto xs:py-[80px] relative z-40">
-      <motion.div variants={textVariant()} className="xl:mx-0 xs:mx-[60px]">
-        <p className={`${styles.sectionSubText} text-slate-100 w-fit`}>
-          My Apps & Solutions
-        </p>
-        <h2 className={`${styles.sectionHeadText} w-fit text-accent`}>
-          My Demos
-        </h2>
-      </motion.div>
-
-      {/* work cards */}
-      <div className="mx-[60px] xl:mx-0 mt-14 flex flex-wrap gap-7  relative">
-        <VideoDemo
-          index={1}
-          title={"Data Hierarchy Tree Renderer"}
-          image={"/img/thumbnails/organogram-demo-thumb.png"}
-          videoUrl={
-            "https://www.youtube.com/embed/ATioOmdy0QU?si=awcIojnD_Fvzw_wo"
-          }
-        />
-        <VideoDemo
-          index={2}
-          title={"Expense Claims Admin Backend"}
-          image={"/img/thumbnails/expense-claims-admin-thumb.png"}
-          videoUrl={
-            "https://www.youtube.com/embed/D8GQOih-mR0?si=RbHtz8-o_1nLAJAZ"
-          }
-        />
-        <VideoDemo
-          index={1}
-          title={"Clerk Auth Solution"}
-          image={"/img/thumbnails/clerk-thumb.jpg"}
-          videoUrl={
-            "https://www.youtube.com/embed/XOaxkhZBzFg?si=JS4Bb7zpLLgqP0Pe"
-          }
-        />
-        <VideoDemo
-          index={2}
-          title={"Dynamic Theming Solution"}
-          image={"/img/thumbnails/theming-thumb.jpg"}
-          videoUrl={
-            "https://www.youtube.com/embed/OB_N6iv07Wg?si=LburBzs9h1S1FFsI"
-          }
-        />
-        <VideoDemo
-          index={0}
-          title={"Illovo Fiscal Calendar"}
-          image={"/img/thumbnails/illovo-thumb.jpg"}
-          videoUrl={
-            "https://www.youtube.com/embed/V6ZwApN66dU?si=wkQEOe7tSQkq0L5v"
-          }
-        />
-        <VideoDemo
-          index={2}
-          title={"Products Module"}
-          image={"/img/thumbnails/product-module-thumb.png"}
-          videoUrl={
-            "https://www.youtube.com/embed/OOeQQqqmUJA?si=i9sj_AZcQfqIBAqW"
-          }
-        />
-        <div className="mr-[-3px] flex w-full justify-end mt-6">
-          <LinkButton
-            url={`#`}
-            typography={{ value: "View All" }}
-            container={{ className: "mr-[-16px]" }}
+    <>
+      <GlassPopup
+        heading="My Demos"
+        isOpen={isDemoModalOpen}
+        setIsOpen={setIsDemoModalOpen}
+      >
+        {/* work cards */}
+        <div className="mx-[60px] xl:mx-0 mt-6 flex flex-wrap gap-7  relative">
+          <VideoDemo
+            index={1}
+            title={"Data Hierarchy Tree Renderer"}
+            image={"/img/thumbnails/organogram-demo-thumb.jpg"}
+            videoUrl={
+              "https://www.youtube.com/embed/ATioOmdy0QU?si=awcIojnD_Fvzw_wo"
+            }
+            isLight
+          />
+          <VideoDemo
+            index={2}
+            title={"Expense Claims Admin Backend"}
+            image={"/img/thumbnails/expense-claims-admin-thumb.jpg"}
+            videoUrl={
+              "https://www.youtube.com/embed/D8GQOih-mR0?si=RbHtz8-o_1nLAJAZ"
+            }
+            isLight
+          />
+          <VideoDemo
+            index={1}
+            title={"Clerk Auth Solution"}
+            image={"/img/thumbnails/clerk-thumb.jpg"}
+            videoUrl={
+              "https://www.youtube.com/embed/XOaxkhZBzFg?si=JS4Bb7zpLLgqP0Pe"
+            }
+            isLight
+          />
+          <VideoDemo
+            index={2}
+            title={"Dynamic Theming Solution"}
+            image={"/img/thumbnails/theming-thumb.jpg"}
+            videoUrl={
+              "https://www.youtube.com/embed/OB_N6iv07Wg?si=LburBzs9h1S1FFsI"
+            }
+            isLight
+          />
+          <VideoDemo
+            index={0}
+            title={"Illovo Fiscal Calendar"}
+            image={"/img/thumbnails/illovo-thumb.jpg"}
+            videoUrl={
+              "https://www.youtube.com/embed/V6ZwApN66dU?si=wkQEOe7tSQkq0L5v"
+            }
+            isLight
+          />
+          <VideoDemo
+            index={2}
+            title={"Products Module"}
+            image={"/img/thumbnails/product-module-thumb.jpg"}
+            videoUrl={
+              "https://www.youtube.com/embed/OOeQQqqmUJA?si=i9sj_AZcQfqIBAqW"
+            }
+            isLight
+          />
+          <VideoDemo
+            index={2}
+            title={"Advanced Surgeon Forms App"}
+            image={"/img/thumbnails/surgeon-demo-thumb.jpg"}
+            videoUrl={
+              "https://www.youtube.com/embed/k0A38OoG_wo?si=48B_n7GrZ-6UQl0K"
+            }
+            isLight
           />
         </div>
+      </GlassPopup>
+      <div className="max-w-[1600px] xs:mx-auto xs:py-[80px] relative z-40">
+        <motion.div variants={textVariant()} className="xl:mx-0 xs:mx-[60px]">
+          <p className={`${styles.sectionSubText} text-slate-100 w-fit`}>
+            My Apps & Solutions
+          </p>
+          <h2 className={`${styles.sectionHeadText} w-fit text-accent`}>
+            My Demos
+          </h2>
+        </motion.div>
+
+        {/* work cards */}
+        <div className="mx-[60px] xl:mx-0 mt-14 flex flex-wrap gap-7  relative">
+          <VideoDemo
+            index={1}
+            title={"Data Hierarchy Tree Renderer"}
+            image={"/img/thumbnails/organogram-demo-thumb.jpg"}
+            videoUrl={
+              "https://www.youtube.com/embed/ATioOmdy0QU?si=awcIojnD_Fvzw_wo"
+            }
+          />
+          <VideoDemo
+            index={2}
+            title={"Expense Claims Admin Backend"}
+            image={"/img/thumbnails/expense-claims-admin-thumb.jpg"}
+            videoUrl={
+              "https://www.youtube.com/embed/D8GQOih-mR0?si=RbHtz8-o_1nLAJAZ"
+            }
+          />
+          <VideoDemo
+            index={1}
+            title={"Clerk Auth Solution"}
+            image={"/img/thumbnails/clerk-thumb.jpg"}
+            videoUrl={
+              "https://www.youtube.com/embed/XOaxkhZBzFg?si=JS4Bb7zpLLgqP0Pe"
+            }
+          />
+          <VideoDemo
+            index={2}
+            title={"Dynamic Theming Solution"}
+            image={"/img/thumbnails/theming-thumb.jpg"}
+            videoUrl={
+              "https://www.youtube.com/embed/OB_N6iv07Wg?si=LburBzs9h1S1FFsI"
+            }
+          />
+          <VideoDemo
+            index={0}
+            title={"Illovo Fiscal Calendar"}
+            image={"/img/thumbnails/illovo-thumb.jpg"}
+            videoUrl={
+              "https://www.youtube.com/embed/V6ZwApN66dU?si=wkQEOe7tSQkq0L5v"
+            }
+          />
+          <VideoDemo
+            index={2}
+            title={"Products Module"}
+            image={"/img/thumbnails/product-module-thumb.jpg"}
+            videoUrl={
+              "https://www.youtube.com/embed/OOeQQqqmUJA?si=i9sj_AZcQfqIBAqW"
+            }
+          />
+          <div className="mr-[-3px] flex w-full justify-end mt-6">
+            <Button
+              className="py-3 text-lg text-primary-foreground flex items-center hover:bg-opacity-60"
+              variant="ghost"
+              onClick={() => setIsDemoModalOpen(true)}
+            >
+              View All Demos{" "}
+              <MdArrowRightAlt className="ml-2 text-[#de4444]" size={25} />
+            </Button>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
-const VideoDemo = ({ index = 1, videoUrl, title, image }) => {
+const VideoDemo = ({
+  index = 1,
+  videoUrl,
+  title,
+  image,
+  isLight,
+}: {
+  index: number;
+  videoUrl: string;
+  title: string;
+  image: string;
+  isLight?: boolean;
+}) => {
   return (
     <LightGalleryWrapper
       elementClassNames={
-        "sm:w-[calc(33.33%-19px)] cursor-pointer w-full h-full transition-transform duration-300 ease-in-out rounded-2xl"
+        "sm:w-[calc(33.33%-19px)] cursor-pointer w-full h-full transition-transform duration-300 ease-in-out rounded-2xl  shadow-custom"
       }
     >
       <a
@@ -118,7 +211,14 @@ const VideoDemo = ({ index = 1, videoUrl, title, image }) => {
                 </div>
 
                 <div className="mt-5">
-                  <h3 className="text-white font-bold text-[24px]">{title}</h3>
+                  <h3
+                    className={cn(
+                      "text-white font-bold text-[24px]",
+                      isLight && "text-[#333]"
+                    )}
+                  >
+                    {title}
+                  </h3>
                 </div>
               </div>
             </div>

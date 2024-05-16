@@ -67,11 +67,12 @@ const GlassPopup = (props: GlassPopupProps) => {
               </button>
             )}
 
-            <div className="scrollbar scrollbarWidth2 mt-[30px] h-[calc(100%-40px)] overflow-y-auto  mx-1">
+            <div className="scrollbar scrollbarWidth2 mt-[30px] h-[calc(100%-40px)] overflow-y-auto  p-4 overflow-x-hidden">
               {heading && (
                 <>
-                  <h2 className="mb-7 text-[46px] text-[#000]">{heading}</h2>
-                  <hr className="my-0 mb-9 h-[2px] w-full rounded-[50px] border-0 bg-[rgba(255,255,255,0.3)]" />
+                  <h2 className="text-[40px] text-[#333] font-semibold">
+                    {heading}
+                  </h2>
                 </>
               )}
               {children}

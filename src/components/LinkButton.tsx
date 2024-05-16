@@ -11,7 +11,7 @@ interface Typography {
 }
 
 interface LinkButtonProps {
-  url: string;
+  url?: string;
   typography: Typography;
   container?: ButtonContainer;
   arrowLeft?: boolean;

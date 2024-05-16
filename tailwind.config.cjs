@@ -100,6 +100,9 @@ module.exports = {
         "paricle-radial":
           "radial-gradient(50% 50% at 50% 50%, rgba(245, 222, 250,0.5) 0%, rgba(145,94,255,0) 100%)",
       },
+      boxShadow: {
+        custom: "1px 1px 6px #ddd",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
