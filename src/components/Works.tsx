@@ -229,7 +229,7 @@ const ProjectCard = ({
 
 const Works = () => {
   return (
-    <div className="max-w-[1600px] xs:mx-auto xs:py-[80px]">
+    <div className="max-w-[1600px] xs:mx-auto xs:py-[80px] relative z-40">
       <motion.div variants={textVariant()} className="xl:mx-0 xs:mx-[60px]">
         <p className={`${styles.sectionSubText} text-slate-100 w-fit`}>
           But Not Limited To

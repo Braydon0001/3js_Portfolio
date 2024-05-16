@@ -32,12 +32,19 @@ const App = () => {
           <div className="absolute w-full bg-gradient-to-t from-[#11235f] to-transparent bottom-0 h-[300px] z-30" />
         </div>
         {/* <Tech /> */}
-        <div className="bg-gradient-to-b from-[#11235f] to-transparent bg-cover bg-no-repeat bg-bottom relative">
+        <div className="relative">
+          <div className="absolute w-full bg-gradient-to-b from-[#11235f] to-transparent top-0 h-[300px] z-30" />
+          <div className="absolute w-full bg-[#11235f] h-full opacity-60 z-30" />
+          <div className="absolute w-full bg-b9  h-full z-20 bg-cover bg-no-repeat bg-top" />
           <Demos />
           <div className="absolute w-full bg-gradient-to-t from-[#11235f] to-transparent bottom-0 h-[300px] z-30" />
         </div>
-        <div className="bg-gradient-to-b from-[#11235f] to-primary bg-cover bg-no-repeat bg-top">
+        <div className="relative">
+          <div className="absolute w-full bg-gradient-to-b from-[#11235f] to-transparent top-0 h-[300px] z-30" />
+          <div className="absolute w-full bg-[#11235f] h-full opacity-80 z-30" />
+          {/* <div className="absolute w-full bg-b7  h-full z-20 bg-cover bg-no-repeat bg-top" /> */}
           <Works />
+          <div className="absolute w-full bg-gradient-to-t from-[#11235f] to-transparent bottom-0 h-[300px] z-30" />
         </div>
         <Feedbacks />
         <div className="relative z-0">

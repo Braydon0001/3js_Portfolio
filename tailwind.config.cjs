@@ -83,6 +83,18 @@ module.exports = {
         xl: "1600px",
       },
       backgroundImage: {
+        b1: "url('/img/bg/b1.jpg')",
+        b2: "url('/img/bg/b2.jpg')",
+        b3: "url('/img/bg/b3.jpg')",
+        b4: "url('/img/bg/b4.jpg')",
+        b5: "url('/img/bg/b5.jpg')",
+        b6: "url('/img/bg/b6.jpg')",
+        b7: "url('/img/bg/b7.jpg')",
+        b8: "url('/img/bg/b8.jpg')",
+        b9: "url('/img/bg/computer.jpg')",
+
+        typing: "url('/img/bg/typing.jpg')",
+        coding: "url('/img/bg/coding-bg.jpg')",
         "hero-pattern": "url('/src/assets/bg4.svg')",
         "hero-bg-1": "url('/img/bg/bg-option-1.jpg')",
         "hero-bg-1-1": "url('/img/bg/bg-option-1-1.jpg')",

@@ -22,6 +22,7 @@ const Demos = () => {
         {/* work cards */}
         <div className="mx-[60px] xl:mx-0 mt-6 flex flex-wrap gap-7  relative">
           <VideoDemo
+            className="shadow-custom"
             index={1}
             title={"Data Hierarchy Tree Renderer"}
             image={"/img/thumbnails/organogram-demo-thumb.jpg"}
@@ -31,6 +32,7 @@ const Demos = () => {
             isLight
           />
           <VideoDemo
+            className="shadow-custom"
             index={2}
             title={"Expense Claims Admin Backend"}
             image={"/img/thumbnails/expense-claims-admin-thumb.jpg"}
@@ -40,6 +42,7 @@ const Demos = () => {
             isLight
           />
           <VideoDemo
+            className="shadow-custom"
             index={1}
             title={"Clerk Auth Solution"}
             image={"/img/thumbnails/clerk-thumb.jpg"}
@@ -49,6 +52,7 @@ const Demos = () => {
             isLight
           />
           <VideoDemo
+            className="shadow-custom"
             index={2}
             title={"Dynamic Theming Solution"}
             image={"/img/thumbnails/theming-thumb.jpg"}
@@ -58,6 +62,7 @@ const Demos = () => {
             isLight
           />
           <VideoDemo
+            className="shadow-custom"
             index={0}
             title={"Illovo Fiscal Calendar"}
             image={"/img/thumbnails/illovo-thumb.jpg"}
@@ -67,6 +72,7 @@ const Demos = () => {
             isLight
           />
           <VideoDemo
+            className="shadow-custom"
             index={2}
             title={"Products Module"}
             image={"/img/thumbnails/product-module-thumb.jpg"}
@@ -76,6 +82,7 @@ const Demos = () => {
             isLight
           />
           <VideoDemo
+            className="shadow-custom"
             index={2}
             title={"Advanced Surgeon Forms App"}
             image={"/img/thumbnails/surgeon-demo-thumb.jpg"}
@@ -148,7 +155,7 @@ const Demos = () => {
           />
           <div className="mr-[-3px] flex w-full justify-end mt-6">
             <Button
-              className="py-3 text-lg text-primary-foreground flex items-center hover:bg-opacity-60"
+              className="py-3 text-lg text-primary-foreground flex items-center hover:bg-opacity-90"
               variant="ghost"
               onClick={() => setIsDemoModalOpen(true)}
             >
@@ -168,18 +175,21 @@ const VideoDemo = ({
   title,
   image,
   isLight,
+  className,
 }: {
   index: number;
   videoUrl: string;
   title: string;
   image: string;
   isLight?: boolean;
+  className?: string;
 }) => {
   return (
     <LightGalleryWrapper
-      elementClassNames={
-        "sm:w-[calc(33.33%-19px)] cursor-pointer w-full h-full transition-transform duration-300 ease-in-out rounded-2xl  shadow-custom"
-      }
+      elementClassNames={cn(
+        "sm:w-[calc(33.33%-19px)] cursor-pointer w-full h-full transition-transform duration-300 ease-in-out rounded-2xl",
+        className
+      )}
     >
       <a
         className="text-[18px] text-white"
