@@ -263,9 +263,9 @@ const projects: ProjectType[] = [
     ],
   },
   {
-    name: "Engage Employee Portal",
+    name: "Engage",
     description:
-      "A Next.js project that consisted of multiple components such as a public site, employee portal accessible via login and a headless Content Management System for the client. This was my first enterprise project at Kodelab. I started by Creating LoFi and HiFi figma prototypes. Once approved i moved on to building the front-end of the system using Tailwind CSS and built out mostly custom components while leveraging UI libraries where it made sense. I then moved on to the headless content management system i.e. Sanity.io and build out the CMS backend and integrated the data via its GROQ API",
+      "I worked on projects utilizing Next.js, React, MySQL, and .NET Web API, which included multiple components such as a public site, an employee portal, a partner portal (both accessible via login), and a headless content management system (CMS) for the client. The employee portal was my first enterprise project at Kodelab. I began by creating LoFi and HiFi Figma prototypes. Once approved, I built the front end using Tailwind CSS, developing mostly custom components while leveraging UI libraries where appropriate. I then transitioned to the headless CMS (Sanity.io), developing the CMS backend and integrating data via its GROQ API. Additionally, I scaffolded a partner portal and added an advanced product module with numerous niche features. I also contributed to the back-office admin app, implementing several key features. Furthermore, I built a fully functional data hierarchy renderer to traverse and configure the company's organogram using multiple queries, including regional and departmental filters. This feature includes panning, zooming, theming, and a host of advanced node operations. I also handled the queries for the data and constructed the hierarchical trees accordingly",
     tags: [
       {
         name: "Next.js",
@@ -301,7 +301,7 @@ const projects: ProjectType[] = [
   {
     name: "Expense Claims",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "The in-house solution allows employees to log in using their Microsoft credentials, submit claims for company-related expenses, and receive notifications about the status of their claims. It includes an Azure file storage solution for uploading and viewing supporting files via a .NET Web API, an admin panel for managing categories, rates, and options, and a role-based backend for viewing, approving, and rejecting claims. Additionally, the system features a CSV export module to export paid claim data in a specific format for upload to SAP",
     tags: [
       {
         name: "React",
@@ -321,7 +321,7 @@ const projects: ProjectType[] = [
   {
     name: "Illovo CPA",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "I have developed multiple features using React and ASP.NET Web API, including creating custom features for AG Grid via its API, implementing charts, and enhancing the user interface. Additionally, I implemented an algorithm to generate a fiscal calendar with week-shifting logic and designed the accompanying UI",
     tags: [
       {
         name: "React",
@@ -345,7 +345,7 @@ const projects: ProjectType[] = [
   {
     name: "RCL Foods Activity Tracker",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "I was primarily involved in UI/UX and front-end development for this project, where I built the menu and Health Checker HiFi prototypes, along with the corresponding user interfaces",
     tags: [
       {
         name: "React",
@@ -365,7 +365,7 @@ const projects: ProjectType[] = [
   {
     name: "Works Group",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "An MVC App that was taken over from a previous developer. I was tasked with fixing bugs, adding new features, and improving the overall performance of the app. I also worked on fixing Syncing issues with a Windows Service that was responsible for syncing data between the app and SAP. I also worked on the order PDF generation features and improved the overall UI/UX of the app",
     tags: [
       {
         name: "MVC",
