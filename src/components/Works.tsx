@@ -123,10 +123,10 @@ const ProjectCard = ({
       </GlassPopup>
       <motion.div
         onClick={() => setIsProfileModalOpen(true)}
-        className="sm:w-[calc(33.33%-19px)] cursor-pointer w-full h-full min-h-[486px] xl:min-h-[601px] hover:scale-[1.02] transition-transform duration-300 ease-in-out rounded-2xl "
+        className="sm:w-[calc(33.33%-19px)] cursor-pointer w-full h-full min-h-[505px] xl:min-h-[617px] hover:scale-[1.02] transition-transform duration-300 ease-in-out rounded-2xl "
         variants={fadeIn("up", "spring", index * 0.5, 0.75)}
       >
-        <div className="flex flex-col justify-between glass p-5 rounded-2xl h-full min-h-[486px] xl:min-h-[601px] ">
+        <div className="flex flex-col justify-between glass p-5 rounded-2xl h-full min-h-[505px] xl:min-h-[617px] ">
           <div>
             <div className="relative w-full h-[230px] xl:h-[330px]">
               <img
@@ -198,7 +198,7 @@ const ProjectCard = ({
 
             <div className="mt-5">
               <h3 className="text-white font-bold text-[24px]">{name}</h3>
-              <p className="line-clamp-3 text-[rgba(255,255,255,0.7)] mt-2 text-[14px]">
+              <p className="line-clamp-3 text-[rgba(255,255,255,0.7)] mt-3 text-[16px]">
                 {description}
               </p>
             </div>
@@ -206,7 +206,10 @@ const ProjectCard = ({
 
           <div className="mt-4 flex flex-wrap gap-2">
             {tags?.map((tag, index) => (
-              <p key={tag?.name} className={`text-[14px] ${tag?.color}`}>
+              <p
+                key={tag?.name}
+                className={`text-[15px] leading-3 mt-1 ${tag?.color}`}
+              >
                 {tag?.name}
               </p>
             ))}

@@ -254,7 +254,7 @@ const projects: ProjectType[] = [
         color: "orange-text-gradient",
       },
     ],
-    image: carrent,
+    image: "img/thumbnails/surgeon-demo-thumb.jpg",
     video_iframe_links: [
       "https://www.youtube.com/embed/dQw4w9WgXcQ?si=w71qYNEZ3-dO8mbH",
     ],
@@ -265,7 +265,7 @@ const projects: ProjectType[] = [
   {
     name: "Engage",
     description:
-      "I worked on projects utilizing Next.js, React, MySQL, and .NET Web API, which included multiple components such as a public site, an employee portal, a partner portal (both accessible via login), and a headless content management system (CMS) for the client. The employee portal was my first enterprise project at Kodelab. I began by creating LoFi and HiFi Figma prototypes. Once approved, I built the front end using Tailwind CSS, developing mostly custom components while leveraging UI libraries where appropriate. I then transitioned to the headless CMS (Sanity.io), developing the CMS backend and integrating data via its GROQ API. Additionally, I scaffolded a partner portal and added an advanced product module with numerous niche features. I also contributed to the back-office admin app, implementing several key features. Furthermore, I built a fully functional data hierarchy renderer to traverse and configure the company's organogram using multiple queries, including regional and departmental filters. This feature includes panning, zooming, theming, and a host of advanced node operations. I also handled the queries for the data and constructed the hierarchical trees accordingly",
+      "I worked on a number of projects utilizing Next.js, React, MySQL, and .NET Web API, which included multiple components such as a public site, an employee portal, a partner portal (both accessible via login), and a headless content management system (CMS) for the client. The employee portal was my first enterprise project at Kodelab. I began by creating LoFi and HiFi Figma prototypes. Once approved, I built the front end using Tailwind CSS, developing mostly custom components while leveraging UI libraries where appropriate. I then transitioned to the headless CMS (Sanity.io), developing the CMS backend and integrating data via its GROQ API. Additionally, I scaffolded a partner portal and added an advanced product module with numerous niche features. I also contributed to the back-office admin app, implementing several key features. Furthermore, I built a fully functional data hierarchy renderer to traverse and configure the company's organogram using multiple queries, including regional and departmental filters. This feature includes panning, zooming, theming, and a host of advanced node operations. I also handled the queries for the data and constructed the hierarchical trees accordingly",
     tags: [
       {
         name: "Next.js",
@@ -292,16 +292,16 @@ const projects: ProjectType[] = [
         color: "cyan-text-gradient",
       },
     ],
-    image: jobit,
+    image: "img/thumbnails/product-module-thumb.jpg",
     // video_iframe_links: [""],
     figma_links: [
       "https://www.figma.com/proto/dBwfWvP5wqCoPmOFHVQ38q/Engage-Website-Design?node-id=1108-5&starting-point-node-id=1108%3A5&mode=design&t=myrpyQbUxOCEZWzm-1",
     ],
   },
   {
-    name: "Expense Claims",
+    name: "Insight Consulting",
     description:
-      "The in-house solution allows employees to log in using their Microsoft credentials, submit claims for company-related expenses, and receive notifications about the status of their claims. It includes an Azure file storage solution for uploading and viewing supporting files via a .NET Web API, an admin panel for managing categories, rates, and options, and a role-based backend for viewing, approving, and rejecting claims. Additionally, the system features a CSV export module to export paid claim data in a specific format for upload to SAP",
+      "I built the in-house Expense Claims solution which allows employees to log in using their Microsoft credentials, submit claims for company-related expenses, and receive notifications about the status of their claims. It includes an Azure file storage solution for uploading and viewing supporting files via a .NET Web API, an admin panel for managing categories, rates, and options, and a role-based backend for viewing, approving, and rejecting claims. Additionally, the system features a CSV export module to export paid claim data in a specific format for upload to SAP",
     tags: [
       {
         name: "React",
@@ -316,12 +316,12 @@ const projects: ProjectType[] = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: "img/expense-form.png",
   },
   {
-    name: "Illovo CPA",
+    name: "Illovo",
     description:
-      "I have developed multiple features using React and ASP.NET Web API, including creating custom features for AG Grid via its API, implementing charts, and enhancing the user interface. Additionally, I implemented an algorithm to generate a fiscal calendar with week-shifting logic and designed the accompanying UI",
+      "I have developed multiple features for the Illovo CPA app using React and ASP.NET Web API, including creating custom features for AG Grid via its API, implementing charts, and enhancing the user interface. Additionally, I implemented an algorithm to generate a fiscal calendar with week-shifting logic and designed the accompanying UI",
     tags: [
       {
         name: "React",
@@ -340,12 +340,12 @@ const projects: ProjectType[] = [
         color: "orange-text-gradient",
       },
     ],
-    image: tripguide,
+    image: "img/thumbnails/illovo-thumb.jpg",
   },
   {
-    name: "RCL Foods Activity Tracker",
+    name: "RCL Foods",
     description:
-      "I was primarily involved in UI/UX and front-end development for this project, where I built the menu and Health Checker HiFi prototypes, along with the corresponding user interfaces",
+      "I was primarily involved in UI/UX and front-end development for the Activity Tracker project, where I built the menu and Health Checker HiFi prototypes, along with the corresponding user interfaces",
     tags: [
       {
         name: "React",
@@ -360,7 +360,7 @@ const projects: ProjectType[] = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: "img/rcl.png",
   },
   {
     name: "Works Group",
@@ -380,7 +380,7 @@ const projects: ProjectType[] = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: "img/wgs.png",
   },
 ];
 
