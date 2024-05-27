@@ -12,7 +12,7 @@ const ParrallaxBg = ({ children }: { children: ReactNode }) => {
   // const backgroundY2 = useTransform(scrollYProgress, [0, 1], ["0%", "42%"]);
   // const backgroundY3 = useTransform(scrollYProgress, [0, 1], ["0%", "33%"]);
   // const backgroundY4 = useTransform(scrollYProgress, [0, 1], ["0%", "28%"]);
-  const backgroundY1 = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  // const backgroundY1 = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
   const backgroundY2 = useTransform(scrollYProgress, [0, 1], ["0%", "34%"]);
   const backgroundY3 = useTransform(scrollYProgress, [0, 1], ["0%", "24.5%"]);
   const backgroundY4 = useTransform(scrollYProgress, [0, 1], ["0%", "17%"]);
@@ -23,13 +23,18 @@ const ParrallaxBg = ({ children }: { children: ReactNode }) => {
       className="w-full h-full overflow-hidden relative grid place-items-center"
     >
       <motion.div
-        className="absolute inset-0 z-[5]"
+        className="absolute inset-0"
         style={{
+          position: "fixed",
+          zIndex: -1,
+          top: 0,
+          left: 0,
           backgroundImage: "url(/img/bg/parallax-bg/Layer-1.jpg)",
           backgroundPosition: "top",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          y: backgroundY1,
+          // y: backgroundY1,
+          transform: "translateZ(0)", // Add this line
         }}
       />
       <ParticleBackground />
