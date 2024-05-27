@@ -51,9 +51,9 @@ const ProjectCard = ({
                   <LightGalleryWrapper key={index}>
                     <a
                       className="text-[18px] text-white"
-                      id={video_link}
+                      id={video_link.url}
                       data-iframe="true"
-                      data-src={video_link}
+                      data-src={video_link.url}
                     >
                       <div className="bg-gray-800  w-10 h-10 rounded-full flex justify-center items-center cursor-pointer hover:bg-[#de4444]">
                         <TooltipProvider delayDuration={0}>
@@ -76,9 +76,9 @@ const ProjectCard = ({
                     <LightGalleryWrapper key={index}>
                       <a
                         className="text-[18px] text-white"
-                        id={figma_link}
+                        id={figma_link.url}
                         data-iframe="true"
-                        data-src={figma_link}
+                        data-src={figma_link.url}
                       >
                         <div className="bg-gray-800 hover:bg-[#de4444] w-10 h-10 rounded-full flex justify-center items-center cursor-pointer ">
                           <TooltipProvider delayDuration={0}>
@@ -103,8 +103,8 @@ const ProjectCard = ({
             </div>
 
             <div className="mt-5">
-              <h3 className=" font-bold text-[24px]">{name}</h3>
-              <div className=" text-[rgba(0,0,0,0.9)] mt-2 text-[16px] flex flex-col gap-3">
+              <h3 className="font-bold text-[24px]">{name}</h3>
+              <div className=" text-[rgba(0,0,0,0.9)] mt-3 text-[16px] flex flex-col gap-3">
                 {description.map((desc, index) => (
                   <p key={index}>{desc}</p>
                 ))}
@@ -116,17 +116,18 @@ const ProjectCard = ({
                   <LightGalleryWrapper key={index}>
                     <a
                       className="text-[18px] text-white"
-                      id={video_link}
+                      id={video_link.url}
                       data-iframe="true"
-                      data-src={video_link}
+                      data-src={video_link.url}
                     >
                       <Button
+                        containerClassName="w-full"
                         borderRadius="1rem"
                         borderClassName="bg-[radial-gradient(var(--purple-500)_40%,transparent_60%)]"
                         className="text-primary px-2 pt-[2px] bg-white hover:bg-gray-100/80 border-0"
                         onClick={() => null}
                       >
-                        Video Demo{" "}
+                        {video_link.name}{" "}
                         <MdArrowRightAlt
                           className="ml-2 text-[#de4444]"
                           size={25}
@@ -141,17 +142,18 @@ const ProjectCard = ({
                     <LightGalleryWrapper key={index}>
                       <a
                         className="text-[18px] text-white"
-                        id={figma_link}
+                        id={figma_link.url}
                         data-iframe="true"
-                        data-src={figma_link}
+                        data-src={figma_link.url}
                       >
                         <Button
+                          containerClassName="w-full"
                           borderRadius="1rem"
                           borderClassName="bg-[radial-gradient(var(--purple-500)_40%,transparent_60%)]"
                           className="text-primary px-2 pt-[2px] bg-white hover:bg-gray-100/80 border-0"
                           onClick={() => null}
                         >
-                          Presentation{" "}
+                          {figma_link.name}{" "}
                           <MdArrowRightAlt
                             className="ml-2 text-[#de4444]"
                             size={25}
@@ -197,9 +199,9 @@ const ProjectCard = ({
                   <LightGalleryWrapper key={index}>
                     <a
                       className="text-[18px] text-white"
-                      id={video_link}
+                      id={video_link.url}
                       data-iframe="true"
-                      data-src={video_link}
+                      data-src={video_link.url}
                     >
                       <div className="bg-gray-800 hover:bg-[#de4444] w-10 h-10 rounded-full flex justify-center items-center cursor-pointer ">
                         <TooltipProvider delayDuration={0}>
@@ -225,9 +227,9 @@ const ProjectCard = ({
                     <LightGalleryWrapper key={index}>
                       <a
                         className="text-[18px] text-white"
-                        id={figma_link}
+                        id={figma_link.url}
                         data-iframe="true"
-                        data-src={figma_link}
+                        data-src={figma_link.url}
                       >
                         <div className="bg-gray-800 hover:bg-[#de4444] w-10 h-10 rounded-full flex justify-center items-center cursor-pointer ">
                           <TooltipProvider delayDuration={0}>

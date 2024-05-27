@@ -258,16 +258,28 @@ const projects: ProjectType[] = [
     ],
     image: "img/thumbnails/surgeon-demo-thumb.jpg",
     video_iframe_links: [
-      "https://www.youtube.com/embed/dQw4w9WgXcQ?si=w71qYNEZ3-dO8mbH",
+      {
+        name: "Surgeon App Video",
+        url: "https://www.youtube.com/embed/dQw4w9WgXcQ?si=w71qYNEZ3-dO8mbH",
+      },
     ],
     figma_links: [
-      "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fdsop7M44BoWU60uSWSzYhW%2FSurgical-Society%3Fnode-id%3D1-12%26starting-point-node-id%3D1%253A12%26mode%3Ddesign%26t%3D5dNG1ZQlP9PTioS5-1",
+      {
+        name: "Surgeon App Presentation",
+        url: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fdsop7M44BoWU60uSWSzYhW%2FSurgical-Society%3Fnode-id%3D1-12%26starting-point-node-id%3D1%253A12%26mode%3Ddesign%26t%3D5dNG1ZQlP9PTioS5-1",
+      },
     ],
   },
   {
     name: "Engage",
     description: [
-      "I worked on a number of projects utilizing Next.js, React, MySQL, and .NET Web API, which included multiple components such as a public site, an employee portal, a partner portal (both accessible via login), and a headless content management system (CMS) for the client. The employee portal was my first enterprise project at Kodelab. I began by creating LoFi and HiFi Figma prototypes. Once approved, I built the front end using Tailwind CSS, developing mostly custom components while leveraging UI libraries where appropriate. I then transitioned to the headless CMS (Sanity.io), developing the CMS backend and integrating data via its GROQ API. Additionally, I scaffolded a partner portal and added an advanced product module with numerous niche features. I also contributed to the back-office admin app, implementing several key features. Furthermore, I built a fully functional data hierarchy renderer to traverse and configure the company's organogram using multiple queries, including regional and departmental filters. This feature includes panning, zooming, theming, and a host of advanced node operations. I also handled the queries for the data and constructed the hierarchical trees accordingly",
+      "I worked on multiple projects utilizing Next.js, React, MySQL, and .NET Web API, encompassing various components such as a public site, an employee portal, a partner portal (both accessible via login), and a headless content management system (CMS) for the client.",
+
+      "The employee portal was my first enterprise project at Kodelab. I started by creating low-fidelity (LoFi) and high-fidelity (HiFi) prototypes using Figma. Once approved, I built the front end with Tailwind CSS, developing mostly custom components while leveraging UI libraries where appropriate.",
+
+      "Next, I transitioned to the headless CMS (Sanity.io), where I developed the backend and integrated data via its GROQ API. I also scaffolded a partner portal, adding an advanced product module with numerous niche features.",
+
+      "Additionally, I contributed to the back-office admin app by implementing several key features. One significant accomplishment was building a fully functional data hierarchy renderer. This tool allows users to traverse and configure the company's organogram using multiple queries, including regional and departmental filters. It supports panning, zooming, theming, and a host of advanced node operations. I handled the data queries and constructed the hierarchical trees accordingly.",
     ],
     tags: [
       {
@@ -298,7 +310,10 @@ const projects: ProjectType[] = [
     image: "img/thumbnails/product-module-thumb.jpg",
     // video_iframe_links: [""],
     figma_links: [
-      "https://www.figma.com/proto/dBwfWvP5wqCoPmOFHVQ38q/Engage-Website-Design?node-id=1108-5&starting-point-node-id=1108%3A5&mode=design&t=myrpyQbUxOCEZWzm-1",
+      {
+        name: "Employee Portal Presentation",
+        url: "https://www.figma.com/proto/dBwfWvP5wqCoPmOFHVQ38q/Engage-Website-Design?node-id=1108-5&starting-point-node-id=1108%3A5&mode=design&t=myrpyQbUxOCEZWzm-1",
+      },
     ],
   },
   {

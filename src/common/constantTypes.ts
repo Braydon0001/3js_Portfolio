@@ -39,6 +39,6 @@ export type ProjectType = {
     color: string;
   }[];
   image: string;
-  video_iframe_links?: string[];
-  figma_links?: string[];
+  video_iframe_links?: { name: string; url: string }[];
+  figma_links?: { name: string; url: string }[];
 };
