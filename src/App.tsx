@@ -41,7 +41,7 @@ const App = () => {
         </div>
         <div className="relative">
           <div className="absolute w-full bg-gradient-to-b from-[#11235f] to-transparent top-0 h-[300px] z-30" />
-          <div className="absolute w-full bg-[#11235f] h-full opacity-80 z-30" />
+          <div className="absolute w-full bg-[#11235f] h-full opacity-90 z-30" />
           <div className="absolute w-full bg-b7  h-full z-20 bg-cover bg-no-repeat bg-top" />
           <Works />
           <div className="absolute w-full bg-gradient-to-t from-[#11235f] to-transparent bottom-0 h-[300px] z-30" />

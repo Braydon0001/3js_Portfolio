@@ -234,8 +234,10 @@ const testimonials: TestimonialType[] = [
 const projects: ProjectType[] = [
   {
     name: "Surgical Society",
-    description:
-      'Web based advanced back office forms system that leverages React Survey.js to generate form schemas and return the Answers in JSON format. I then persisted the schema and answers in "JSON columns" in the db. To view and edit the forms and answers, i pass the form schema to the Survey component which generates the forms and also pass the answers to populate the form fields. I only had a month deadline so I had to get creative to manage the complexity of the form logic required, create extremely long forms (one of the schemas came to 9000 lines) and perform crud operations in adition to some of the niche requirements.',
+    description: [
+      "I developed a web-based advanced back-office forms system using React Survey.js to generate form schemas and output answers in JSON format. These schemas and answers were stored in 'JSON columns' in the database. For form viewing and editing, I passed the form schema to the Survey component to dynamically generate the forms and populate the fields with the provided answers.",
+      "With only a one-month deadline, I had to innovate to handle the complex form logic, create extremely lengthy forms (one schema was 9,000 lines), and execute CRUD operations, all while meeting specific niche requirements.",
+    ],
     tags: [
       {
         name: "React",
@@ -264,8 +266,9 @@ const projects: ProjectType[] = [
   },
   {
     name: "Engage",
-    description:
+    description: [
       "I worked on a number of projects utilizing Next.js, React, MySQL, and .NET Web API, which included multiple components such as a public site, an employee portal, a partner portal (both accessible via login), and a headless content management system (CMS) for the client. The employee portal was my first enterprise project at Kodelab. I began by creating LoFi and HiFi Figma prototypes. Once approved, I built the front end using Tailwind CSS, developing mostly custom components while leveraging UI libraries where appropriate. I then transitioned to the headless CMS (Sanity.io), developing the CMS backend and integrating data via its GROQ API. Additionally, I scaffolded a partner portal and added an advanced product module with numerous niche features. I also contributed to the back-office admin app, implementing several key features. Furthermore, I built a fully functional data hierarchy renderer to traverse and configure the company's organogram using multiple queries, including regional and departmental filters. This feature includes panning, zooming, theming, and a host of advanced node operations. I also handled the queries for the data and constructed the hierarchical trees accordingly",
+    ],
     tags: [
       {
         name: "Next.js",
@@ -300,8 +303,9 @@ const projects: ProjectType[] = [
   },
   {
     name: "Insight Consulting",
-    description:
+    description: [
       "I built the in-house Expense Claims solution which allows employees to log in using their Microsoft credentials, submit claims for company-related expenses, and receive notifications about the status of their claims. It includes an Azure file storage solution for uploading and viewing supporting files via a .NET Web API, an admin panel for managing categories, rates, and options, and a role-based backend for viewing, approving, and rejecting claims. Additionally, the system features a CSV export module to export paid claim data in a specific format for upload to SAP",
+    ],
     tags: [
       {
         name: "React",
@@ -320,8 +324,9 @@ const projects: ProjectType[] = [
   },
   {
     name: "Illovo",
-    description:
+    description: [
       "I have developed multiple features for the Illovo CPA app using React and ASP.NET Web API, including creating custom features for AG Grid via its API, implementing charts, and enhancing the user interface. Additionally, I implemented an algorithm to generate a fiscal calendar with week-shifting logic and designed the accompanying UI",
+    ],
     tags: [
       {
         name: "React",
@@ -344,8 +349,9 @@ const projects: ProjectType[] = [
   },
   {
     name: "RCL Foods",
-    description:
+    description: [
       "I was primarily involved in UI/UX and front-end development for the Activity Tracker project, where I built the menu and Health Checker HiFi prototypes, along with the corresponding user interfaces",
+    ],
     tags: [
       {
         name: "React",
@@ -364,8 +370,9 @@ const projects: ProjectType[] = [
   },
   {
     name: "Works Group",
-    description:
+    description: [
       "An MVC App that was taken over from a previous developer. I was tasked with fixing bugs, adding new features, and improving the overall performance of the app. I also worked on fixing Syncing issues with a Windows Service that was responsible for syncing data between the app and SAP. I also worked on the order PDF generation features and improved the overall UI/UX of the app",
+    ],
     tags: [
       {
         name: "MVC",

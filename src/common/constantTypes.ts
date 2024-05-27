@@ -33,7 +33,7 @@ export type TestimonialType = {
 
 export type ProjectType = {
   name: string;
-  description: string;
+  description: string[];
   tags: {
     name: string;
     color: string;

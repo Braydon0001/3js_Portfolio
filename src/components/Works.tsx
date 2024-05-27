@@ -15,6 +15,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "./ui/tooltip";
+import { Button } from "./aceternity-ui/moving-border";
 
 const ProjectCard = ({
   index,
@@ -103,9 +104,63 @@ const ProjectCard = ({
 
             <div className="mt-5">
               <h3 className=" font-bold text-[24px]">{name}</h3>
-              <p className=" text-[rgba(0,0,0,0.9)] mt-2 text-[16px]">
-                {description}
-              </p>
+              <div className=" text-[rgba(0,0,0,0.9)] mt-2 text-[16px] flex flex-col gap-3">
+                {description.map((desc, index) => (
+                  <p key={index}>{desc}</p>
+                ))}
+              </div>
+            </div>
+            <div className="flex w-full gap-3 mt-6 mb-3">
+              {hasVideoLinks &&
+                video_iframe_links?.map((video_link, index) => (
+                  <LightGalleryWrapper key={index}>
+                    <a
+                      className="text-[18px] text-white"
+                      id={video_link}
+                      data-iframe="true"
+                      data-src={video_link}
+                    >
+                      <Button
+                        borderRadius="1rem"
+                        borderClassName="bg-[radial-gradient(var(--purple-500)_40%,transparent_60%)]"
+                        className="text-primary px-2 pt-[2px] bg-white hover:bg-gray-100/80 border-0"
+                        onClick={() => null}
+                      >
+                        Video Demo{" "}
+                        <MdArrowRightAlt
+                          className="ml-2 text-[#de4444]"
+                          size={25}
+                        />
+                      </Button>
+                    </a>
+                  </LightGalleryWrapper>
+                ))}
+              {hasFigmaLinks &&
+                figma_links?.map((figma_link, index) => (
+                  <div key={index}>
+                    <LightGalleryWrapper key={index}>
+                      <a
+                        className="text-[18px] text-white"
+                        id={figma_link}
+                        data-iframe="true"
+                        data-src={figma_link}
+                      >
+                        <Button
+                          borderRadius="1rem"
+                          borderClassName="bg-[radial-gradient(var(--purple-500)_40%,transparent_60%)]"
+                          className="text-primary px-2 pt-[2px] bg-white hover:bg-gray-100/80 border-0"
+                          onClick={() => null}
+                        >
+                          Presentation{" "}
+                          <MdArrowRightAlt
+                            className="ml-2 text-[#de4444]"
+                            size={25}
+                          />
+                        </Button>
+                      </a>
+                    </LightGalleryWrapper>
+                  </div>
+                ))}
             </div>
           </div>
 
@@ -199,7 +254,7 @@ const ProjectCard = ({
             <div className="mt-5">
               <h3 className="text-white font-bold text-[24px]">{name}</h3>
               <p className="line-clamp-3 text-[rgba(255,255,255,0.7)] mt-3 text-[16px]">
-                {description}
+                {description[0]}
               </p>
             </div>
           </div>
@@ -208,7 +263,7 @@ const ProjectCard = ({
             {tags?.map((tag, index) => (
               <p
                 key={tag?.name}
-                className={`text-[15px] leading-3 mt-1 ${tag?.color}`}
+                className={`text-[15px] font-semibold leading-4 mt-1 ${tag?.color}`}
               >
                 {tag?.name}
               </p>
