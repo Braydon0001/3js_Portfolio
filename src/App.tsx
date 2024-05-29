@@ -47,7 +47,7 @@ const App = () => {
           <div className="absolute w-full bg-gradient-to-t from-[#020f3d] to-transparent bottom-0 h-[300px] z-30" />
         </div>
         <div className="relative z-0">
-          <div className="absolute w-full bg-gradient-to-b from-[#020f3d] to-transparent top-0 h-[300px] z-40" />
+          <div className="absolute w-full bg-gradient-to-b from-[#020f3d] to-transparent top-0 h-[100px] z-40" />
           <div className="absolute w-full bg-[#020f3d] h-full  z-30" />
           <Contact />
           <StarsCanvas />

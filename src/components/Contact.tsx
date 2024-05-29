@@ -4,8 +4,11 @@ import { EarthCanvas, StarsCanvas } from "./canvas";
 import { slideIn } from "@/utils/motion";
 import { Icon } from "./Icon";
 import Map from "./Map";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
 
 const Contact = () => {
+  const [isGrabbing, setIsGrabbing] = useState(false);
   return (
     <div className="max-w-[1600px] xs:mx-auto xs:py-[80px] relative z-40">
       <StarsCanvas />
@@ -52,7 +55,12 @@ const Contact = () => {
 
         <motion.div
           variants={slideIn("right", "tween", 0.2, 1)}
-          className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px] relative z-50"
+          className={cn(
+            "xl:flex-1 xl:h-auto md:h-[550px] h-[350px] relative z-50 cursor-grab",
+            isGrabbing && "cursor-grabbing"
+          )}
+          onMouseDown={() => setIsGrabbing(true)}
+          onMouseUp={() => setIsGrabbing(false)}
         >
           <EarthCanvas />
         </motion.div>
