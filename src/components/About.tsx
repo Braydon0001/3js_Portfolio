@@ -30,11 +30,11 @@ const About = () => {
         className="xl:mx-0 xs:mx-[60px] mt-4 text-slate-100 text-[18px] max-w-3xl leading-[30px]"
       >
         I am an Intermediate full stack developer and Senior UI/UX designer from
-        South Africa. With a Higher Certificate in Information Systems &
+        sunny South Africa. With a Higher Certificate in Information Systems &
         Software Development and a Bachelor of Science Degree in IT, I am
         constantly innovating and pushing the boundaries beyond expectations. My
-        interests include playing musical instruments, going to the gym, gaming,
-        and art.
+        interests include exploring emerging technologies, playing musical
+        instruments, going to the gym, gaming, and art.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10 w-fit mr-5">
