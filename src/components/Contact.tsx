@@ -39,16 +39,21 @@ const Contact = () => {
                 color="#de4444"
                 size={26}
               />
-              <h3 className={"text-white font-bold text-[24px]"}>
-                +27 84 881 6464
-              </h3>
+              <a href="tel:+27848816464">
+                <h3 className={"text-white font-bold text-[24px]"}>
+                  +27 84 881 6464
+                </h3>
+              </a>
             </div>
 
             <div className="w-full py-2 relative flex gap-4 items-center">
               <Icon className="mb-[1px]" name="Mail" color="#de4444" />
-              <h3 className={"text-white font-bold text-[24px] ml-[2px]"}>
-                braydz0001@gmail.com
-              </h3>
+
+              <a href="mailto:braydz0001@gmail.com">
+                <h3 className={"text-white font-bold text-[24px] ml-[2px]"}>
+                  braydz0001@gmail.com
+                </h3>
+              </a>
             </div>
           </div>
         </motion.div>
