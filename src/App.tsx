@@ -44,14 +44,14 @@ const App = () => {
           <div className="absolute w-full bg-[#11235f] h-full opacity-90 z-30" />
           <div className="absolute w-full bg-b7  h-full z-20 bg-cover bg-no-repeat bg-top" />
           <Works />
-          <div className="absolute w-full bg-gradient-to-t from-[#11235f] to-transparent bottom-0 h-[300px] z-30" />
+          <div className="absolute w-full bg-gradient-to-t from-[#020f3d] to-transparent bottom-0 h-[300px] z-30" />
         </div>
         <div className="relative z-0">
-          <div className="absolute w-full bg-gradient-to-b from-[#11235f] to-transparent top-0 h-[300px] z-30" />
-          <div className="absolute w-full bg-[#11235f] h-full opacity-90 z-30" />
+          <div className="absolute w-full bg-gradient-to-b from-[#020f3d] to-transparent top-0 h-[300px] z-40" />
+          <div className="absolute w-full bg-[#020f3d] h-full  z-30" />
           <Contact />
           <StarsCanvas />
-          <div className="absolute w-full bg-gradient-to-t from-[#11235f] to-transparent bottom-0 h-[300px] z-20" />
+          <div className="absolute w-full bg-gradient-to-t from-[#11235f] to-transparent bottom-0 h-[150px] opacity-70 z-30" />
         </div>
       </div>
     </BrowserRouter>

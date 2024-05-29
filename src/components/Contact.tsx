@@ -13,7 +13,7 @@ const Contact = () => {
       <div className="xl:pt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}
-          className="flex-[0.75] bg-black-100 p-5 rounded-2xl glass-no-border border-0 min-h-[600px]"
+          className="flex-[0.75]  p-5 rounded-2xl glass-no-border border-0 min-h-[600px]"
         >
           <p
             className={`${styles.sectionSubText} text-slate-100 w-fit  relative z-10`}
