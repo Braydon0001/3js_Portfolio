@@ -66,6 +66,7 @@
     "react-resizable-panels": "^2.0.13",
     "react-router-dom": "^6.8.2",
     "react-scroll-parallax": "^3.4.5",
+    "react-simple-maps": "^3.0.0",
     "react-spring": "^9.6.1",
     "react-tilt": "^0.1.4",
     "react-vertical-timeline-component": "^3.6.0",

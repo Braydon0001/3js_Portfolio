@@ -46,10 +46,12 @@ const App = () => {
           <Works />
           <div className="absolute w-full bg-gradient-to-t from-[#11235f] to-transparent bottom-0 h-[300px] z-30" />
         </div>
-        <Feedbacks />
         <div className="relative z-0">
+          <div className="absolute w-full bg-gradient-to-b from-[#11235f] to-transparent top-0 h-[300px] z-30" />
+          <div className="absolute w-full bg-[#11235f] h-full opacity-90 z-30" />
           <Contact />
           <StarsCanvas />
+          <div className="absolute w-full bg-gradient-to-t from-[#11235f] to-transparent bottom-0 h-[300px] z-20" />
         </div>
       </div>
     </BrowserRouter>
