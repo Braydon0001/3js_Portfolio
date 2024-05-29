@@ -1,15 +1,14 @@
 import { motion } from "framer-motion";
 import { styles } from "../style";
-import { EarthCanvas } from "./canvas";
+import { EarthCanvas, StarsCanvas } from "./canvas";
 import { slideIn } from "@/utils/motion";
 import { Icon } from "./Icon";
 import Map from "./Map";
-import Stars from "./canvas/Stars";
 
 const Contact = () => {
   return (
     <div className="max-w-[1600px] xs:mx-auto xs:py-[80px] relative z-40">
-      <Stars />
+      <StarsCanvas />
       <div className="xl:pt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}
