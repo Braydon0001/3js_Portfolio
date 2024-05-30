@@ -20,7 +20,7 @@ const Hero = () => {
   return (
     <section className={"relative w-full h-[90vh] xs:h-screen mx-auto"}>
       <div
-        className={`absolute inset-0 top-[160px] mx-14 max-w-[1600px] xl:mx-auto flex flex-row items-start gap-5`}
+        className={`absolute inset-0 top-[160px] mx-4 md:mx-14 max-w-[1600px] xl:mx-auto flex flex-row items-start gap-5`}
       >
         {/* purple line next to name */}
         <div className="flex flex-col justify-center items-center mt-5">
