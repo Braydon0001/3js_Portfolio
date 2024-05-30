@@ -289,7 +289,7 @@ const ProjectCard = ({
 
 const Works = () => {
   return (
-    <div className="max-w-[1600px] xs:mx-auto xs:py-[80px] relative z-40">
+    <div className="max-w-[1600px] xs:mx-auto xs:py-[80px] relative z-40 md:px-0 px-4">
       <motion.div variants={textVariant()} className="xl:mx-0 xs:mx-[60px]">
         <p className={`${styles.sectionSubText} text-slate-100 w-fit`}>
           But Not Limited To
@@ -300,8 +300,8 @@ const Works = () => {
       </motion.div>
 
       {/* work cards */}
-      <div className="mx-[60px] xl:mx-0">
-        <div className="mt-14 flex flex-wrap gap-7 w-full relative min-h-[486px] xl:min-h-[601px]">
+      <div className="md:mx-[60px] xl:mx-0">
+        <div className="mt-9 md:mt-14 flex flex-wrap gap-7 w-full relative min-h-[486px] xl:min-h-[601px]">
           {projects?.map((project, index) => (
             <ProjectCard index={index} key={`project-${index}`} {...project} />
           ))}

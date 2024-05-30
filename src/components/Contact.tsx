@@ -10,12 +10,12 @@ import { cn } from "@/lib/utils";
 const Contact = () => {
   const [isGrabbing, setIsGrabbing] = useState(false);
   return (
-    <div className="max-w-[1600px] xs:mx-auto xs:py-[80px] xs:pb-[120px] relative z-40">
+    <div className="max-w-[1600px] xs:mx-auto  pb-0 xs:py-[80px] py-14 xs:pb-[120px] relative z-40">
       <StarsCanvas />
       <div className="xl:pt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}
-          className="flex-1  p-5 rounded-2xl glass-no-border border-0 min-h-[600px]"
+          className="flex-1  p-5 md:rounded-2xl glass-no-border border-0 min-h-[430px] md:min-h-[600px]"
         >
           <p
             className={`${styles.sectionSubText} text-slate-100 w-fit  relative z-10`}

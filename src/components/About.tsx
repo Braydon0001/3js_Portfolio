@@ -15,7 +15,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="w-fit max-w-[1600px] mx-0 px-4 xs:mx-auto py-0 md:py-[80px] md:pb-0 pb-28 lg:px-0 relative"
+      className="w-fit max-w-[1600px] mx-0 px-4 xs:mx-auto py-0 md:py-[80px] md:pb-0 pb-24 lg:px-0 relative"
     >
       <motion.div variants={textVariant()} className="xl:mx-0 xs:mx-[60px]">
         <p className={`${styles.sectionSubText} text-slate-100 w-fit`}>

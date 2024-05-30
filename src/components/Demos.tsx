@@ -43,7 +43,7 @@ const Demos = () => {
           />
         </div>
       </GlassPopup>
-      <div className="max-w-[1600px] xs:mx-auto xs:py-[80px] relative z-40">
+      <div className="md:px-0 px-4 py-20 max-w-[1600px] xs:mx-auto xs:py-[80px] relative z-40">
         <motion.div variants={textVariant()} className="xl:mx-0 xs:mx-[60px]">
           <p className={`${styles.sectionSubText} text-slate-100 w-fit`}>
             My Apps & Solutions
@@ -54,7 +54,7 @@ const Demos = () => {
         </motion.div>
 
         {/* work cards */}
-        <div className="mx-[60px] xl:mx-0 mt-14 flex flex-wrap gap-7  relative">
+        <div className="md:mx-[60px] xl:mx-0 mt-9 md:mt-14 flex flex-wrap gap-7  relative">
           <VideoDemo
             index={1}
             title={"Data Hierarchy Tree Renderer"}
@@ -103,7 +103,7 @@ const Demos = () => {
               "https://www.youtube.com/embed/OOeQQqqmUJA?si=i9sj_AZcQfqIBAqW"
             }
           />
-          <div className="mr-[-3px] flex w-full justify-end mt-6">
+          <div className="mr-[-3px] flex w-full justify-end mt-4 md:mt-6">
             <Button
               borderRadius="1rem"
               borderClassName="bg-[radial-gradient(var(--purple-500)_40%,transparent_60%)]"
@@ -138,7 +138,7 @@ const VideoDemo = ({
   return (
     <LightGalleryWrapper
       elementClassNames={cn(
-        "sm:w-[calc(33.33%-19px)] cursor-pointer w-full h-full transition-transform duration-300 ease-in-out rounded-2xl",
+        "md:w-[calc(33.33%-19px)] cursor-pointer w-full h-full transition-transform duration-300 ease-in-out rounded-2xl",
         className
       )}
     >

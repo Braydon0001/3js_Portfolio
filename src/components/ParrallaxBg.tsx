@@ -40,7 +40,7 @@ const ParrallaxBg = ({ children }: { children: ReactNode }) => {
   return (
     <div
       ref={ref}
-      className="w-full h-full overflow-hidden relative grid place-items-center md:px-0 px-4"
+      className="w-full h-full overflow-hidden relative grid place-items-center md:px-0 px-[6px]"
     >
       <motion.div
         className="absolute inset-0"
