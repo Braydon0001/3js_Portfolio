@@ -51,7 +51,7 @@ const Hero = () => {
                       times: [0, 0.2, 0.4, 0.6],
                       duration: 4,
                     }}
-                    className="absolute w-[145px] h-[145px] left-[46.5%] translate-x-[-46.5%] bottom-[31%] translate-y-[-31%] opacity-20 z-20"
+                    className="absolute w-[80px] md:w-[145px] h-[80px] md:h-[145px] left-[46.5%] translate-x-[-46.5%] bottom-1/2 md:bottom-[31%] translate-y-[-31%] opacity-20 z-20"
                   >
                     <img
                       src={"img/icons/move-white.png"}

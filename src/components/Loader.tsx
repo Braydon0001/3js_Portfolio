@@ -4,18 +4,8 @@ const Loader = () => {
   const { progress } = useProgress();
   return (
     <Html>
-      <span className="canvas-load w-80"></span>
-      <p
-        style={{
-          fontSize: 21,
-          color: "#f1f1f1",
-          fontWeight: 800,
-          marginTop: 40,
-          whiteSpace: "nowrap",
-          textAlign: "center",
-          width: "180px",
-        }}
-      >
+      <span className="canvas-load w-40 md:w-80"></span>
+      <p className="text-[21px] text-[#f1f1f1] font-[800] mt-10 whitespace-nowrap text-center w-[180px] -ml-20 ">
         Loading 3D Model <br />
         <span className="text-[#de4444]">{progress.toFixed(2)}%</span>
       </p>

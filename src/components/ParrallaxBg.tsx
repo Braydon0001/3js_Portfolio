@@ -1,9 +1,29 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ReactNode, useRef } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
 import ParticleBackground from "./ParticleBackground";
 
 const ParrallaxBg = ({ children }: { children: ReactNode }) => {
   const ref = useRef<HTMLDivElement>(null);
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  //changing the isMobile state
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 500px)");
+
+    setIsMobile(mediaQuery.matches);
+
+    const handleMediaQueryChange = (event) => {
+      setIsMobile(event.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  }, []);
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
@@ -20,7 +40,7 @@ const ParrallaxBg = ({ children }: { children: ReactNode }) => {
   return (
     <div
       ref={ref}
-      className="w-full h-full overflow-hidden relative grid place-items-center"
+      className="w-full h-full overflow-hidden relative grid place-items-center md:px-0 px-4"
     >
       <motion.div
         className="absolute inset-0"
@@ -33,7 +53,7 @@ const ParrallaxBg = ({ children }: { children: ReactNode }) => {
           backgroundPosition: "top",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          // y: backgroundY1,
+          // y: !isMobile && backgroundY1,
           transform: "translateZ(0)", // Add this line
         }}
       />
@@ -45,7 +65,7 @@ const ParrallaxBg = ({ children }: { children: ReactNode }) => {
           backgroundPosition: "bottom",
           backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
-          y: backgroundY2,
+          y: !isMobile && backgroundY2,
         }}
       />
       <motion.div
@@ -55,7 +75,7 @@ const ParrallaxBg = ({ children }: { children: ReactNode }) => {
           backgroundPosition: "bottom",
           backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
-          y: backgroundY3,
+          y: !isMobile && backgroundY3,
         }}
       />
       <motion.div
@@ -65,7 +85,7 @@ const ParrallaxBg = ({ children }: { children: ReactNode }) => {
           backgroundPosition: "bottom",
           backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
-          y: backgroundY4,
+          y: !isMobile && backgroundY4,
         }}
       />
       {children}

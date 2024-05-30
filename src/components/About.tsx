@@ -15,7 +15,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="w-fit max-w-[1600px] mx-6 xs:mx-auto py-[80px]  lg:px-0 relative"
+      className="w-fit max-w-[1600px] mx-0 px-4 xs:mx-auto py-0 md:py-[80px] md:pb-0 pb-28 lg:px-0 relative"
     >
       <motion.div variants={textVariant()} className="xl:mx-0 xs:mx-[60px]">
         <p className={`${styles.sectionSubText} text-slate-100 w-fit`}>
@@ -37,10 +37,10 @@ const About = () => {
         instruments, going to the gym, gaming, and art.
       </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-10 w-fit mr-5">
+      <div className="mt-28 md:mt-20 flex flex-wrap gap-10 w-fit md:mr-5">
         <div className="xl:w-[1600px] flex flex-wrap justify-between relative">
           <div className="w-full xl:w-[800px] flex justify-between relative z-10">
-            <ul className="list-none flex flex-wrap flex-row xl:flex-col md:min-w-[510px] justify-center gap-x-10 xl:px-0 px-5 xl:gap-1">
+            <ul className="list-none flex flex-wrap flex-row xl:flex-col md:min-w-[510px] justify-center gap-x-10 xl:px-0 md:px-5 xl:gap-1">
               {services.map((service, index) => (
                 <li
                   key={service.title + index}
@@ -64,13 +64,13 @@ const About = () => {
           </div>
 
           <div className="w-full xl:w-[800px] flex justify-between gap-4 md:mt-0 mt-6 md:gap-0 relative flex-wrap md:flex-auto">
-            <div className="glass w-[350px] rounded-lg h-fit md:h-auto md:absolute md:right-[140px] xl:right-[60px]  p-5 top-[40px] xl:top-[90px]">
+            <div className="glass w-full md:w-[350px] rounded-lg h-fit md:h-auto md:absolute md:right-[140px] xl:right-[60px]  p-5 top-[40px] xl:top-[90px]">
               <p className="text-[21px] text-white">
                 {services[skill].skillGroups[2]}
               </p>
             </div>
 
-            <div className="glass w-[350px] rounded-lg h-fit md:h-auto md:absolute md:right-[160px] xl:right-[80px]  z-30  p-5 top-[150px] xl:top-[330px]">
+            <div className="glass w-full md:w-[350px] rounded-lg h-fit md:h-auto md:absolute md:right-[160px] xl:right-[80px]  z-30  p-5 top-[150px] xl:top-[330px]">
               <p className="text-[21px] text-white">
                 {services[skill].skillGroups[3]}
               </p>
@@ -87,13 +87,13 @@ const About = () => {
               <ReactModel />
             </div>
 
-            <div className="glass w-[350px] rounded-lg h-fit md:h-auto md:absolute  z-30 p-5 top-[40px] left-[160px] xl:left-auto  xl:right-[610px]">
+            <div className="md:mt-0 -mt-3 glass w-full md:w-[350px] rounded-lg h-fit md:h-auto md:absolute  z-30 p-5 top-[40px] left-[160px] xl:left-auto  xl:right-[610px]">
               <p className="text-[21px] text-white">
                 {services[skill].skillGroups[0]}
               </p>
             </div>
 
-            <div className="glass w-[350px] rounded-lg h-fit md:h-auto md:absolute z-[1]  p-5 top-[150px] xl:top-[290px] xl:left-auto left-[140px]  xl:right-[630px]">
+            <div className="glass w-full md:w-[350px] rounded-lg h-fit md:h-auto md:absolute z-[1]  p-5 top-[150px] xl:top-[290px] xl:left-auto left-[140px]  xl:right-[630px]">
               <p className="text-[21px] text-white">
                 {services[skill].skillGroups[1]}
               </p>
