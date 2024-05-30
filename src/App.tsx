@@ -3,10 +3,8 @@ import {
   About,
   Contact,
   Experience,
-  Feedbacks,
   Hero,
   Navbar,
-  Tech,
   Works,
   StarsCanvas,
 } from "./components";
@@ -51,7 +49,7 @@ const App = () => {
           <div className="absolute w-full bg-[#020f3d] h-full  z-30" />
           <Contact />
           <StarsCanvas />
-          <div className="absolute w-full bg-gradient-to-t from-[#11235f] to-transparent bottom-0 h-[150px] opacity-70 z-30" />
+          <div className="absolute w-full bg-gradient-to-t from-[#11235f] to-transparent bottom-0 h-[120px] opacity-70 z-30" />
         </div>
       </div>
     </BrowserRouter>

@@ -396,9 +396,41 @@
   animation: moveText 0.5s linear both;
 }
 
+@media (max-width: 700px) {
+  .listItems {
+    -webkit-text-stroke: 1px white;
+  }
+
+  .listItems.active {
+    color: rgb(145 94 255);
+  }
+
+  /* .listItems:hover {
+            -webkit-text-stroke: 0px white;
+          } */
+
+  .listItems:hover::after {
+    animation: moveTextSm 0.5s linear both;
+  }
+
+  .listItems.active {
+    -webkit-text-stroke: 0px;
+  }
+
+  .listItems.active::after {
+    animation: moveTextSm 0.5s linear both;
+  }
+}
+
 @keyframes moveText {
   to {
     width: 100%;
+  }
+}
+
+@keyframes moveTextSm {
+  to {
+    width: 0;
   }
 }
 

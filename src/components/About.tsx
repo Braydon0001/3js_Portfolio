@@ -15,7 +15,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="w-fit max-w-[1600px] mx-6 xs:mx-auto py-[80px] relative"
+      className="w-fit max-w-[1600px] mx-6 xs:mx-auto py-[80px]  lg:px-0 relative"
     >
       <motion.div variants={textVariant()} className="xl:mx-0 xs:mx-[60px]">
         <p className={`${styles.sectionSubText} text-slate-100 w-fit`}>
@@ -40,14 +40,14 @@ const About = () => {
       <div className="mt-20 flex flex-wrap gap-10 w-fit mr-5">
         <div className="xl:w-[1600px] flex flex-wrap justify-between relative">
           <div className="w-full xl:w-[800px] flex justify-between relative z-10">
-            <ul className="list-none flex flex-wrap flex-row xl:flex-col min-w-[510px]  justify-center gap-x-10 xl:px-0 px-5 xl:gap-1">
+            <ul className="list-none flex flex-wrap flex-row xl:flex-col min-w-[510px] justify-center gap-x-10 xl:px-0 px-5 xl:gap-1">
               {services.map((service, index) => (
                 <li
                   key={service.title + index}
                   onClick={() => setSkill(index)}
                   data-content={service.title}
-                  className={`lg:text-[74px] flex justify-between items-center gap-5 text-center xl:text-left w-[45%] xl:w-full sm:text-[60px] xs:text-[50px] text-[40px] font-bold cursor-pointer text-transparent stroke-white stroke-1 listItems relative ${
-                    skill == index && "active"
+                  className={`lg:text-[74px] flex justify-between items-center gap-5 text-center xl:text-left w-full md:w-[45%] xl:w-full sm:text-[60px] xs:text-[50px] text-[40px] font-bold cursor-pointer text-transparent stroke-white stroke-1 listItems relative ${
+                    skill == index && "active text-accent md:text-transparent"
                   }`}
                 >
                   {service.title}

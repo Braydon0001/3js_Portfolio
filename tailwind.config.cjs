@@ -84,6 +84,8 @@ module.exports = {
       },
       screens: {
         xs: "501px",
+        sm: "700px",
+        md: "1366px",
         xl: "1600px",
       },
       backgroundImage: {
