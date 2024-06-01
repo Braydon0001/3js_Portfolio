@@ -1,11 +1,11 @@
-import { Suspense, useEffect, useRef, useState } from 'react'
-import { Canvas } from '@react-three/fiber'
-import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
+import { Suspense, useEffect, useRef, useState } from "react";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
-import CanvasLoader from '../Loader'
+import CanvasLoader from "../Loader";
 
 const CSharp = ({ isMobile }) => {
-  const CSharpModel = useGLTF('./csharp/scene.gltf')
+  const CSharpModel = useGLTF("./csharp/scene.gltf");
 
   return (
     // @ts-ignore
@@ -27,31 +27,31 @@ const CSharp = ({ isMobile }) => {
         is="x3d"
         object={CSharpModel.scene}
         scale={isMobile ? 0.1 : 0.11}
-        position={isMobile ? [0, -1.25, -0.5] : [0, 0, 0]}
+        position={isMobile ? [0, 0, 0] : [0, 0, 0]}
       />
     </mesh>
-  )
-}
+  );
+};
 
 const CSharpCanvas = () => {
-  const [isMobile, setIsMobile] = useState(false)
+  const [isMobile, setIsMobile] = useState(false);
 
   //changing the isMobile state
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 500px)')
+    const mediaQuery = window.matchMedia("(max-width: 500px)");
 
-    setIsMobile(mediaQuery.matches)
+    setIsMobile(mediaQuery.matches);
 
     const handleMediaQueryChange = (event) => {
-      setIsMobile(event.matches)
-    }
+      setIsMobile(event.matches);
+    };
 
-    mediaQuery.addEventListener('change', handleMediaQueryChange)
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
 
     return () => {
-      mediaQuery.removeEventListener('change', handleMediaQueryChange)
-    }
-  }, [])
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  }, []);
 
   return (
     <Canvas
@@ -75,7 +75,7 @@ const CSharpCanvas = () => {
 
       <Preload all />
     </Canvas>
-  )
-}
+  );
+};
 
-export default CSharpCanvas
+export default CSharpCanvas;

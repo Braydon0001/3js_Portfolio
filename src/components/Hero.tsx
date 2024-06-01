@@ -69,13 +69,13 @@ const Hero = () => {
         onMouseDown={() => setIsGrabbing(true)}
         onMouseUp={() => setIsGrabbing(false)}
         className={cn(
-          `m-auto  md:pr-4 w-full sm:w-full md:w-full h-full cursor-grab`,
+          `m-auto  md:pr-4 w-full sm:w-[90%] md:w-full h-full cursor-grab pt-20 sm:pt-0`,
           isGrabbing && "cursor-grabbing"
         )}
       >
         <ComputersCanvas />
       </div>
-      <div className="absolute xs:bottom-6 bottom-32 w-full flex justify-center items-center">
+      <div className="absolute xs:bottom-6 bottom-16 w-full flex justify-center items-center">
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             <motion.div

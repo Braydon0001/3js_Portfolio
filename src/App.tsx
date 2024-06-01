@@ -19,10 +19,10 @@ const App = () => {
           <Navbar />
           <Hero />
         </div>
-        <div className="bg-gradient-to-t from-[#11235f] to-primary bg-contain bg-no-repeat bg-top -mt-10 md:-mt-1">
+        <div className="bg-gradient-to-t from-[#11235f] to-primary bg-contain bg-no-repeat bg-top -mt-[1px] md:-mt-1">
           <About />
         </div>
-        <div className="relative md:mt-0 -mt-1">
+        <div className="relative md:mt-0 mt-[-1px]">
           <div className="absolute w-full bg-gradient-to-b from-[#11235f] to-transparent top-0 h-[300px] z-30" />
 
           <div className="absolute w-full bg-[#11235f] h-full opacity-50 z-[5] md:hidden" />

@@ -1,11 +1,11 @@
-import { Suspense, useEffect, useRef, useState } from 'react'
-import { Canvas } from '@react-three/fiber'
-import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
+import { Suspense, useEffect, useRef, useState } from "react";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
-import CanvasLoader from '../Loader'
+import CanvasLoader from "../Loader";
 
 const Figma = ({ isMobile }) => {
-  const FigmaModel = useGLTF('./figma/scene.gltf')
+  const FigmaModel = useGLTF("./figma/scene.gltf");
 
   return (
     // @ts-ignore
@@ -26,32 +26,32 @@ const Figma = ({ isMobile }) => {
       <primitive
         is="x3d"
         object={FigmaModel.scene}
-        scale={isMobile ? 2 : 4}
-        position={isMobile ? [0, -1.25, -0.5] : [0, 0, 0]}
+        scale={isMobile ? 3.5 : 4}
+        position={isMobile ? [0, 0, -0.5] : [0, 0, 0]}
       />
     </mesh>
-  )
-}
+  );
+};
 
 const FigmaCanvas = () => {
-  const [isMobile, setIsMobile] = useState(false)
+  const [isMobile, setIsMobile] = useState(false);
 
   //changing the isMobile state
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 500px)')
+    const mediaQuery = window.matchMedia("(max-width: 500px)");
 
-    setIsMobile(mediaQuery.matches)
+    setIsMobile(mediaQuery.matches);
 
     const handleMediaQueryChange = (event) => {
-      setIsMobile(event.matches)
-    }
+      setIsMobile(event.matches);
+    };
 
-    mediaQuery.addEventListener('change', handleMediaQueryChange)
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
 
     return () => {
-      mediaQuery.removeEventListener('change', handleMediaQueryChange)
-    }
-  }, [])
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  }, []);
 
   return (
     <Canvas
@@ -75,7 +75,7 @@ const FigmaCanvas = () => {
 
       <Preload all />
     </Canvas>
-  )
-}
+  );
+};
 
-export default FigmaCanvas
+export default FigmaCanvas;

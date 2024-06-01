@@ -15,9 +15,9 @@ const About = () => {
   return (
     <div
       id="about"
-      className="w-fit max-w-[1600px] mx-0 px-4 xs:mx-auto py-0 md:py-[80px] md:pb-0 pb-20 lg:px-0 relative"
+      className="w-fit max-w-[1600px] mx-0 px-4 xs:mx-auto py-0 md:py-[80px] md:pb-0 pb-20 md:px-0 relative"
     >
-      <motion.div variants={textVariant()} className="xl:mx-0 xs:mx-[60px]">
+      <motion.div variants={textVariant()} className="xl:mx-0 md:mx-[60px]">
         <p className={`${styles.sectionSubText} text-slate-100 w-fit`}>
           Introduction
         </p>
@@ -27,7 +27,7 @@ const About = () => {
       </motion.div>
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="xl:mx-0 xs:mx-[60px] mt-4 text-slate-100 text-[18px] max-w-3xl leading-[30px]"
+        className="xl:mx-0 md:mx-[60px] mt-4 text-slate-100 text-[18px] max-w-3xl leading-[30px]"
       >
         I am an Intermediate full stack developer and Senior UI/UX designer from
         sunny South Africa. With a Higher Certificate in Information Systems &
@@ -37,7 +37,7 @@ const About = () => {
         instruments, going to the gym, gaming, and art.
       </motion.p>
 
-      <div className="mt-28 md:mt-20 flex flex-wrap gap-10 w-fit md:mr-5">
+      <div className="mt-20 flex flex-wrap gap-10 w-fit md:mr-5">
         <div className="xl:w-[1600px] flex flex-wrap justify-between relative">
           <div className="w-full xl:w-[800px] flex justify-between relative z-10">
             <ul className="list-none flex flex-wrap flex-row xl:flex-col md:min-w-[510px] justify-center gap-x-10 xl:px-0 md:px-5 xl:gap-1">
@@ -80,7 +80,7 @@ const About = () => {
               onMouseDown={() => setIsGrabbing(true)}
               onMouseUp={() => setIsGrabbing(false)}
               className={cn(
-                "w-[140%] -mt-16 md:mt-10 xl:mt-0 xl:w-2/3 z-20 cursor-grab md:h-auto h-[300px]",
+                "w-[140%] -mt-2 sm:mt-0 md:mt-10 xl:mt-0 xl:w-2/3 z-20 cursor-grab md:h-auto h-[300px]",
                 isGrabbing && "cursor-grabbing"
               )}
             >

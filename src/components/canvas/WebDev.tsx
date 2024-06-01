@@ -1,11 +1,11 @@
-import { Suspense, useEffect, useRef, useState } from 'react'
-import { Canvas } from '@react-three/fiber'
-import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
+import { Suspense, useEffect, useRef, useState } from "react";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
-import CanvasLoader from '../Loader'
+import CanvasLoader from "../Loader";
 
 const WebDev = ({ isMobile }) => {
-  const WebDevModel = useGLTF('./web/scene.gltf')
+  const WebDevModel = useGLTF("./web/scene.gltf");
 
   return (
     // @ts-ignore
@@ -26,33 +26,33 @@ const WebDev = ({ isMobile }) => {
       <primitive
         is="x3d"
         object={WebDevModel.scene}
-        scale={isMobile ? 0.5 : 0.95}
-        position={isMobile ? [0, -1, -0.5] : [0, -1.5, 1]}
+        scale={isMobile ? 0.86 : 0.95}
+        position={isMobile ? [0, -1.2, 0] : [0, -1.5, 1]}
         rotation={[-0.01, -0.2, -0.3]}
       />
     </mesh>
-  )
-}
+  );
+};
 
 const WebDevCanvas = () => {
-  const [isMobile, setIsMobile] = useState(false)
+  const [isMobile, setIsMobile] = useState(false);
 
   //changing the isMobile state
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 500px)')
+    const mediaQuery = window.matchMedia("(max-width: 500px)");
 
-    setIsMobile(mediaQuery.matches)
+    setIsMobile(mediaQuery.matches);
 
     const handleMediaQueryChange = (event) => {
-      setIsMobile(event.matches)
-    }
+      setIsMobile(event.matches);
+    };
 
-    mediaQuery.addEventListener('change', handleMediaQueryChange)
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
 
     return () => {
-      mediaQuery.removeEventListener('change', handleMediaQueryChange)
-    }
-  }, [])
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  }, []);
 
   return (
     <Canvas
@@ -76,7 +76,7 @@ const WebDevCanvas = () => {
 
       <Preload all />
     </Canvas>
-  )
-}
+  );
+};
 
-export default WebDevCanvas
+export default WebDevCanvas;
