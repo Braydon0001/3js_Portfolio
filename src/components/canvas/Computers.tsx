@@ -4,7 +4,7 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 
-const Computers = ({ isMobile }) => {
+const Computers = ({ isMobile, isTablet }) => {
   const computer = useGLTF("./gaming_desktop_pc/scene.gltf");
 
   return (
@@ -26,8 +26,14 @@ const Computers = ({ isMobile }) => {
       <primitive
         is="x3d"
         object={computer.scene}
-        scale={isMobile ? 0.3 : 0.7}
-        position={isMobile ? [0, -1.25, -0.5] : [0, -3.25, -1.5]}
+        scale={isMobile ? 0.3 : isTablet ? 0.43 : 0.7}
+        position={
+          isMobile
+            ? [0, -1.25, -0.5]
+            : isTablet
+            ? [0, -1.95, -0.7]
+            : [0, -3.25, -1.5]
+        }
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
@@ -36,21 +42,33 @@ const Computers = ({ isMobile }) => {
 
 const ComputerCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
 
   //changing the isMobile state
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 500px)");
+    const mobileMediaQuery = window.matchMedia("(max-width: 500px)");
+    const tabletMediaQuery = window.matchMedia("(max-width: 1366px)");
 
-    setIsMobile(mediaQuery.matches);
+    setIsMobile(mobileMediaQuery.matches);
+    setIsTablet(tabletMediaQuery.matches);
 
     const handleMediaQueryChange = (event) => {
       setIsMobile(event.matches);
     };
 
-    mediaQuery.addEventListener("change", handleMediaQueryChange);
+    const handleTabletMediaQueryChange = (event) => {
+      setIsTablet(event.matches);
+    };
+
+    mobileMediaQuery.addEventListener("change", handleMediaQueryChange);
+    tabletMediaQuery.addEventListener("change", handleTabletMediaQueryChange);
 
     return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+      mobileMediaQuery.removeEventListener("change", handleMediaQueryChange);
+      tabletMediaQuery.removeEventListener(
+        "change",
+        handleTabletMediaQueryChange
+      );
     };
   }, []);
 
@@ -71,7 +89,7 @@ const ComputerCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Computers isMobile={isMobile} />
+        <Computers isMobile={isMobile} isTablet={isTablet} />
       </Suspense>
 
       <Preload all />

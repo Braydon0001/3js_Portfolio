@@ -69,7 +69,7 @@ const Hero = () => {
         onMouseDown={() => setIsGrabbing(true)}
         onMouseUp={() => setIsGrabbing(false)}
         className={cn(
-          `m-auto  sm:pr-4 w-full sm:w-3/4 h-full cursor-grab`,
+          `m-auto  md:pr-4 w-full sm:w-full md:w-full h-full cursor-grab`,
           isGrabbing && "cursor-grabbing"
         )}
       >
