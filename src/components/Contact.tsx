@@ -10,9 +10,9 @@ import { cn } from "@/lib/utils";
 const Contact = () => {
   const [isGrabbing, setIsGrabbing] = useState(false);
   return (
-    <div className="max-w-[1600px] xs:mx-auto -mt-3 md:mt-0 pb-0 md:py-[80px] py-20 md:pb-[120px] relative z-40">
+    <div className="max-w-[1600px] px-0 md:px-[60px] xs:mx-auto -mt-3 md:mt-0 pb-0 md:py-[80px] py-20 md:pb-[120px] relative z-40">
       <StarsCanvas />
-      <div className="xl:pt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
+      <div className="md:pt-12 md:flex-row flex-col-reverse flex gap-10 overflow-hidden">
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}
           className="flex-1  p-5 md:rounded-2xl glass-no-border border-0 min-h-[430px] md:min-h-[600px]"
@@ -61,7 +61,7 @@ const Contact = () => {
         <motion.div
           variants={slideIn("right", "tween", 0.2, 1)}
           className={cn(
-            "xl:flex-1 xl:h-auto md:h-[550px] h-[350px] relative z-50 cursor-grab",
+            "md:flex-1 md:h-auto xl:h-[550px] h-[350px] relative z-50 cursor-grab",
             isGrabbing && "cursor-grabbing"
           )}
           onMouseDown={() => setIsGrabbing(true)}

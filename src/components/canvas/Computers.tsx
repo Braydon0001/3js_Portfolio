@@ -47,7 +47,7 @@ const ComputerCanvas = () => {
   //changing the isMobile state
   useEffect(() => {
     const mobileMediaQuery = window.matchMedia("(max-width: 500px)");
-    const tabletMediaQuery = window.matchMedia("(max-width: 1366px)");
+    const tabletMediaQuery = window.matchMedia("(max-width: 1365px)");
 
     setIsMobile(mobileMediaQuery.matches);
     setIsTablet(tabletMediaQuery.matches);

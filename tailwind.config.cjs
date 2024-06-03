@@ -87,7 +87,7 @@ module.exports = {
         sm: "700px",
         md: "1366px",
         lg: "1366px",
-        xl: "1600px",
+        xl: "1700px",
       },
       backgroundImage: {
         b1: "url('/img/bg/b1.jpg')",

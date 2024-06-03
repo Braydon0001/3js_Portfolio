@@ -396,7 +396,7 @@
   animation: moveText 0.5s linear both;
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 1700px) {
   .listItems {
     -webkit-text-stroke: 1px white;
   }

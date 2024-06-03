@@ -48,7 +48,7 @@ const Navbar = () => {
             )}
           />
           <p className="text-white text-[21px] font-bold cursor-pointer flex">
-            Braydon &nbsp;{" "}
+            Braydon Padayachee &nbsp;{" "}
             <span className="sm:block hidden">| &nbsp;Portfolio</span>
           </p>
         </Link>

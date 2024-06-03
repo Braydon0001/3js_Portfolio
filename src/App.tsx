@@ -10,6 +10,7 @@ import {
 } from "./components";
 import Demos from "./components/Demos";
 import ParrallaxBg from "./components/ParrallaxBg";
+import { Icon } from "./components/Icon";
 
 const App = () => {
   return (

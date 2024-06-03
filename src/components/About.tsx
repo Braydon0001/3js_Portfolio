@@ -15,7 +15,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="w-fit max-w-[1600px] mx-0 px-4 xs:mx-auto py-0 sm:py-10 md:py-[80px] md:pb-0 pb-20 md:px-0 relative"
+      className="w-fit max-w-[1600px] mx-0 px-4 xs:mx-auto py-0 sm:py-10 md:py-[80px]  pb-20 md:px-0 relative"
     >
       <motion.div variants={textVariant()} className="xl:mx-0 md:mx-[60px]">
         <p className={`${styles.sectionSubText} text-slate-100 w-fit`}>
@@ -80,7 +80,7 @@ const About = () => {
               onMouseDown={() => setIsGrabbing(true)}
               onMouseUp={() => setIsGrabbing(false)}
               className={cn(
-                "w-[140%] -mt-2 sm:mt-0 md:mt-10 xl:mt-0 xl:w-2/3 z-20 cursor-grab md:h-auto h-[300px]",
+                "w-[140%] -mt-2 sm:mt-0 md:mt-10 xl:mt-0 xl:w-2/3 z-20 cursor-grab xl:h-auto h-[300px]",
                 isGrabbing && "cursor-grabbing"
               )}
             >
