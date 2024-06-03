@@ -50,7 +50,7 @@ const ExperienceCard = ({ experience }) => {
         {experience.points.map((point, index) => (
           <li
             key={`experience-point-${index}`}
-            className="text-white-100 text-[14px] pl-1 tracking-wider"
+            className="text-white-100 text-[14px] sm:text-[16px] md:text-[14px] pl-1 tracking-wider"
           >
             {point}
           </li>
@@ -63,21 +63,24 @@ const ExperienceCard = ({ experience }) => {
 const Experience = () => {
   return (
     <div className="max-w-[1600px] xs:mx-auto xs:py-[80px] z-40 relative">
-      <motion.div variants={textVariant()} className="xl:mx-0 xs:mx-[60px]">
+      <motion.div
+        variants={textVariant()}
+        className="xl:mx-0 mx-4 md:mx-[60px]"
+      >
         <p
-          className={`${styles.sectionSubText} text-slate-100 text-center w-full`}
+          className={`${styles.sectionSubText} text-slate-100 md:text-center w-full`}
         >
           My career
         </p>
         <h2
-          className={`${styles.sectionHeadText} text-accent text-center w-full`}
+          className={`${styles.sectionHeadText} text-accent md:text-center w-full`}
         >
           Work Experience
         </h2>
       </motion.div>
 
       {/* timeline */}
-      <div className="mt-10 md:mt-20 flex flex-col">
+      <div className="mt-10 md:mt-20 flex flex-col mx-0 xs:-mx-2 md:mx-0 ">
         <VerticalTimeline>
           {experiences?.map((experience, index) => (
             <ExperienceCard key={index} experience={experience} />

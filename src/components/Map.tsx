@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
   ComposableMap,
   Geographies,
@@ -7,13 +8,44 @@ import {
 } from "react-simple-maps";
 
 const Map = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
+
+  //changing the isMobile state
+  useEffect(() => {
+    const mobileMediaQuery = window.matchMedia("(max-width: 500px)");
+    const tabletMediaQuery = window.matchMedia("(max-width: 1366px)");
+
+    setIsMobile(mobileMediaQuery.matches);
+    setIsTablet(tabletMediaQuery.matches);
+
+    const handleMediaQueryChange = (event) => {
+      setIsMobile(event.matches);
+    };
+
+    const handleTabletMediaQueryChange = (event) => {
+      setIsTablet(event.matches);
+    };
+
+    mobileMediaQuery.addEventListener("change", handleMediaQueryChange);
+    tabletMediaQuery.addEventListener("change", handleTabletMediaQueryChange);
+
+    return () => {
+      mobileMediaQuery.removeEventListener("change", handleMediaQueryChange);
+      tabletMediaQuery.removeEventListener(
+        "change",
+        handleTabletMediaQueryChange
+      );
+    };
+  }, []);
+
   return (
     <ComposableMap
       projection="geoAzimuthalEqualArea"
       projectionConfig={{
         rotate: [-10.0, -52.0, 0],
-        center: [-5, -40],
-        scale: 400,
+        center: isMobile ? [-13, -50] : isTablet ? [-5, -75] : [-5, -40],
+        scale: isMobile ? 500 : 400,
       }}
     >
       <Geographies

@@ -180,7 +180,7 @@ const ProjectCard = ({
       </GlassPopup>
       <motion.div
         onClick={() => setIsProfileModalOpen(true)}
-        className="sm:w-[calc(33.33%-19px)] cursor-pointer w-full h-full min-h-[505px] xl:min-h-[617px] hover:scale-[1.02] transition-transform duration-300 ease-in-out rounded-2xl "
+        className="sm:w-[calc(50%-14px)] md:w-[calc(33.33%-19px)] cursor-pointer w-full h-full min-h-[505px] xl:min-h-[617px] hover:scale-[1.02] transition-transform duration-300 ease-in-out rounded-2xl "
         variants={fadeIn("up", "spring", index * 0.5, 0.75)}
       >
         <div className="flex flex-col justify-between glass p-5 rounded-2xl h-full min-h-[505px] xl:min-h-[617px] ">
@@ -261,7 +261,7 @@ const ProjectCard = ({
             </div>
           </div>
 
-          <div className="mt-4 flex flex-wrap gap-2">
+          <div className="mt-4 flex flex-wrap gap-2 line-clamp-2">
             {tags?.map((tag, index) => (
               <p
                 key={tag?.name}
@@ -290,7 +290,7 @@ const ProjectCard = ({
 const Works = () => {
   return (
     <div className="max-w-[1600px] xs:mx-auto xs:py-[80px] relative z-40 md:px-0 px-4">
-      <motion.div variants={textVariant()} className="xl:mx-0 xs:mx-[60px]">
+      <motion.div variants={textVariant()} className="xl:mx-0 md:mx-[60px]">
         <p className={`${styles.sectionSubText} text-slate-100 w-fit`}>
           But Not Limited To
         </p>

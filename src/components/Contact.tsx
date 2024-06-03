@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 const Contact = () => {
   const [isGrabbing, setIsGrabbing] = useState(false);
   return (
-    <div className="max-w-[1600px] xs:mx-auto  pb-0 xs:py-[80px] py-20 xs:pb-[120px] relative z-40">
+    <div className="max-w-[1600px] xs:mx-auto -mt-3 md:mt-0 pb-0 md:py-[80px] py-20 md:pb-[120px] relative z-40">
       <StarsCanvas />
       <div className="xl:pt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
         <motion.div

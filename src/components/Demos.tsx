@@ -44,7 +44,7 @@ const Demos = () => {
         </div>
       </GlassPopup>
       <div className="md:px-0 px-4 py-20 max-w-[1600px] xs:mx-auto xs:py-[80px] relative z-40">
-        <motion.div variants={textVariant()} className="xl:mx-0 xs:mx-[60px]">
+        <motion.div variants={textVariant()} className="xl:mx-0 md:mx-[60px]">
           <p className={`${styles.sectionSubText} text-slate-100 w-fit`}>
             My Apps & Solutions
           </p>
@@ -138,7 +138,7 @@ const VideoDemo = ({
   return (
     <LightGalleryWrapper
       elementClassNames={cn(
-        "md:w-[calc(33.33%-19px)] cursor-pointer w-full h-full transition-transform duration-300 ease-in-out rounded-2xl",
+        "md:w-[calc(33.33%-19px)] cursor-pointer w-full sm:w-[calc(50%-14px)] h-full transition-transform duration-300 ease-in-out rounded-2xl",
         className
       )}
     >
