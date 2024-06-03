@@ -176,7 +176,7 @@ const VideoDemo = ({
                   <h3
                     className={cn(
                       "text-white font-bold text-[24px]",
-                      isLight && "text-[#333] line-clamp-1"
+                      isLight && "text-[#333]"
                     )}
                   >
                     {title}
