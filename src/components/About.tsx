@@ -53,6 +53,7 @@ const About = () => {
                   {service.title}
                   {skill == index && (
                     <MoveLeft
+                      className="mr-0 md:mr-6 xl:mr-0"
                       style={{ width: "40px", height: "40px", marginTop: 5 }}
                       color="rgba(255,255,255,0.7)"
                       // color="#de4444"

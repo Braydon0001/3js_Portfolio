@@ -4,6 +4,7 @@ import { styles } from "../style";
 import { logo, menu, close } from "../assets";
 import { navLinks } from "../constants";
 import { cn } from "@/lib/utils";
+import LightGalleryWrapper from "./LightGalleryWrapper";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -31,27 +32,34 @@ const Navbar = () => {
       )}
     >
       <div className="w-full flex justify-between max-w-[1600px] mx-auto items-center">
-        <Link
+        {/* <Link
           to="/"
-          className="flex items-center gap-2"
+          className=""
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0);
           }}
-        >
-          <img
-            src={logo}
-            alt="Logo"
-            className={cn(
-              " transition-all duration-[0.5s] ease h-[50px]",
-              isNavSticky && "h-[40px]"
-            )}
-          />
-          <p className="text-white text-[21px] font-bold cursor-pointer flex">
-            Braydon Padayachee &nbsp;{" "}
-            <span className="sm:block hidden">| &nbsp;Portfolio</span>
-          </p>
-        </Link>
+        > */}
+        <LightGalleryWrapper>
+          <a
+            className="text-[18px] text-white flex items-center gap-4"
+            id={"braydon-profile-picture"}
+            href="img/braydon-profile-picture.jpeg"
+          >
+            <img
+              src={"img/braydon-profile-picture.jpeg"}
+              alt="Braydon Padayachee"
+              className={cn(
+                " transition-all duration-[0.5s] ease h-[50px] rounded-full",
+                isNavSticky && "h-[50px]"
+              )}
+            />
+            <p className="text-white text-[21px] font-bold cursor-pointer flex">
+              Braydon Padayachee &nbsp;{" "}
+              <span className="sm:block hidden">| &nbsp;Portfolio</span>
+            </p>
+          </a>
+        </LightGalleryWrapper>
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((link, index) => (
             <li
