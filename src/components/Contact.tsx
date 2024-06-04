@@ -40,7 +40,9 @@ const Contact = () => {
                 size={26}
               />
               <a href="tel:+27848816464">
-                <h3 className={"text-white font-bold text-[24px]"}>
+                <h3
+                  className={"text-white font-bold text-[24px] hover:underline"}
+                >
                   +27 84 881 6464
                 </h3>
               </a>
@@ -50,7 +52,11 @@ const Contact = () => {
               <Icon className="mb-[1px]" name="Mail" color="#de4444" />
 
               <a href="mailto:braydz0001@gmail.com">
-                <h3 className={"text-white font-bold text-[24px] ml-[2px]"}>
+                <h3
+                  className={
+                    "text-white font-bold text-[24px] ml-[2px] hover:underline"
+                  }
+                >
                   braydz0001@gmail.com
                 </h3>
               </a>

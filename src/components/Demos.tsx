@@ -20,7 +20,7 @@ const Demos = () => {
         setIsOpen={setIsDemoModalOpen}
       >
         {/* work cards */}
-        <div className="md:mx-[60px] xl:mx-0 mt-6 flex flex-wrap gap-7  relative">
+        <div className="mx-0 mt-6 flex flex-wrap gap-7  relative">
           <VideoDemo
             className="shadow-custom"
             index={2}

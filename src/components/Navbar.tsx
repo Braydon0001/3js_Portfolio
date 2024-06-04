@@ -40,26 +40,28 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         > */}
-        <LightGalleryWrapper>
-          <a
-            className="text-[18px] text-white flex items-center gap-4"
-            id={"braydon-profile-picture"}
-            href="img/braydon-profile-picture.jpeg"
-          >
-            <img
-              src={"img/braydon-profile-picture.jpeg"}
-              alt="Braydon Padayachee"
-              className={cn(
-                " transition-all duration-[0.5s] ease h-[50px] rounded-full",
-                isNavSticky && "h-[50px]"
-              )}
-            />
-            <p className="text-white text-[21px] font-bold cursor-pointer flex">
-              Braydon Padayachee &nbsp;{" "}
-              <span className="sm:block hidden">| &nbsp;Portfolio</span>
-            </p>
-          </a>
-        </LightGalleryWrapper>
+        <div className="flex items-center gap-4">
+          <LightGalleryWrapper>
+            <a
+              className="text-[18px] text-white cursor-pointer hover:opacity-80"
+              id={"braydon-profile-picture"}
+              href="img/braydon-profile-picture.jpeg"
+            >
+              <img
+                src={"img/braydon-profile-picture.jpeg"}
+                alt="Braydon Padayachee"
+                className={cn(
+                  " transition-all duration-[0.5s] ease h-[50px] rounded-full",
+                  isNavSticky && "h-[50px]"
+                )}
+              />
+            </a>
+          </LightGalleryWrapper>
+          <p className="text-white text-[21px] font-bold cursor-pointer flex">
+            Braydon Padayachee &nbsp;{" "}
+            <span className="sm:block hidden">| &nbsp;Portfolio</span>
+          </p>
+        </div>
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((link, index) => (
             <li
