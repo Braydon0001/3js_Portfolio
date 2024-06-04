@@ -261,14 +261,14 @@ const ProjectCard = ({
             </div>
           </div>
 
-          <div className="mt-4 flex flex-wrap gap-2 line-clamp-2">
+          <div className="mt-4 flex flex-wrap gap-2">
             {tags?.map((tag, index) => (
-              <p
+              <span
                 key={tag?.name}
                 className={`text-[15px] font-semibold leading-4 mt-1 ${tag?.color}`}
               >
                 {tag?.name}
-              </p>
+              </span>
             ))}
           </div>
 
