@@ -104,7 +104,7 @@ const ProjectCard = ({
                 ))} 
             </div>*/}
 
-            <div className="mt-5">
+            <div className="mt-[22px]">
               <h3 className="font-bold text-[24px]">{name}</h3>
               <div className=" text-[rgba(0,0,0,0.9)] mt-3 text-[16px] flex flex-col gap-3">
                 {description.map((desc, index) => (
@@ -112,7 +112,7 @@ const ProjectCard = ({
                 ))}
               </div>
             </div>
-            <div className="flex flex-wrap w-full gap-3 mt-6 mb-3">
+            <div className="flex flex-wrap w-full gap-3 mt-8 mb-5">
               {hasVideoLinks &&
                 video_iframe_links?.map((video_link, index) => (
                   <LightGalleryWrapper key={index}>
