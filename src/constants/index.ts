@@ -260,13 +260,13 @@ const projects: ProjectType[] = [
     video_iframe_links: [
       {
         name: "Surgeon App Video",
-        url: "https://www.youtube.com/embed/dQw4w9WgXcQ?si=w71qYNEZ3-dO8mbH",
+        url: "https://www.youtube.com/embed/k0A38OoG_wo?si=48B_n7GrZ-6UQl0K",
       },
     ],
     figma_links: [
       {
         name: "Surgeon App Presentation",
-        url: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fdsop7M44BoWU60uSWSzYhW%2FSurgical-Society%3Fnode-id%3D1-12%26starting-point-node-id%3D1%253A12%26mode%3Ddesign%26t%3D5dNG1ZQlP9PTioS5-1",
+        url: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fdsop7M44BoWU60uSWSzYhW%2FSurgical-Society%3Fnode-id%3D126-2%26t%3Dbs0DAfX9on5fFoEc-1%26scaling%3Dmin-zoom%26page-id%3D0%253A1%26starting-point-node-id%3D126%253A2",
       },
     ],
   },
@@ -308,11 +308,32 @@ const projects: ProjectType[] = [
       },
     ],
     image: "img/thumbnails/product-module-thumb.jpg",
-    // video_iframe_links: [""],
+    video_iframe_links: [
+      {
+        name: "Data Hierarchy Tree Renderer",
+        url: "https://www.youtube.com/embed/_vPxPHYdemY?si=JLw5hVQLIm5TIKjy",
+      },
+      {
+        name: "Clerk Auth Solution",
+        url: "https://www.youtube.com/embed/XOaxkhZBzFg?si=JS4Bb7zpLLgqP0Pe",
+      },
+      {
+        name: "Dynamic Theming Solution",
+        url: "https://www.youtube.com/embed/OB_N6iv07Wg?si=LburBzs9h1S1FFsI",
+      },
+      {
+        name: "Azure Image Export Client Feedback",
+        url: "https://www.youtube.com/embed/KBuKT0dobXg?si=wp0XpwhFzuJsccIN",
+      },
+      {
+        name: "Products Module",
+        url: "https://www.youtube.com/embed/OOeQQqqmUJA?si=i9sj_AZcQfqIBAqW",
+      },
+    ],
     figma_links: [
       {
         name: "Employee Portal Presentation",
-        url: "https://www.figma.com/proto/dBwfWvP5wqCoPmOFHVQ38q/Engage-Website-Design?node-id=1108-5&starting-point-node-id=1108%3A5&mode=design&t=myrpyQbUxOCEZWzm-1",
+        url: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FdBwfWvP5wqCoPmOFHVQ38q%2FEngage-Website-Design%3Fnode-id%3D1936-7%26t%3DqHLYC2yosDXtFaV8-1%26scaling%3Dmin-zoom%26page-id%3D1108%253A2%26starting-point-node-id%3D1936%253A7",
       },
     ],
   },
@@ -334,8 +355,28 @@ const projects: ProjectType[] = [
         name: "SQL Server",
         color: "pink-text-gradient",
       },
+      {
+        name: "Azure Blob Stoarge",
+        color: "orange-text-gradient",
+      },
     ],
     image: "img/expense-form.png",
+    figma_links: [
+      {
+        name: "Skills Matrix Presentation",
+        url: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FACCwFwTp1xmT7PiGVPIGVz%2FSkills-Matrix-App%3Fnode-id%3D101-3%26t%3DxIcV5YU4wPUKdunY-1%26scaling%3Dmin-zoom%26page-id%3D0%253A1%26starting-point-node-id%3D101%253A3",
+      },
+      {
+        name: "KodeLab Website Prototype",
+        url: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FNe7ID8jGm1ntIi8QcdV4qM%2FKodeLab-Website%3Fnode-id%3D43-9%26t%3DIjbtRflMwTOwLSQQ-1%26scaling%3Dmin-zoom%26page-id%3D0%253A1%26starting-point-node-id%3D43%253A9",
+      },
+    ],
+    video_iframe_links: [
+      {
+        name: "Expense Claims Admin Backend",
+        url: "https://www.youtube.com/embed/D8GQOih-mR0?si=RbHtz8-o_1nLAJAZ",
+      },
+    ],
   },
   {
     name: "Illovo",
@@ -361,6 +402,12 @@ const projects: ProjectType[] = [
       },
     ],
     image: "img/thumbnails/illovo-thumb.jpg",
+    video_iframe_links: [
+      {
+        name: "Illovo Fiscal Calendar",
+        url: "https://www.youtube.com/embed/V6ZwApN66dU?si=wkQEOe7tSQkq0L5v",
+      },
+    ],
   },
   {
     name: "RCL Foods",
@@ -382,6 +429,16 @@ const projects: ProjectType[] = [
       },
     ],
     image: "img/rcl.png",
+    figma_links: [
+      {
+        name: "Dashboard Presentation",
+        url: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FfdeyU8yXig69jf45rPTuds%2FRCL-UI-Design%3Fnode-id%3D2116-24%26t%3DcM7WnhWTDMTDl4D7-1%26scaling%3Dmin-zoom%26page-id%3D53%253A4%26starting-point-node-id%3D2116%253A24",
+      },
+      {
+        name: "Health Tracker Presentation",
+        url: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FfdeyU8yXig69jf45rPTuds%2FRCL-UI-Design%3Fnode-id%3D2116-365%26t%3DQXBSDqj0YDr13DN6-1%26scaling%3Dmin-zoom%26page-id%3D1801%253A345%26starting-point-node-id%3D2116%253A365",
+      },
+    ],
   },
   {
     name: "Works Group",

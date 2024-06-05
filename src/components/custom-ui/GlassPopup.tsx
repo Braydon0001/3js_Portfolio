@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction, useEffect } from "react";
 import { MdClose } from "react-icons/md";
 import { ScrollArea } from "../ui/scroll-area";
+import { cn } from "@/lib/utils";
 
 interface GlassPopupProps {
   isOpen: boolean;
@@ -13,6 +14,7 @@ interface GlassPopupProps {
   hideCloseBtn?: boolean;
   lightBg?: boolean;
   displayNone?: boolean;
+  className?: string;
 }
 
 const GlassPopup = (props: GlassPopupProps) => {
@@ -25,6 +27,7 @@ const GlassPopup = (props: GlassPopupProps) => {
     lightBg = true,
     hideCloseBtn = false,
     displayNone,
+    className,
   } = props;
 
   useEffect(() => {
@@ -48,7 +51,7 @@ const GlassPopup = (props: GlassPopupProps) => {
           <div
             className={`  ${
               lightBg ? "glassWhiter5" : "glassWhiter"
-            } glass shadow-md fixed left-[50%]  top-[50%] z-[53] h-[80vh] w-[100vw] translate-y-[-50%] translate-x-[-50%] rounded-[15px] p-[10px]  pb-[15px] pt-[15px] sm:w-[90vw] sm:p-[30px] sm:pt-[30px] sm:pb-[40px] md:w-[70vw] ${
+            } glass shadow-md fixed left-[50%]  top-[50%] z-[53] h-[80vh] w-[100vw] translate-y-[-50%] translate-x-[-50%] rounded-[15px] p-[10px]  pb-[15px] pt-[15px] sm:w-[90vw] sm:p-[30px] sm:pt-[30px] sm:pb-[40px] md:w-[80vw] ${
               hideCloseBtn && "pt-[40px]"
             }`}
           >
@@ -67,7 +70,12 @@ const GlassPopup = (props: GlassPopupProps) => {
               </button>
             )}
 
-            <div className="scrollbar scrollbarWidth2 mt-[30px] h-[calc(100%-40px)] overflow-y-auto  p-4 overflow-x-hidden">
+            <div
+              className={cn(
+                "scrollbar scrollbarWidth2 mt-[30px] h-[calc(100%-40px)] overflow-y-auto  p-4 overflow-x-hidden",
+                className
+              )}
+            >
               {heading && (
                 <>
                   <h2 className="text-[40px] text-[#333] font-semibold">

@@ -33,11 +33,11 @@ const Demos = () => {
           />
           <VideoDemo
             className="shadow-custom"
-            index={2}
-            title={"Azure Image Export Client Feedback"}
-            image={"/img/thumbnails/image-export-thumb.png"}
+            index={0}
+            title={"Illovo Fiscal Calendar"}
+            image={"/img/thumbnails/illovo-thumb.jpg"}
             videoUrl={
-              "https://www.youtube.com/embed/KBuKT0dobXg?si=wp0XpwhFzuJsccIN"
+              "https://www.youtube.com/embed/V6ZwApN66dU?si=wkQEOe7tSQkq0L5v"
             }
             isLight
           />
@@ -96,11 +96,11 @@ const Demos = () => {
             }
           />
           <VideoDemo
-            index={0}
-            title={"Illovo Fiscal Calendar"}
-            image={"/img/thumbnails/illovo-thumb.jpg"}
+            index={2}
+            title={"Azure Image Export Client Feedback"}
+            image={"/img/thumbnails/image-export-thumb.png"}
             videoUrl={
-              "https://www.youtube.com/embed/V6ZwApN66dU?si=wkQEOe7tSQkq0L5v"
+              "https://www.youtube.com/embed/KBuKT0dobXg?si=wp0XpwhFzuJsccIN"
             }
           />
           <VideoDemo

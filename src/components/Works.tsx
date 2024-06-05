@@ -16,6 +16,7 @@ import {
   TooltipTrigger,
 } from "./ui/tooltip";
 import { Button } from "./aceternity-ui/moving-border";
+import { Icon } from "./Icon";
 
 const ProjectCard = ({
   index,
@@ -32,11 +33,12 @@ const ProjectCard = ({
   return (
     <>
       <GlassPopup
+        className="pt-0"
         isOpen={isProfileModalOpen}
         setIsOpen={setIsProfileModalOpen}
         lightBg
       >
-        <div className="flex flex-col justify-between relative p-5 rounded-2xl h-full min-h-[486px] xl:min-h-[601px] ">
+        <div className="flex flex-col justify-between relative p-5 pt-0 rounded-2xl h-full min-h-[486px] xl:min-h-[601px] ">
           <div>
             <div className="relative w-full h-[230px] xl:h-[510px]">
               <img
@@ -45,7 +47,7 @@ const ProjectCard = ({
                 className="w-full h-full object-cover rounded-2xl"
               />
             </div>
-            <div className="w-full flex gap-2 absolute top-0 right-0">
+            {/*<div className="w-full flex gap-2 absolute top-0 right-0">
               {hasVideoLinks &&
                 video_iframe_links?.map((video_link, index) => (
                   <LightGalleryWrapper key={index}>
@@ -99,8 +101,8 @@ const ProjectCard = ({
                       </a>
                     </LightGalleryWrapper>
                   </div>
-                ))}
-            </div>
+                ))} 
+            </div>*/}
 
             <div className="mt-5">
               <h3 className="font-bold text-[24px]">{name}</h3>
@@ -110,7 +112,7 @@ const ProjectCard = ({
                 ))}
               </div>
             </div>
-            <div className="flex w-full gap-3 mt-6 mb-3">
+            <div className="flex flex-wrap w-full gap-3 mt-6 mb-3">
               {hasVideoLinks &&
                 video_iframe_links?.map((video_link, index) => (
                   <LightGalleryWrapper key={index}>
@@ -127,6 +129,11 @@ const ProjectCard = ({
                         className="text-primary px-2 pt-[2px] bg-white hover:bg-gray-100/80 border-0"
                         onClick={() => null}
                       >
+                        <Icon
+                          name="MonitorPlay"
+                          size={20}
+                          className="mr-2 text-secondary mb-[2px]"
+                        />
                         {video_link.name}{" "}
                         <MdArrowRightAlt
                           className="ml-2 text-[#de4444]"
@@ -150,9 +157,14 @@ const ProjectCard = ({
                           containerClassName="w-full"
                           borderRadius="1rem"
                           borderClassName="bg-[radial-gradient(var(--purple-500)_40%,transparent_60%)]"
-                          className="text-primary px-2 pt-[2px] bg-white hover:bg-gray-100/80 border-0"
+                          className="text-primary px-3 pt-[2px] bg-white hover:bg-gray-100/80 border-0"
                           onClick={() => null}
                         >
+                          <Icon
+                            name="Figma"
+                            size={17}
+                            className="mr-2 text-secondary mb-[2px]"
+                          />
                           {figma_link.name}{" "}
                           <MdArrowRightAlt
                             className="ml-2 text-[#de4444]"
@@ -194,63 +206,93 @@ const ProjectCard = ({
             </div>
 
             <div className="w-full flex gap-2 absolute top-0 right-0  p-8">
-              {hasVideoLinks &&
-                video_iframe_links?.map((video_link, index) => (
-                  <LightGalleryWrapper key={index}>
-                    <a
-                      className="text-[18px] text-white"
-                      id={video_link.url}
-                      data-iframe="true"
-                      data-src={video_link.url}
-                    >
-                      <div className="bg-gray-800 hover:bg-[#de4444] w-10 h-10 rounded-full flex justify-center items-center cursor-pointer ">
-                        <TooltipProvider delayDuration={0}>
-                          <Tooltip>
-                            <TooltipTrigger>
-                              <Play color="white" width={27} height={27} />
-                            </TooltipTrigger>
-                            <TooltipContent side="bottom" sideOffset={15}>
-                              Demo Video
-                            </TooltipContent>
-                          </Tooltip>
-                        </TooltipProvider>
-                      </div>
-                    </a>
-                  </LightGalleryWrapper>
-                ))}
-              {hasFigmaLinks &&
-                figma_links?.map((figma_link, index) => (
-                  <div
-                    key={index}
-                    // className="absolute inset-0 flex justify-end m-8 card-img_hover Z-30"
-                  >
-                    <LightGalleryWrapper key={index}>
-                      <a
-                        className="text-[18px] text-white"
-                        id={figma_link.url}
-                        data-iframe="true"
-                        data-src={figma_link.url}
-                      >
-                        <div className="bg-gray-800 hover:bg-[#de4444] w-10 h-10 rounded-full flex justify-center items-center cursor-pointer ">
-                          <TooltipProvider delayDuration={0}>
-                            <Tooltip>
-                              <TooltipTrigger>
-                                <FigmaLogoIcon
-                                  color="white"
-                                  width={27}
-                                  height={27}
-                                />
-                              </TooltipTrigger>
-                              <TooltipContent side="bottom" sideOffset={15}>
-                                Figma Prototype
-                              </TooltipContent>
-                            </Tooltip>
-                          </TooltipProvider>
-                        </div>
-                      </a>
-                    </LightGalleryWrapper>
+              {
+                hasVideoLinks && (
+                  <div className="bg-gray-800 hover:bg-[#de4444] w-10 h-10 rounded-full flex justify-center items-center cursor-pointer ">
+                    <TooltipProvider delayDuration={0}>
+                      <Tooltip>
+                        <TooltipTrigger>
+                          <Play color="white" width={27} height={27} />
+                        </TooltipTrigger>
+                        <TooltipContent side="bottom" sideOffset={15}>
+                          Includes Demo Videos
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
                   </div>
-                ))}
+                )
+                // video_iframe_links?.map((video_link, index) => (
+                //   <LightGalleryWrapper key={index}>
+                //     <a
+                //       className="text-[18px] text-white"
+                //       id={video_link.url}
+                //       data-iframe="true"
+                //       data-src={video_link.url}
+                //     >
+                //       <div className="bg-gray-800 hover:bg-[#de4444] w-10 h-10 rounded-full flex justify-center items-center cursor-pointer ">
+                //         <TooltipProvider delayDuration={0}>
+                //           <Tooltip>
+                //             <TooltipTrigger>
+                //               <Play color="white" width={27} height={27} />
+                //             </TooltipTrigger>
+                //             <TooltipContent side="bottom" sideOffset={15}>
+                //               Demo Video
+                //             </TooltipContent>
+                //           </Tooltip>
+                //         </TooltipProvider>
+                //       </div>
+                //     </a>
+                //   </LightGalleryWrapper>
+                // ))
+              }
+              {
+                hasFigmaLinks && (
+                  <div className="bg-gray-800 hover:bg-[#de4444] w-10 h-10 rounded-full flex justify-center items-center cursor-pointer ">
+                    <TooltipProvider delayDuration={0}>
+                      <Tooltip>
+                        <TooltipTrigger>
+                          <FigmaLogoIcon color="white" width={27} height={27} />
+                        </TooltipTrigger>
+                        <TooltipContent side="bottom" sideOffset={15}>
+                          Includes Figma Prototypes
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </div>
+                )
+                // figma_links?.map((figma_link, index) => (
+                //   <div
+                //     key={index}
+                //     // className="absolute inset-0 flex justify-end m-8 card-img_hover Z-30"
+                //   >
+                //     <LightGalleryWrapper key={index}>
+                //       <a
+                //         className="text-[18px] text-white"
+                //         id={figma_link.url}
+                //         data-iframe="true"
+                //         data-src={figma_link.url}
+                //       >
+                //         <div className="bg-gray-800 hover:bg-[#de4444] w-10 h-10 rounded-full flex justify-center items-center cursor-pointer ">
+                //           <TooltipProvider delayDuration={0}>
+                //             <Tooltip>
+                //               <TooltipTrigger>
+                //                 <FigmaLogoIcon
+                //                   color="white"
+                //                   width={27}
+                //                   height={27}
+                //                 />
+                //               </TooltipTrigger>
+                //               <TooltipContent side="bottom" sideOffset={15}>
+                //                 Figma Prototype
+                //               </TooltipContent>
+                //             </Tooltip>
+                //           </TooltipProvider>
+                //         </div>
+                //       </a>
+                //     </LightGalleryWrapper>
+                //   </div>
+                // ))
+              }
             </div>
 
             <div className="mt-5">
