@@ -8,6 +8,7 @@ import {
 
 import "react-vertical-timeline-component/style.min.css";
 import { experiences } from "../constants";
+import { useInView } from "react-intersection-observer";
 // import { SectionWrapper } from '../utils/motion'
 
 const ExperienceCard = ({ experience }) => {
@@ -61,10 +62,18 @@ const ExperienceCard = ({ experience }) => {
 };
 
 const Experience = () => {
+  // Use the useInView hook to track when the element enters the viewport
+  const [ref, inView] = useInView({
+    triggerOnce: true, // Change this to false if you want the animation to trigger again whenever it comes in view
+  });
   return (
     <div className="max-w-[1600px] xs:mx-auto xs:py-[80px] z-40 relative">
       <motion.div
-        variants={textVariant()}
+        ref={ref}
+        initial="hidden"
+        animate={inView ? "show" : "hidden"}
+        transition={{ delay: 0.5 * 0.2 }} // Add a delay based on the index
+        variants={fadeIn("", "tween", 0.3, 1)}
         className="xl:mx-0 mx-4 md:mx-[60px]"
       >
         <p

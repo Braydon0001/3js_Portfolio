@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { InView } from "react-intersection-observer";
+import { InView, useInView } from "react-intersection-observer";
 import { styles } from "../style";
 import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -12,12 +12,24 @@ const About = () => {
   const [isGrabbing, setIsGrabbing] = useState(false);
   const ReactModel = services[skill].model;
 
+  // Use the useInView hook to track when the element enters the viewport
+  const [ref, inView] = useInView({
+    triggerOnce: true, // Change this to false if you want the animation to trigger again whenever it comes in view
+  });
+
   return (
     <div
       id="about"
       className="w-fit max-w-[1600px] mx-0 px-4 xs:mx-auto py-0 sm:py-10 md:py-[80px]  pb-20 md:px-0 relative"
     >
-      <motion.div variants={textVariant()} className="xl:mx-0 md:mx-[60px]">
+      <motion.div
+        ref={ref}
+        initial="hidden"
+        animate={inView ? "show" : "hidden"}
+        transition={{ delay: 0.5 * 0.2 }} // Add a delay based on the index
+        variants={fadeIn("", "tween", 0.3, 1)}
+        className="xl:mx-0 md:mx-[60px]"
+      >
         <p className={`${styles.sectionSubText} text-slate-100 w-fit`}>
           Introduction
         </p>
@@ -25,8 +37,13 @@ const About = () => {
           Overview
         </h2>
       </motion.div>
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
+      <motion.div
+        // variants={textVariant()}
+        ref={ref}
+        initial="hidden"
+        animate={inView ? "show" : "hidden"}
+        transition={{ delay: 0.1 * 0.2 }} // Add a delay based on the index
+        variants={fadeIn("up", "tween", 0.1, 1)}
         className="xl:mx-0 md:mx-[60px] mt-4 text-slate-100 text-[18px] max-w-3xl leading-[30px]"
       >
         I am an Intermediate full stack developer and Senior UI/UX designer from
@@ -35,7 +52,7 @@ const About = () => {
         constantly innovating and pushing the boundaries beyond expectations. My
         interests include exploring emerging technologies, playing musical
         instruments, going to the gym, gaming, and art.
-      </motion.p>
+      </motion.div>
 
       <div className="mt-20 flex flex-wrap gap-10 w-fit md:mr-5">
         <div className="xl:w-[1600px] flex flex-wrap justify-between relative">

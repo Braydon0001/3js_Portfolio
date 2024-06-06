@@ -17,6 +17,7 @@ import {
 } from "./ui/tooltip";
 import { Button } from "./aceternity-ui/moving-border";
 import { Icon } from "./Icon";
+import { useInView } from "react-intersection-observer";
 
 const ProjectCard = ({
   index,
@@ -30,6 +31,12 @@ const ProjectCard = ({
   const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
   const hasFigmaLinks = figma_links && figma_links?.length > 0;
   const hasVideoLinks = video_iframe_links && video_iframe_links?.length > 0;
+  // Use the useInView hook to track when the element enters the viewport
+  const [ref, inView] = useInView({
+    triggerOnce: true, // Change this to false if you want the animation to trigger again whenever it comes in view
+  });
+
+  const stagger = [0, 2, 3, 0, 2, 3];
   return (
     <>
       <GlassPopup
@@ -191,11 +198,19 @@ const ProjectCard = ({
         </div>
       </GlassPopup>
       <motion.div
+        ref={ref}
+        variants={fadeIn("up", "spring", stagger[index] * 0.1, 1)}
+        initial="hidden"
+        // animate={inView ? "show" : "hidden"}
+        // transition={{ delay: stagger[index] * 0.2 }} // Add a delay based on the index
+
+        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+        transition={{ duration: 0.5, delay: stagger[index] * 0.2 }} // Add a delay based on the index
         onClick={() => setIsProfileModalOpen(true)}
-        className="sm:w-[calc(50%-14px)] md:w-[calc(33.33%-19px)] cursor-pointer w-full h-full min-h-[505px] xl:min-h-[617px] hover:scale-[1.02] transition-transform duration-300 ease-in-out rounded-2xl "
-        variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+        className="sm:w-[calc(50%-14px)] md:w-[calc(33.33%-19px)] cursor-pointer w-full h-full min-h-[505px] xl:min-h-[617px] rounded-2xl "
+        // variants={fadeIn("up", "spring", index * 0.5, 0.75)}
       >
-        <div className="flex flex-col justify-between glass p-5 rounded-2xl h-full min-h-[505px] xl:min-h-[617px] ">
+        <div className="flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300 ease-in-out  glass p-5 rounded-2xl h-full min-h-[505px] xl:min-h-[617px] ">
           <div>
             <div className="relative w-full h-[230px] xl:h-[330px]">
               <img
@@ -330,9 +345,20 @@ const ProjectCard = ({
 };
 
 const Works = () => {
+  // Use the useInView hook to track when the element enters the viewport
+  const [ref, inView] = useInView({
+    triggerOnce: true, // Change this to false if you want the animation to trigger again whenever it comes in view
+  });
   return (
     <div className="max-w-[1600px] xs:mx-auto xs:py-[80px] relative z-40 md:px-0 px-4">
-      <motion.div variants={textVariant()} className="xl:mx-0 md:mx-[60px]">
+      <motion.div
+        ref={ref}
+        initial="hidden"
+        animate={inView ? "show" : "hidden"}
+        transition={{ delay: 0.5 * 0.2 }} // Add a delay based on the index
+        variants={fadeIn("", "tween", 0.3, 1)}
+        className="xl:mx-0 md:mx-[60px]"
+      >
         <p className={`${styles.sectionSubText} text-slate-100 w-fit`}>
           But Not Limited To
         </p>

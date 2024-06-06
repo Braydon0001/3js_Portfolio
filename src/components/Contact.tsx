@@ -1,20 +1,29 @@
 import { motion } from "framer-motion";
 import { styles } from "../style";
 import { EarthCanvas, StarsCanvas } from "./canvas";
-import { slideIn } from "@/utils/motion";
+import { fadeIn, slideIn } from "@/utils/motion";
 import { Icon } from "./Icon";
 import Map from "./Map";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { useInView } from "react-intersection-observer";
 
 const Contact = () => {
   const [isGrabbing, setIsGrabbing] = useState(false);
+  // Use the useInView hook to track when the element enters the viewport
+  const [ref, inView] = useInView({
+    triggerOnce: true, // Change this to false if you want the animation to trigger again whenever it comes in view
+  });
   return (
     <div className="max-w-[1600px] px-0 md:px-[60px] xl:px-0 xs:mx-auto -mt-3 md:mt-0 pb-0 md:py-[80px] py-20 md:pb-[120px] relative z-40">
       <StarsCanvas />
       <div className="md:pt-12 md:flex-row flex-col-reverse flex gap-10 overflow-hidden">
         <motion.div
-          variants={slideIn("left", "tween", 0.2, 1)}
+          ref={ref}
+          initial="hidden"
+          animate={inView ? "show" : "hidden"}
+          transition={{ delay: 0.5 * 0.2 }} // Add a delay based on the index
+          variants={fadeIn("", "tween", 0.2, 0.75)}
           className="flex-1  p-5 md:rounded-2xl glass-no-border border-0 min-h-[430px] md:min-h-[600px]"
         >
           <p

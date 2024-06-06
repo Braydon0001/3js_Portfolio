@@ -9,9 +9,15 @@ import GlassPopup from "./custom-ui/GlassPopup";
 import { MdArrowRightAlt } from "react-icons/md";
 import { cn } from "@/lib/utils";
 import { Button } from "./aceternity-ui/moving-border";
+import { useInView } from "react-intersection-observer";
 
 const Demos = () => {
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
+  // Use the useInView hook to track when the element enters the viewport
+  const [ref, inView] = useInView({
+    triggerOnce: true, // Change this to false if you want the animation to trigger again whenever it comes in view
+  });
+
   return (
     <>
       <GlassPopup
@@ -23,7 +29,7 @@ const Demos = () => {
         <div className="mx-0 mt-6 flex flex-wrap gap-7  relative">
           <VideoDemo
             className="shadow-custom"
-            index={2}
+            index={0}
             title={"Advanced Surgeon Forms App"}
             image={"/img/thumbnails/surgeon-demo-thumb.jpg"}
             videoUrl={
@@ -33,7 +39,7 @@ const Demos = () => {
           />
           <VideoDemo
             className="shadow-custom"
-            index={0}
+            index={1}
             title={"Illovo Fiscal Calendar"}
             image={"/img/thumbnails/illovo-thumb.jpg"}
             videoUrl={
@@ -44,7 +50,14 @@ const Demos = () => {
         </div>
       </GlassPopup>
       <div className="md:px-0 px-4 py-20 max-w-[1600px] xs:mx-auto xs:py-[80px] relative z-40">
-        <motion.div variants={textVariant()} className="xl:mx-0 md:mx-[60px]">
+        <motion.div
+          ref={ref}
+          initial="hidden"
+          animate={inView ? "show" : "hidden"}
+          transition={{ delay: 0.5 * 0.2 }} // Add a delay based on the index
+          variants={fadeIn("", "tween", 0.3, 1)}
+          className="xl:mx-0 md:mx-[60px]"
+        >
           <p className={`${styles.sectionSubText} text-slate-100 w-fit`}>
             My Apps & Solutions
           </p>
@@ -56,7 +69,7 @@ const Demos = () => {
         {/* work cards */}
         <div className="md:mx-[60px] xl:mx-0 mt-9 md:mt-14 flex flex-wrap gap-7  relative">
           <VideoDemo
-            index={1}
+            index={0}
             title={"Data Hierarchy Tree Renderer"}
             image={"/img/thumbnails/organogram-demo-thumb.jpg"}
             videoUrl={
@@ -80,7 +93,7 @@ const Demos = () => {
             }
           />
           <VideoDemo
-            index={1}
+            index={3}
             title={"Clerk Auth Solution"}
             image={"/img/thumbnails/clerk-thumb.jpg"}
             videoUrl={
@@ -88,7 +101,7 @@ const Demos = () => {
             }
           />
           <VideoDemo
-            index={2}
+            index={0}
             title={"Dynamic Theming Solution"}
             image={"/img/thumbnails/theming-thumb.jpg"}
             videoUrl={
@@ -104,7 +117,7 @@ const Demos = () => {
             }
           />
           <VideoDemo
-            index={2}
+            index={3}
             title={"Products Module"}
             image={"/img/thumbnails/product-module-thumb.jpg"}
             videoUrl={
@@ -143,6 +156,11 @@ const VideoDemo = ({
   isLight?: boolean;
   className?: string;
 }) => {
+  // Use the useInView hook to track when the element enters the viewport
+  const [ref, inView] = useInView({
+    triggerOnce: true, // Change this to false if you want the animation to trigger again whenever it comes in view
+  });
+
   return (
     <LightGalleryWrapper
       elementClassNames={cn(
@@ -151,6 +169,7 @@ const VideoDemo = ({
       )}
     >
       <a
+        ref={ref}
         className="text-[18px] text-white"
         id={title}
         data-iframe="true"
@@ -158,7 +177,10 @@ const VideoDemo = ({
       >
         <motion.div
           className=""
-          variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+          variants={fadeIn("up", "spring", index * 0.15, 1)}
+          initial="hidden"
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          transition={{ duration: 0.5, delay: index * 0.2 }} // Add a delay based on the index
         >
           <Tilt>
             <div
