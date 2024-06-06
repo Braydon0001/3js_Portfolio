@@ -57,10 +57,13 @@ const Navbar = () => {
               />
             </a>
           </LightGalleryWrapper>
-          <p className="text-white text-[21px] font-bold cursor-pointer flex">
+          <a
+            href="#home"
+            className="text-white text-[21px] font-bold cursor-pointer flex hover:opacity-70"
+          >
             Braydon Padayachee &nbsp;{" "}
             <span className="sm:block hidden">| &nbsp;Portfolio</span>
-          </p>
+          </a>
         </div>
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((link, index) => (
@@ -71,7 +74,7 @@ const Navbar = () => {
               } hover:text-[#de4444] text-[21px] font-medium cursor-pointer`}
               onClick={() => setActive(link.title)}
             >
-              <a href={`${link.id}`}>{link.title}</a>
+              <a href={`#${link.id}`}>{link.title}</a>
             </li>
           ))}
         </ul>
@@ -98,7 +101,7 @@ const Navbar = () => {
                   } hover:text-white font-medium cursor-pointer text-[18px]`}
                   onClick={() => setActive(link.title)}
                 >
-                  <a href={`${link.id}`}>{link.title}</a>
+                  <a href={`#${link.id}`}>{link.title}</a>
                 </li>
               ))}
             </ul>

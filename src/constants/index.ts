@@ -41,8 +41,16 @@ export const navLinks: NavLinkType[] = [
     title: "About",
   },
   {
-    id: "work",
-    title: "Work",
+    id: "experience",
+    title: "Experience",
+  },
+  {
+    id: "demos",
+    title: "Demos",
+  },
+  {
+    id: "projects",
+    title: "Projects",
   },
   {
     id: "contact",

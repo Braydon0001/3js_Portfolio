@@ -18,10 +18,7 @@ const About = () => {
   });
 
   return (
-    <div
-      id="about"
-      className="w-fit max-w-[1600px] mx-0 px-4 xs:mx-auto py-0 sm:py-10 md:py-[80px]  pb-20 md:px-0 relative"
-    >
+    <div className="w-fit max-w-[1600px] mx-0 px-4 xs:mx-auto py-0 sm:py-10 md:py-[80px]  pb-20 md:px-0 relative">
       <motion.div
         ref={ref}
         initial="hidden"

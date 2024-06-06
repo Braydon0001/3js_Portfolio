@@ -15,15 +15,18 @@ import { Icon } from "./components/Icon";
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-primary">
+      <div id="home" className="relative z-0 bg-primary">
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-bottom">
           <Navbar />
           <Hero />
         </div>
-        <div className="bg-gradient-to-t from-[#11235f] to-primary bg-contain bg-no-repeat bg-top -mt-[1px] md:-mt-1">
+        <div
+          id="about"
+          className="bg-gradient-to-t from-[#11235f] to-primary bg-contain bg-no-repeat bg-top -mt-[1px] md:-mt-1"
+        >
           <About />
         </div>
-        <div className="relative md:mt-0 mt-[-1px]">
+        <div id="experience" className="relative md:mt-0 mt-[-1px]">
           <div className="absolute w-full bg-gradient-to-b from-[#11235f] to-transparent top-0 h-[300px] z-30" />
 
           <div className="absolute w-full bg-[#11235f] h-full opacity-50 z-[5] md:hidden" />
@@ -33,21 +36,21 @@ const App = () => {
           <div className="absolute w-full bg-gradient-to-t from-[#11235f] to-transparent bottom-0 h-[300px] z-30" />
         </div>
         {/* <Tech /> */}
-        <div className="relative">
+        <div id="demos" className="relative">
           <div className="absolute w-full bg-gradient-to-b from-[#11235f] to-transparent top-0 h-[300px] z-30" />
           <div className="absolute w-full bg-[#11235f] h-full opacity-60 z-30" />
           <div className="absolute w-full bg-b9  h-full z-20 bg-contain md:bg-cover bg-no-repeat bg-top" />
           <Demos />
           <div className="absolute w-full bg-gradient-to-t from-[#11235f] to-transparent bottom-0 h-[300px] z-30" />
         </div>
-        <div className="relative">
+        <div id="projects" className="relative">
           <div className="absolute w-full bg-gradient-to-b from-[#11235f] to-transparent top-0 h-[300px] z-30" />
           <div className="absolute w-full bg-[#11235f] h-full opacity-90 z-30" />
           <div className="absolute w-full bg-b7  h-full z-20 bg-cover bg-no-repeat bg-top" />
           <Works />
           <div className="absolute w-full bg-gradient-to-t from-[#020f3d] to-transparent bottom-0 h-[300px] z-30" />
         </div>
-        <div className="relative z-0">
+        <div id="contact" className="relative z-0">
           <div className="absolute w-full bg-gradient-to-b from-[#020f3d] to-transparent top-0 h-[100px] z-40" />
           <div className="absolute w-full bg-[#020f3d] h-full  z-30" />
           <Contact />
