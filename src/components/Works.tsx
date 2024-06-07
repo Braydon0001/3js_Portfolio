@@ -119,60 +119,30 @@ const ProjectCard = ({
                 ))}
               </div>
             </div>
-            <div className="flex flex-wrap w-full gap-3 mt-8 mb-5">
-              {hasVideoLinks &&
-                video_iframe_links?.map((video_link, index) => (
-                  <LightGalleryWrapper key={index}>
-                    <a
-                      className="text-[18px] text-white"
-                      id={video_link.url}
-                      data-iframe="true"
-                      data-src={video_link.url}
-                    >
-                      <Button
-                        containerClassName="w-full"
-                        borderRadius="1rem"
-                        borderClassName="bg-[radial-gradient(var(--purple-500)_40%,transparent_60%)]"
-                        className="text-primary px-2 pt-[2px] bg-white hover:bg-gray-100/80 border-0"
-                        onClick={() => null}
-                      >
-                        <Icon
-                          name="MonitorPlay"
-                          size={20}
-                          className="mr-2 text-secondary mb-[2px]"
-                        />
-                        {video_link.name}{" "}
-                        <MdArrowRightAlt
-                          className="ml-2 text-[#de4444]"
-                          size={25}
-                        />
-                      </Button>
-                    </a>
-                  </LightGalleryWrapper>
-                ))}
-              {hasFigmaLinks &&
-                figma_links?.map((figma_link, index) => (
-                  <div key={index}>
+            {(hasVideoLinks || hasFigmaLinks) && (
+              <div className="flex flex-wrap w-full gap-3 mt-8 mb-5">
+                {hasVideoLinks &&
+                  video_iframe_links?.map((video_link, index) => (
                     <LightGalleryWrapper key={index}>
                       <a
                         className="text-[18px] text-white"
-                        id={figma_link.url}
+                        id={video_link.url}
                         data-iframe="true"
-                        data-src={figma_link.url}
+                        data-src={video_link.url}
                       >
                         <Button
                           containerClassName="w-full"
                           borderRadius="1rem"
                           borderClassName="bg-[radial-gradient(var(--purple-500)_40%,transparent_60%)]"
-                          className="text-primary px-3 pt-[2px] bg-white hover:bg-gray-100/80 border-0"
+                          className="text-primary px-2 pt-[2px] bg-white hover:bg-gray-100/80 border-0"
                           onClick={() => null}
                         >
                           <Icon
-                            name="Figma"
-                            size={17}
+                            name="MonitorPlay"
+                            size={20}
                             className="mr-2 text-secondary mb-[2px]"
                           />
-                          {figma_link.name}{" "}
+                          {video_link.name}{" "}
                           <MdArrowRightAlt
                             className="ml-2 text-[#de4444]"
                             size={25}
@@ -180,9 +150,41 @@ const ProjectCard = ({
                         </Button>
                       </a>
                     </LightGalleryWrapper>
-                  </div>
-                ))}
-            </div>
+                  ))}
+                {hasFigmaLinks &&
+                  figma_links?.map((figma_link, index) => (
+                    <div key={index}>
+                      <LightGalleryWrapper key={index}>
+                        <a
+                          className="text-[18px] text-white"
+                          id={figma_link.url}
+                          data-iframe="true"
+                          data-src={figma_link.url}
+                        >
+                          <Button
+                            containerClassName="w-full"
+                            borderRadius="1rem"
+                            borderClassName="bg-[radial-gradient(var(--purple-500)_40%,transparent_60%)]"
+                            className="text-primary px-3 pt-[2px] bg-white hover:bg-gray-100/80 border-0"
+                            onClick={() => null}
+                          >
+                            <Icon
+                              name="Figma"
+                              size={17}
+                              className="mr-2 text-secondary mb-[2px]"
+                            />
+                            {figma_link.name}{" "}
+                            <MdArrowRightAlt
+                              className="ml-2 text-[#de4444]"
+                              size={25}
+                            />
+                          </Button>
+                        </a>
+                      </LightGalleryWrapper>
+                    </div>
+                  ))}
+              </div>
+            )}
           </div>
 
           <div className="mt-4 flex flex-wrap gap-2">

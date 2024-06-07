@@ -348,7 +348,7 @@ const projects: ProjectType[] = [
   {
     name: "Insight Consulting",
     description: [
-      "I built the in-house Expense Claims solution which allows employees to log in using their Microsoft credentials, submit claims for company-related expenses, and receive notifications about the status of their claims. It includes an Azure file storage solution for uploading and viewing supporting files via a .NET Web API, an admin panel for managing categories, rates, and options, and a role-based backend for viewing, approving, and rejecting claims. Additionally, the system features a CSV export module to export paid claim data in a specific format for upload to SAP",
+      "I built the in-house Expense Claims solution which allows employees to log in using their Microsoft credentials, submit claims for company-related expenses, and receive notifications about the status of their claims. It includes an Azure file storage solution for uploading and viewing supporting files via a .NET Web API, an admin panel for managing categories, rates, and options, and a role-based backend for viewing, approving, and rejecting claims. Additionally, the system features a CSV export module to export paid claim data in a specific format for upload to SAP.",
     ],
     tags: [
       {
@@ -389,7 +389,7 @@ const projects: ProjectType[] = [
   {
     name: "Illovo",
     description: [
-      "I have developed multiple features for the Illovo CPA app using React and ASP.NET Web API, including creating custom features for AG Grid via its API, implementing charts, and enhancing the user interface. Additionally, I implemented an algorithm to generate a fiscal calendar with week-shifting logic and designed the accompanying UI",
+      "I have developed multiple features for the Illovo CPA app using React and ASP.NET Web API, including creating custom features for AG Grid via its API, implementing charts, and enhancing the user interface. Additionally, I implemented an algorithm to generate a fiscal calendar with week-shifting logic and designed the accompanying front-end UI.",
     ],
     tags: [
       {
@@ -420,7 +420,7 @@ const projects: ProjectType[] = [
   {
     name: "RCL Foods",
     description: [
-      "I was primarily involved in UI/UX and front-end development for the Activity Tracker project, where I built the menu and Health Checker HiFi prototypes, along with the corresponding user interfaces",
+      "I was primarily involved in UI/UX and front-end development for the Activity Tracker project, where I built the menu and Health Checker HiFi prototypes, along with the corresponding front-end UI's.",
     ],
     tags: [
       {
@@ -451,7 +451,7 @@ const projects: ProjectType[] = [
   {
     name: "Works Group",
     description: [
-      "An MVC App that was taken over from a previous developer. I was tasked with fixing bugs, adding new features, and improving the overall performance of the app. I also worked on fixing Syncing issues with a Windows Service that was responsible for syncing data between the app and SAP. I also worked on the order PDF generation features and improved the overall UI/UX of the app",
+      "An MVC App that was taken over from a previous developer. I was tasked with fixing bugs, adding new features, and improving the overall performance of the app. I also worked on fixing Syncing issues with a Windows Service that was responsible for syncing data between the app and SAP. I also worked on the order PDF generation features and improved the overall UI/UX of the app.",
     ],
     tags: [
       {
